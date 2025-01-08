@@ -1,0 +1,239 @@
+﻿  main.cpp
+C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(33,14): error C2102: '&' requires l-value
+C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,14): error C2102: '&' requires l-value
+C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7): error C2679: binary '<<': no operator found which takes a right-hand operand of type 'overloaded-function' (or there is no acceptable conversion)
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(486,39):
+      could be 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_streambuf<char,std::char_traits<char>> *)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_streambuf<char,std::char_traits<char>> *)': cannot convert argument 2 from 'overloaded-function' to 'std::basic_streambuf<char,std::char_traits<char>> *'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(454,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(const void *)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(const void *)': cannot convert argument 2 from 'overloaded-function' to 'const void *'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(436,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long double)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long double)': cannot convert argument 2 from 'overloaded-function' to 'long double'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(418,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)': cannot convert argument 2 from 'overloaded-function' to 'double'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(400,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(float)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(float)': cannot convert argument 2 from 'overloaded-function' to 'float'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(382,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned __int64)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned __int64)': cannot convert argument 2 from 'overloaded-function' to 'unsigned __int64'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(364,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(__int64)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(__int64)': cannot convert argument 2 from 'overloaded-function' to '__int64'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(346,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned long)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned long)': cannot convert argument 2 from 'overloaded-function' to 'unsigned long'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(328,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long)': cannot convert argument 2 from 'overloaded-function' to 'long'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(309,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned int)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned int)': cannot convert argument 2 from 'overloaded-function' to 'unsigned int'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(283,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)': cannot convert argument 2 from 'overloaded-function' to 'int'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(264,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned short)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned short)': cannot convert argument 2 from 'overloaded-function' to 'unsigned short'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(230,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(short)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(short)': cannot convert argument 2 from 'overloaded-function' to 'short'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(212,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(bool)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(bool)': cannot convert argument 2 from 'overloaded-function' to 'bool'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(206,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))': cannot convert argument 2 from 'overloaded-function' to 'std::ios_base &(__cdecl *)(std::ios_base &)'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              None of the functions with this name in scope match the target type
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(200,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))': cannot convert argument 2 from 'overloaded-function' to 'std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &)'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              None of the functions with this name in scope match the target type
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(195,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &))'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &))': cannot convert argument 2 from 'overloaded-function' to 'std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &)'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              None of the functions with this name in scope match the target type
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(900,32):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<char,std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,_Elem)'
+          with
+          [
+              _Elem=char
+          ]
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<char,std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,_Elem)': cannot convert argument 2 from 'overloaded-function' to '_Elem'
+          with
+          [
+              _Elem=char
+          ]
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(857,32):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<char,std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const _Elem *)'
+          with
+          [
+              _Elem=char
+          ]
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<char,std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const _Elem *)': cannot convert argument 2 from 'overloaded-function' to 'const _Elem *'
+          with
+          [
+              _Elem=char
+          ]
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(1088,32):
+      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::error_code &)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+          'initializing': cannot convert from 'overloaded-function' to 'const std::error_code &'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Reason: cannot convert from 'overloaded-function' to 'const std::error_code'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              'std::error_code::error_code': no overloaded function could convert all the argument types
+                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\system_error(256,1):
+                  could be 'std::error_code::error_code(std::error_code &&)'
+                      C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+                      'std::error_code::error_code(std::error_code &&)': cannot convert argument 1 from 'overloaded-function' to 'std::error_code &&'
+                          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+                          Reason: cannot convert from 'overloaded-function' to 'std::error_code'
+                          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+                          Conversion requires a second user-defined-conversion operator or constructor
+                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\system_error(256,1):
+                  or       'std::error_code::error_code(const std::error_code &)'
+                      C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+                      'std::error_code::error_code(const std::error_code &)': cannot convert argument 1 from 'overloaded-function' to 'const std::error_code &'
+                          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+                          Reason: cannot convert from 'overloaded-function' to 'const std::error_code'
+                          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+                          Conversion requires a second user-defined-conversion operator or constructor
+                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\system_error(171,5):
+                  or       'std::error_code::error_code(int,const std::error_category &) noexcept'
+                      C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+                      'std::error_code::error_code': function does not take 1 arguments
+                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\system_error(169,5):
+                  or       'std::error_code::error_code(void) noexcept'
+                      C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+                      'std::error_code::error_code': function does not take 1 arguments
+                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\system_error(174,5):
+                  or       'std::error_code::error_code(_Enum) noexcept'
+                  C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+                  while trying to match the argument list '(overloaded-function)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(1011,9):
+      or       '_Ostr &&std::operator <<(_Ostr &&,const _Ty &)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          '_Ostr &&std::operator <<(_Ostr &&,const _Ty &)': could not deduce template argument for '_Ty'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(953,31):
+      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,unsigned char)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+          'initializing': cannot convert from 'overloaded-function' to 'unsigned char'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(947,31):
+      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const unsigned char *)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+          'initializing': cannot convert from 'overloaded-function' to 'const unsigned char *'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(942,31):
+      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,signed char)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+          'initializing': cannot convert from 'overloaded-function' to 'signed char'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(936,31):
+      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const signed char *)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+          'initializing': cannot convert from 'overloaded-function' to 'const signed char *'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(819,31):
+      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,char)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+          'initializing': cannot convert from 'overloaded-function' to 'char'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(774,31):
+      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const char *)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+          'initializing': cannot convert from 'overloaded-function' to 'const char *'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(738,32):
+      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,char)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+          'initializing': cannot convert from 'overloaded-function' to 'char'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(694,32):
+      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const char *)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+          'initializing': cannot convert from 'overloaded-function' to 'const char *'
+              C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,36):
+              Context does not allow for disambiguation of overloaded function
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3761,32):
+      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::unique_ptr<_Ty2,_Dx2> &)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::unique_ptr<_Ty2,_Dx2> &)': could not deduce template argument for '_Yty'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::unique_ptr<_Ty2,_Dx2> &)': could not deduce template argument for '_Dx'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1979,32):
+      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::shared_ptr<_Ty> &)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::shared_ptr<_Ty> &)': could not deduce template argument for '_Ty'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(3420,32):
+      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string<_Elem,_Traits,_Alloc> &)'
+          C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for '_Alloc'
+      C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOverloadingFunction\ProjectOverloadingFunction\main.cpp(35,7):
+      while trying to match the argument list '(std::basic_ostream<char,std::char_traits<char>>, overloaded-function)'
+  

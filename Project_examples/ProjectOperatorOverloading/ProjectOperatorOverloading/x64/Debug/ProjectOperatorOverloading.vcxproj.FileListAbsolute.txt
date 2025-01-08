@@ -1,0 +1,2 @@
+C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOperatorOverloading\x64\Debug\ProjectOperatorOverloading.exe.lastcodeanalysissucceeded
+C:\Users\bsmar\OneDrive\Desktop\Udemy\C++\Project_examples\ProjectOperatorOverloading\ProjectOperatorOverloading\x64\Debug\NativeCodeAnalysis.read.1.tlog
