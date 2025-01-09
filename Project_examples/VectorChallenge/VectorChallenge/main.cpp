@@ -37,12 +37,12 @@ int main()
 	cout << endl << "The elements in the vector_2d:" << endl
 		<< vector_2d.at(0).at(0) << " " << vector_2d.at(0).at(1) << endl
 		<< vector_2d.at(1).at(0) << " " << vector_2d.at(1).at(1) << endl;
-	/*for (const auto& row : vector_2d)
+	for (const auto& row : vector_2d)
 	{
 		for (int col : row)
 			cout << col << " ";
 		cout << endl;
-	}*/
+	}
 
 	// Change vector1.at(0)  to 1000
 	vector1.at(0) = 1000;
@@ -51,6 +51,14 @@ int main()
 	cout << endl << "The elements in the vector_2d:" << endl
 		<< vector_2d.at(0).at(0) << " " << vector_2d.at(0).at(1) << endl
 		<< vector_2d.at(1).at(0) << " " << vector_2d.at(1).at(1) << endl;
+
+	cout << "Vector_2d in a table format" << endl;
+	for (const auto & row : vector_2d)
+	{
+		for (int element : row)
+			cout << element << "\t";
+		cout << endl;
+	}
 
 	// Display the elements in vector1
 	cout << endl << "Elements in vector1:" << endl;

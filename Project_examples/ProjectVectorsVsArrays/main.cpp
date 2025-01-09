@@ -37,12 +37,15 @@ int main()
 	//vector <char> vowels(5);	// 5 initialized to zero
 	vector <char> vowels{ 'a', 'e', 'i', 'o', 'u' };
 
+	cout << vowels[0] << endl << vowels[4] << endl;
+
 	cout << endl << "The first element of vowels is " << vowels[0] << endl;
 	cout << "The last element of vowels is " << vowels[5 - 1] << endl;
 
 	//vector <int> test_scores(3);	// 3 elements all initialized to zero
 	//vector <int> test_scores(3, 100);	// 3 elements all initialized to 100
 
+	 // Accessing vector elements - array syntax
 	vector <int> test_scores{ 100, 98, 89 };
 
 	cout << endl << "Test scores using array syntax:" << endl;
@@ -50,6 +53,7 @@ int main()
 	cout << test_scores[1] << endl;
 	cout << test_scores[2] << endl;
 
+	// Accesing vector elements - vecotor syntax
 	cout << endl << "Test scores using vector syntax:" << endl;
 	cout << test_scores.at(0) << endl;
 	cout << test_scores.at(1) << endl;
@@ -111,6 +115,14 @@ int main()
 	cout << movie_ratings.at(0).at(2) << endl;
 	cout << movie_ratings.at(0).at(3) << endl;
 
+	cout << "Display the movie rating in a table format:" << endl;
+
+	for (const auto & row : movie_ratings)
+	{
+		for (const auto& element : row)
+			cout << element << "  ";
+		cout << endl;
+	}
 
 	return 0;
 }
