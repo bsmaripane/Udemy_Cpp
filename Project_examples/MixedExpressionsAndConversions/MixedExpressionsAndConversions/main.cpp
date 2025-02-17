@@ -27,14 +27,15 @@ int main() {
 		the average of the 3 integers.
 	***************************************************************************/
 
-	int number1, number2, number3;
+	int number1{}, number2{}, number3{};	// initialised to zero
 	int sum{ 0 }, total_numbers{ 3 };
 	double average_numbers{ 0.0 };
 
 	cout << "Enter 3 integers: " << endl;
 	cin >> number1 >> number2 >> number3;
-
+	 
 	sum = number1 + number2 + number3;
+	//average = (double)sum / total_numbers;	// Old-style of conversion
 	average_numbers = static_cast<double>(sum) / total_numbers;
 
 	cout << "The 3 integers entered:" << endl

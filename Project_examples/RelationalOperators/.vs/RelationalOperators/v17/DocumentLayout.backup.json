@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\bsmar\\OneDrive\\Desktop\\Udemy\\LearnC\u002B\u002B\\Project_examples\\RelationalOperators\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7284025A-9FBC-43D0-BF1B-D6507250C73C}|RelationalOperators\\RelationalOperators.vcxproj|C:\\Users\\bsmar\\OneDrive\\Desktop\\Udemy\\LearnC\u002B\u002B\\Project_examples\\RelationalOperators\\RelationalOperators\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7284025A-9FBC-43D0-BF1B-D6507250C73C}|RelationalOperators\\RelationalOperators.vcxproj|solutionrelative:RelationalOperators\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\bsmar\\OneDrive\\Desktop\\Udemy\\LearnC\u002B\u002B\\Project_examples\\RelationalOperators\\RelationalOperators\\main.cpp",
+              "RelativeDocumentMoniker": "RelationalOperators\\main.cpp",
+              "ToolTip": "C:\\Users\\bsmar\\OneDrive\\Desktop\\Udemy\\LearnC\u002B\u002B\\Project_examples\\RelationalOperators\\RelationalOperators\\main.cpp*",
+              "RelativeToolTip": "RelationalOperators\\main.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-17T11:46:03.628Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
