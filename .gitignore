@@ -1,32 +1,73 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
+# Visual Studio-specific files
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+*.ncb
+*.sdf
+*.opensdf
+*.suo
+*.user
+*.cache
+*.pdb
+*.idb
+*.ipch
+*.tlog/
+*.lastbuildstate
+*.manifest
 *.pch
 
-# Compiled Dynamic libraries
+# Build directories and binaries
+/x64/
+/Win32/
+/Debug/
+/Release/
+/build/
+/bin/
+/lib/
+/out/
+/obj/
+/ipch/
+
+# C++ compiled files
+*.exe
+*.dll
+*.obj
+*.o
+*.lib
+*.a
 *.so
 *.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
 *.out
 *.app
+
+# Debugging and profiling files
+*.dSYM/
+*.gcno
+*.gcda
+*.gcov
+
+# CMake and Makefile files
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
+# Logs and temporary files
+*.log
+*.tmp
+*.cache
+*.tlog/
+*.lastbuildstate
+
+# IDE and editor-specific files
+*.swp
+*.swo
+*.idea/
+*.vscode/
+*.code-workspace
+
+# OS-specific files
+*.DS_Store
+Thumbs.db
