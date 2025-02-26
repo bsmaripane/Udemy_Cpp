@@ -14,6 +14,7 @@ if package volume is greater than 500 cubic inches there is a 25% surcharge
 *************************************************************************/
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -32,6 +33,30 @@ int main() {
 	// All dimension must be 10 inches or less
 
 	int package_volume{};
+
+	cout << "Welcome to the package cost calculator" << endl;
+	cout << "Enter length, width, and height of the package seperated by spaces : ";
+	cin >> length >> width >> height;
+
+	if (length > max_dimension_length || width > max_dimension_length || height > max_dimension_length)
+		cout << "Sorry, package rejected - dimension exceeded" << endl;
+	else {
+		double package_cost{base_cost};
+
+		package_volume = length * width * height;
+
+		//package_cost = base_cost;
+
+		if (package_volume > tie2_threshold) {
+			package_cost += package_cost * tie2_surcharge;
+		}
+		else if (package_volume > tier1_threshold) {
+			package_cost += package_cost * tie1_surcharge;
+		}
+
+		cout << "The volume of your package is : " << package_volume << endl;
+		cout << "The package will cost R" << fixed << setprecision(2) << package_cost << " to ship" << endl;
+	}
 
 
 
