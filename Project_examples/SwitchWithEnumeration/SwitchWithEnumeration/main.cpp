@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
 
-	enum Direction {
+	enum Direction {  
 		left, right, up, down
 	};
 
@@ -31,4 +31,4 @@ int main() {
 	}
 
 	return 0;
-}
+} 
