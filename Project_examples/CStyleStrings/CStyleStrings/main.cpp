@@ -24,10 +24,18 @@ int main() {
 	cout << "Hello, " << first_name << " your first name has " << strlen(first_name) << " characters" << endl;
 	cout << "and your last name, " << last_name << " has " << strlen(last_name) << " characters" << endl;
 
-	strcpy(full_name, first_name);		// copy first_name to full_name
-	strcat(full_name, " ");				// concatenate full_name and a space
-	strcat(full_name, last_name);		// concatenate last_name to full_name
+	strcpy_s(full_name, first_name);		// copy first_name to full_name
+	strcat_s(full_name, " ");				// concatenate full_name and a space
+	strcat_s(full_name, last_name);		// concatenate last_name to full_name
+
+	cout << "Full naume: " << full_name << " has " << strlen(full_name) << " characters" << endl;
+
 	cout << "-------------------------------" << endl;
+	cout << "Enter your full name: ";
+	cin >> full_name;
+
+	cout << "Your full nume is " << full_name << " has " << strlen(full_name) << " characters" << endl;
+
 
 	return 0;
 }
