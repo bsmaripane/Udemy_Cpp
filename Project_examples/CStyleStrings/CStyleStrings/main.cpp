@@ -48,5 +48,38 @@ int main() {
 	cout << endl << "Your full name is " << full_name << " has " << strlen(full_name) << " characters" << endl;
 
 
+	/****************************************************************************************************************/
+
+	cout << "-------------------------------" << endl;
+	
+	strcpy_s(temp, full_name);
+
+	if (strcmp(temp, full_name) == 0)
+		cout << temp << " and " << full_name << " are the same" << endl;
+	else
+		cout << temp << " and " << full_name << " are different" << endl;
+
+	cout << "-------------------------------" << endl;
+
+	for (size_t i{}; i < strlen(full_name); ++i) {
+		if (isalpha(full_name[i]))
+			full_name[i] = toupper(full_name[i]);
+	}
+
+	cout << "You full name is " << full_name << endl;
+
+	cout << "-------------------------------" << endl;
+
+	//strcpy_s(temp, full_name);
+
+	if (strcmp(temp, full_name) == 0)
+		cout << temp << " and " << full_name << " are the same" << endl;
+	else
+		cout << temp << " and " << full_name << " are different" << endl;
+
+	cout << "-------------------------------" << endl;
+	cout << "Result of comparing " << temp << " and " << full_name << ": " << strcmp(temp, full_name) << endl;
+	cout << "Result of comparing " << full_name << " and " << temp << ": " << strcmp(full_name, temp) << endl;
+
 	return 0;
 }
