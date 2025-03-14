@@ -44,6 +44,26 @@ int main() {
 	
 	/***********************************************************************************************************************/
 	// Assignment
+	cout << endl << "Assignment" << endl << "-----------------------------------------------------------------" << endl;
+	name1 = "Watermelon";
+	cout << "name1 is now: " << name1 << endl;
+
+	name2 = name1;
+
+	cout << "name2 is now: " << name2 << endl;
+
+	name3 = "Maswi";
+	cout << "name3 is now: " << name3 << endl;
+
+	name3[2] = 'S';
+	cout << "name3 third letter changed to '" << name3[2] << "': " << name3 << endl;
+
+	name3.at(0) = 'B';
+	cout << "name3 first letter changed to '" << name3.at(0) << "': " << name3 << endl;
+
+	/***********************************************************************************************************************/
+	// Concatenation
+	cout << endl << "Concatenation" << endl << "-----------------------------------------------------------------" << endl;
 
 
 	return 0;
