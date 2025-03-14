@@ -28,7 +28,7 @@ int main() {
 	strcat_s(full_name, " ");				// concatenate full_name and a space
 	strcat_s(full_name, last_name);		// concatenate last_name to full_name
 
-	cout << "Full naume: " << full_name << " has " << strlen(full_name) << " characters" << endl;
+	cout << "Full name: " << full_name << " has " << strlen(full_name) << " characters" << endl;
 
 	//cout << "-------------------------------" << endl;
 	//cout << "Enter your full name: ";
@@ -41,10 +41,11 @@ int main() {
 
 	cout << "-------------------------------" << endl;
 
+	cin.ignore();	// To avoid input skipping
 	cout << "Please enter your full name: ";
-	cin.getline(full_name, 50);
+	std::cin.getline (full_name, 50);
 
-	cout << "Your full nume is " << full_name << " has " << strlen(full_name) << " characters" << endl;
+	cout << endl << "Your full name is " << full_name << " has " << strlen(full_name) << " characters" << endl;
 
 
 	return 0;
