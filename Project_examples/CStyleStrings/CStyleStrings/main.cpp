@@ -30,9 +30,19 @@ int main() {
 
 	cout << "Full naume: " << full_name << " has " << strlen(full_name) << " characters" << endl;
 
+	//cout << "-------------------------------" << endl;
+	//cout << "Enter your full name: ";
+	//cin >> full_name;
+
+	//cout << "Your full nume is " << full_name << " has " << strlen(full_name) << " characters" << endl;
+
+	/**************************************************************************************************************/
+	// read the full from a keyboard properly
+
 	cout << "-------------------------------" << endl;
-	cout << "Enter your full name: ";
-	cin >> full_name;
+
+	cout << "Please enter your full name: ";
+	cin.getline(full_name, 50);
 
 	cout << "Your full nume is " << full_name << " has " << strlen(full_name) << " characters" << endl;
 
