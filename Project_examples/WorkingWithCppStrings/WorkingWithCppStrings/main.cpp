@@ -12,7 +12,7 @@ int main() {
 	string name3{ "Kiwi" };
 	string name4{ "apple" };
 	string name5{ name1 };
-	string name6{ name1, 0, 3 };
+	string name6{ name1, 3, 5 };
 	string name7( 15,'X' );
 
 	cout << name0 << endl;		// No garbage
@@ -64,7 +64,30 @@ int main() {
 	/***********************************************************************************************************************/
 	// Concatenation
 	cout << endl << "Concatenation" << endl << "-----------------------------------------------------------------" << endl;
+	cout << name1 + " and " + name4 + " are fruits that are nice" << endl;
 
+
+	/**********************************************************************************************************************/
+	// Accessing the lettersing the string
+	cout << endl << "Concatenation" << endl << "-----------------------------------------------------------------" << endl;
+	for (char letter : name1)
+		cout << letter<< endl;
+
+	/**********************************************************************************************************************/
+	// Reading string from keyboard using cin and getline
+
+	string word;
+	string sentance;
+
+	cout << "Enter a word: ";
+	cin >> word;
+
+	cin.ignore();	// decared remaining data to avoid conflict between cin and getline
+	cout << "Enter a sentance of words of the day: ";
+	getline(cin, sentance);
+
+	cout << endl << "The word is: " << word << endl
+		<< "The word of the day is: " << sentance << endl;
 
 	return 0;
 }
