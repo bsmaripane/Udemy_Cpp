@@ -66,16 +66,31 @@ int main() {
 	cout << endl << "Concatenation" << endl << "-----------------------------------------------------------------" << endl;
 	cout << name1 + " and " + name4 + " are fruits that are nice" << endl;
 
+	name3 = name5 + " and " + name2 + " juice";
+	
+	cout << "name3 is now: " << name3 << endl;
+	
+	name3 = "nice " + name0 + " cold " + name5 + " juice";
+	cout << "name3 is now: " << name3 << endl;
 
 	/**********************************************************************************************************************/
-	// Accessing the lettersing the string
-	cout << endl << "Concatenation" << endl << "-----------------------------------------------------------------" << endl;
+	// Accessing the lettersing the sring - Looping
+	cout << endl << "Looping"<< endl << "-----------------------------------------------------------------" << endl;
 	for (char letter : name1)
 		cout << letter<< endl;
 
+	for (size_t i{}; i < name1.length(); ++i)
+		cout << name1.at(i);
+	cout << endl;
+
+	// Range-based for loop
+	for (char character : name1)
+		cout << character;
+	cout << endl;
+
 	/**********************************************************************************************************************/
 	// Reading string from keyboard using cin and getline
-
+	cout << endl << "Reading from keyboard" << endl << "-----------------------------------------------------------------" << endl;
 	string word;
 	string sentance;
 
@@ -88,6 +103,8 @@ int main() {
 
 	cout << endl << "The word is: " << word << endl
 		<< "The word of the day is: " << sentance << endl;
+
+	/*************************************************************************************************************************/
 
 	return 0;
 }
