@@ -121,6 +121,10 @@ int main() {
 
 	cout << name0 << endl;
 
+	name0.insert(14, "Program");
+
+	cout << name0 << endl;
+
 	name0.erase(0, 5);
 
 	cout << "name0 is now: " << name0 << endl;
