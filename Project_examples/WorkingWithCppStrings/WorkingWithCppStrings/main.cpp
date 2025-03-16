@@ -114,6 +114,34 @@ int main() {
 	cout << radio.substr(10, 6) << endl;
 
 	/*************************************************************************************************************************/
+	// Erase
+	cout << endl << "Erasing" << endl << "-----------------------------------------------------------------" << endl;
+
+	name0 = "This is a test";
+
+	cout << name0 << endl;
+
+	name0.erase(0, 5);
+
+	cout << "name0 is now: " << name0 << endl;
+
+	/*************************************************************************************************************************/
+	// find method
+	cout << endl << "Finding" << endl << "-----------------------------------------------------------------" << endl;
+
+	name0 = "The secret word is Lesego";
+
+	cout << "Enter a secret word: ";
+	cin >> word;
+
+	size_t position{ name0.find(word) };
+
+	if (position != string::npos)
+		cout << "Found " << word << " at position " << position << endl;
+	else
+		cout << "Sorry, " << word << " not found" << endl;
+
+	cout << endl;
 
 	return 0;
 }
