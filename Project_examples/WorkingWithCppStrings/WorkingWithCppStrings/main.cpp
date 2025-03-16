@@ -5,6 +5,45 @@
 
 using namespace std;
 
+// Using C++ Strings - Exercise 1
+void cpp_strings1() {
+
+	string unformatted_full_name{ "StephenHawking" };
+
+	//----DO NOT MODIFY THE CODE ABOVE THIS LINE----
+	//----WRITE YOUR CODE BELOW THIS LINE----
+
+	string first_name{ unformatted_full_name.substr(0,7) };
+	string last_name{ unformatted_full_name.substr(7,7) };
+	string formatted_full_name = first_name + last_name;
+	formatted_full_name.insert(7, " ");
+
+	//----WRITE YOUR CODE ABOVE THIS LINE----
+	//----DO NOT MODIFY THE CODE BELOW THIS LINE----
+
+	cout << formatted_full_name;
+}
+
+// Using C++ Strings - Exercise 2
+void cpp_strings2() {
+
+	string journal_entry_1{ "Isaac Newton" };
+	string journal_entry_2{ "Leibniz" };
+
+	//----DO NOT MODIFY THE CODE ABOVE THIS LINE----
+	//----WRITE YOUR CODE BELOW THIS LINE----
+
+	journal_entry_1.erase(0, 6);
+
+	if (journal_entry_1.at(0) > journal_entry_2.at(0))
+		swap(journal_entry_1, journal_entry_2);
+
+	//----WRITE YOUR CODE ABOVE THIS LINE----
+	//----DO NOT MODIFY THE CODE BELOW THIS LINE----
+
+	cout << journal_entry_1 << "\n" << journal_entry_2;
+}
+
 int main() {
 	string name0;
 	string name1{ "Apple" };
@@ -146,6 +185,14 @@ int main() {
 		cout << "Sorry, " << word << " not found" << endl;
 
 	cout << endl;
+
+	/************************************************************************************************************************/
+	// test onlince exercises
+	cout << endl << "Using C++ Strings - Exercise 1" << endl;
+	cpp_strings1();
+
+	cout << endl << "Using C++ Strings - Exercise 2" << endl;
+	cpp_strings2();
 
 	return 0;
 }
