@@ -28,13 +28,13 @@ int main() {
 		{
 			
 			for (size_t space{ position - row }; space > 0; --space)
-				cout << "*";
+				cout << " ";
 			
 			for (size_t index{}; index <= row; index++)
 				cout << characters.at(index);
 			
-			for (size_t index{row}; index >= 0; index--)
-				cout << characters.at(index);
+			for (size_t index = row; index > 0; --index)
+				cout << characters.at(index - 1);
 
 			cout << endl;
 		}
