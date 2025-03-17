@@ -14,11 +14,11 @@ using namespace std;
 
 int main() {
 	// variable declaration
-	string characters{ "Hello" };
+	string characters;
 
 	// Prompt the user to enter a string
 	cout << "Enter characters to use for Letter Pyramid: ";
-	//getline(cin, characters);
+	getline(cin, characters);
 
 	// Draw a Letter Pyramid
 	if (!characters.empty()) {
