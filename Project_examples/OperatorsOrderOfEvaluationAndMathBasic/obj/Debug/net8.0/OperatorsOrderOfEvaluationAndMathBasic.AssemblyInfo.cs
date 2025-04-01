@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OperatorsOrderOfEvaluationAndMathBasic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d819bc4676c4cd6e5fd44421892f84b8073083b3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77a490ca6a5233deab755de84db0fe573ddec600")]
 [assembly: System.Reflection.AssemblyProductAttribute("OperatorsOrderOfEvaluationAndMathBasic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OperatorsOrderOfEvaluationAndMathBasic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -12,10 +12,10 @@ namespace OperatorsOrderOfEvaluationAndMathBasic
 
             // Concatination
             Console.WriteLine("Age is " + number1);
-            Console.WriteLine("Addition number1 + number2 = " + number1 + number2);
+            Console.WriteLine("Addition number1 + number2 = " + (number1 + number2));
 
             // Order of Evaluation
-            Console.WriteLine("Subtraction number1 - number2 = " + number1 - number2);
+            Console.WriteLine("Subtraction number1 - number2 = " + (number1 - number2));
             Console.WriteLine("Multiplication number1 * number2 = " + number1 * number2);
             Console.WriteLine("Division number1 / number2 = " + number1 / number2);
 
