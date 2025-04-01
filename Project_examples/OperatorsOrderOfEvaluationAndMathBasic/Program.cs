@@ -22,6 +22,11 @@ namespace OperatorsOrderOfEvaluationAndMathBasic
             Console.WriteLine($"Modulation number1 % number2 {number1 % number2}");
 
             // basic math
+            Console.WriteLine($"Unordered calcualation: {5 / 6 - 3 + 2 * 4 - 8 * 3}");
+            Console.WriteLine($"Ordered calcualtion: {(5 / 6 - 3) + (2 * 4 - 8 * 3)}");
+            Console.WriteLine($"Order of evaluation: {(5 / 6 - 3) + ((2 * 4) - 8 * 3)}");
+            Console.WriteLine($"Order of evaluation: {(5 / (6 - 3)) + ((2 * 4) - 8 * 3)}");
+            Console.WriteLine($"Order of evaluation: {(5 / 6 - 3) + (2 * (4 - 8) * 3)}");
 
             // Wait for the key press before closing
             Console.ReadKey();
