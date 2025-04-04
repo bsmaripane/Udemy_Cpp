@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Executable>C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\SampleGoogleTest\x64\Debug\SampleGoogleTest.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="FactorialTest.HandlesZeroInput" Duration="1" />
+    <TestDuration Test="FactorialTest.HandlesPositiveInput" Duration="1" />
+    <TestDuration Test="FactorialTest.HandlesNegativeInput" Duration="1" />
+    <TestDuration Test="FactorialTest.HandlesLargeInput" Duration="1" />
+    <TestDuration Test="FactorialTest.HandlesEdgeCases" Duration="1" />
+  </TestDurations>
+</GtaTestDurations>

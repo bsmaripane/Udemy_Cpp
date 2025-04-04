@@ -1,0 +1,3 @@
+C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\SampleGoogleTest\x64\Debug\gtest.pdb
+C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\SampleGoogleTest\x64\Debug\gtest_main.pdb
+C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\SampleGoogleTest\SampleGoogleTest\x64\Debug\SampleGo.168F7820.Up2Date
