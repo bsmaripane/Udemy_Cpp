@@ -19,7 +19,7 @@ int main()
     cout << "The sine of " << number << " is " << sin(number) << endl;
     cout << "The cosine of " << number << " is " << cos(number) << endl;
 
-    cout << "The call of " << number << " is " << cell(number) << endl;
+    cout << "The cail of " << number << " is " << ceil(number) << endl;
 
     return 0;
 }
