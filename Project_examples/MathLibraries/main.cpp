@@ -30,6 +30,10 @@ int main()
 
     cout << number << " raised to the " << power << " power is " << pow(number, power) << endl;
    
+    // Wait for key press before closing
+    cin.ignore();
+    cin.get();
+
     return 0;
 }
 
