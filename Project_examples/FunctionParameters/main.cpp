@@ -49,7 +49,12 @@ void pass_by_value2(std::string strValue)
 
 void pass_by_value3(std::vector<std::string> strVector)
 {
-	for (auto value : strVector)
-		std::cout << value << " ";
+	strVector.clear();	// delete all vector elements
+}
+
+void print_vector(std::vector<std::string> strVector)
+{
+	for (auto element : strVector)
+		std::cout << element << " ";
 	std::cout << std::endl;
 }
