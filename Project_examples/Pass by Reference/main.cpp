@@ -51,5 +51,12 @@ int main()
 	pass_by_ref2(name);
 	cout << "name after calling pass_by_ref2: " << name << endl;
 
+	vector<string> stooges{ "Belmy", "Tracy", "Marlene", "Leander", "Veronica" };
+	cout << "\nstooges before calling pass_by_ref3: ";
+	print_vector(stooges);
+	pass_by_ref3(stooges);
+	cout << "stooges after calling pass_by_ref1: ";
+	print_vector(stooges);
+
 	return 0;
 }
