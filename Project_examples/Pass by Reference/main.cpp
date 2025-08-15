@@ -45,5 +45,11 @@ int main()
 	pass_by_ref1(another_num);
 	cout << "num after calling pass_by_ref1: " << another_num << endl;
 
+	string name{ "Belmy" };
+
+	cout << "name before calling pass_by_ref2: " << name << endl;
+	pass_by_ref2(name);
+	cout << "num after calling pass_by_ref1: " << name << endl;
+
 	return 0;
 }
