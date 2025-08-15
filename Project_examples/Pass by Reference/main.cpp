@@ -49,7 +49,7 @@ int main()
 
 	cout << "name before calling pass_by_ref2: " << name << endl;
 	pass_by_ref2(name);
-	cout << "num after calling pass_by_ref1: " << name << endl;
+	cout << "name after calling pass_by_ref2: " << name << endl;
 
 	return 0;
 }
