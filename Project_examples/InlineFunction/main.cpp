@@ -13,7 +13,11 @@ int main()
 {
 	int result{ 0 };
 
+	cout << "Result: " << result << endl;
+
 	result = add_numbers(100, 200);		// call
+
+	cout << "Result: " << result << endl;
 
 	return 0;
 }
