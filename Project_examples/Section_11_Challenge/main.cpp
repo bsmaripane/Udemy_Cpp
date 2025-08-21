@@ -21,6 +21,7 @@
 #include <iostream>
 #include <vector>
 #include <cctype>
+#include <string>
 
 using namespace std;
 
@@ -30,6 +31,7 @@ char readSelection();
 void printNumbers(vector<int> vecList);
 void addNumber(vector<int>& vecList);
 bool isNumberFound(vector<int> vecList, int num);
+double calcMean(vector<int>& vecList);
 void selected_choice(vector<int>& list, char selection);
 
 int main() {
@@ -80,19 +82,7 @@ void selected_choice(vector<int>& list, char selection) {
 		addNumber(list);
 		break;
 	case 'M':
-		if (list.empty())
-			cout << "Unable to calculate the mean - no data" << endl;
-		else {
-			double average{};
-			int sum{};
-
-			for (auto number : list)
-				sum += number;
-
-			average = static_cast<double>(sum) / list.size();
-
-			cout << "The average is " << average << endl;
-		}
+		cout << (list.empty()? "Unable to calculate the mean - no data" : "The average is " + to_string(calcMean(list))) << endl;
 		break;
 	case 'S':
 		if (list.empty())
@@ -214,4 +204,14 @@ bool isNumberFound(vector<int> vecList, int num)
 		if (number == num)
 			return true;
 	return false;
+}
+
+double calcMean(vector<int>& vecList)
+{
+	int sum{};
+
+	for (auto number : vecList)
+		sum += number;
+
+	return (static_cast<double>(sum) / vecList.size());
 }
