@@ -28,13 +28,13 @@ using namespace std;
 // Function Prototype
 void displayMenu();
 char readSelection();
-void printNumbers(vector<int> vecList);
+void printNumbers(const vector<int>& vecList);
 void addNumber(vector<int>& vecList);
-bool isNumberFound(vector<int> vecList, int num);
+bool isNumberFound(const vector<int>& vecList, int num);
 double calcMean(vector<int>& vecList);
-int minimumNumber(vector<int> vecList);
-int maximumNumber(vector<int> vecList);
-string findNumber(vector<int> vecList);
+int minimumNumber(const vector<int>& vecList);
+int maximumNumber(const vector<int>& vecList);
+string findNumber(const vector<int>& vecList);
 string replaceNumber(vector<int>& vecList);
 void selected_choice(vector<int>& list, char selection);
 
@@ -59,8 +59,8 @@ void displayMenu()
 		<< "P - Print numbers" << endl
 		<< "A - Add a number no duplicate" << endl
 		<< "M - Display mean of the numbers" << endl
-		<< "S - Display the smallest numbe" << endl
-		<< "L - Display the largeest number" << endl
+		<< "S - Display the smallest number" << endl
+		<< "L - Display the largest number" << endl
 		<< "F - Find a number in a list" << endl
 		<< "C - Clear the list" << endl
 		<< "R - Replace the number" << endl
@@ -106,20 +106,21 @@ void selected_choice(vector<int>& list, char selection) {
 		break;
 	case 'Q':
 		cout << "Goodbye" << endl;
+		break;
 	default:
 		cout << "Unknown selection, please try again!" << endl;
 		break;
 	}
 }
 
-void printNumbers(vector<int> vecList)
+void printNumbers(const vector<int>& vecList)
 {
 	if (vecList.empty())
 		cout << "[] - the list is empty" << endl;
 	else
 	{
 		cout << "[";
-		for (auto number : vecList)
+		for (const auto& number : vecList)
 			cout << number << " ";
 		cout << "]" << endl;
 	}
@@ -140,9 +141,9 @@ void addNumber(vector<int>& vecList)
 	}
 }
 
-bool isNumberFound(vector<int> vecList, int num)
+bool isNumberFound(const vector<int>& vecList, int num)
 {
-	for (auto number : vecList)
+	for (const auto& number : vecList)
 		if (number == num)
 			return true;
 	return false;
@@ -152,34 +153,34 @@ double calcMean(vector<int>& vecList)
 {
 	int sum{};
 
-	for (auto number : vecList)
+	for (const auto& number : vecList)
 		sum += number;
 
 	return (static_cast<double>(sum) / vecList.size());
 }
 
-int minimumNumber(vector<int> vecList)
+int minimumNumber(const vector<int>& vecList)
 {
 	int minNum{ vecList.at(0) };
 
-	for (auto number : vecList)
+	for (const auto& number : vecList)
 		if (number < minNum)
 			minNum = number;
 	return minNum;
 }
 
-int maximumNumber(vector<int> vecList)
+int maximumNumber(const vector<int>& vecList)
 {
 	int maxNum{ vecList.at(0) };
 
-	for (auto number : vecList)
+	for (const auto& number : vecList)
 		if (number > maxNum)
 			maxNum = number;
 
 	return maxNum;
 }
 
-string findNumber(vector<int> vecList)
+string findNumber(const vector<int>& vecList)
 {
 	int number;
 
