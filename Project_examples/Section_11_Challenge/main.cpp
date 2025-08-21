@@ -34,6 +34,7 @@ bool isNumberFound(vector<int> vecList, int num);
 double calcMean(vector<int>& vecList);
 int minimumNumber(vector<int> vecList);
 int maximumNumber(vector<int> vecList);
+string findNumber(vector<int> vecList);
 void selected_choice(vector<int>& list, char selection);
 
 int main() {
@@ -93,21 +94,7 @@ void selected_choice(vector<int>& list, char selection) {
 		cout << (list.empty()? "Unable to determine the largest number - list is empty" : "The largest is " + to_string(maximumNumber(list))) << endl;
 		break;
 	case 'F':
-		if (list.empty())
-			cout << "Unable to find any number - list is empty" << endl;
-		else {
-			int number;
-
-			cout << "Enter number to find: ";
-			cin >> number;
-
-			for (size_t i{}; i < list.size(); ++i) {
-				if (number == list.at(i))
-					cout << number << " is at position in the list " << i + 1 << endl;
-				else
-					cout << number << " is not found in the list." << endl;
-			}
-		}
+		cout << (list.empty() ? "Unable to find any number - list is empty" : findNumber(list)) << endl;
 		break;
 	case 'C':
 		list.clear();
@@ -215,4 +202,21 @@ int maximumNumber(vector<int> vecList)
 			maxNum = number;
 
 	return maxNum;
+}
+
+string findNumber(vector<int> vecList)
+{
+	int number;
+
+	cout << "Enter number to find: ";
+	cin >> number;
+
+	if (isNumberFound(vecList, number))
+	{
+		for (size_t i{}; i < vecList.size(); ++i)
+			if (number == vecList.at(i))
+				return to_string(number) + " is at position in the list " + to_string(i + 1);
+	}
+	else
+		return to_string(number) + " is not found in the list.";
 }
