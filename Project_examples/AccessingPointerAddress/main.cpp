@@ -12,7 +12,7 @@ int main()
 	cout << "sizeof of num is: " << sizeof(num) << " bytes" << endl;
 	cout << "Address of num is: " << &num << endl;
 
-	int* p{-0};
+	int* p;
 
 	cout << "Value of p is: " << p << endl;	// garbage
 	cout << "Address p is: " << &p << endl;
