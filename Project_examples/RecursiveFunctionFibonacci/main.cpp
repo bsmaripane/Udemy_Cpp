@@ -14,6 +14,10 @@ unsigned long long fibonacci(unsigned long long number)
 int main()
 {
 	cout << fibonacci(8) << endl;
+	cout << fibonacci(20) << endl;
+	cout << fibonacci(35) << endl;
+	cout << fibonacci(45) << endl;
+	cout << fibonacci(85) << endl;
 
 	return 0;
 }
