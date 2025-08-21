@@ -86,13 +86,13 @@ void selected_choice(vector<int>& list, char selection) {
 		addNumber(list);
 		break;
 	case 'M':
-		cout << (list.empty()? "Unable to calculate the mean - no data" : "The average is " + to_string(calcMean(list))) << endl;
+		cout << (list.empty()? "Unable to calculate the mean - no data" : "The average is [ " + to_string(calcMean(list))) + " ]" << endl;
 		break;
 	case 'S':
-		cout << (list.empty()? "Unable to determine the smallest number - list is empty" : "The smallest is " + to_string(minimumNumber(list))) << endl;
+		cout << (list.empty()? "Unable to determine the smallest number - list is empty" : "The smallest is [ " + to_string(minimumNumber(list))) + " ]" << endl;
 		break;
 	case 'L':
-		cout << (list.empty()? "Unable to determine the largest number - list is empty" : "The largest is " + to_string(maximumNumber(list))) << endl;
+		cout << (list.empty()? "Unable to determine the largest number - list is empty" : "The largest is [ " + to_string(maximumNumber(list))) + " ]" << endl;
 		break;
 	case 'F':
 		cout << (list.empty() ? "Unable to find any number - list is empty" : findNumber(list)) << endl;
@@ -137,7 +137,7 @@ void addNumber(vector<int>& vecList)
 		cout << number << " is already in the list" << endl;
 	else {
 		vecList.push_back(number);
-		cout << number << " added" << endl;
+		cout << "[ " << number << " ] is added" << endl;
 	}
 }
 
@@ -189,9 +189,9 @@ string findNumber(const vector<int>& vecList)
 
 	for (size_t i{}; i < vecList.size(); ++i)
 		if (number == vecList.at(i))
-			return to_string(number) + " is at position " + to_string(i + 1) + " in the list ";
+			return "[ " + to_string(number) + " ] is at position [ " + to_string(i + 1) + " ] in the list ";
 	
-	return to_string(number) + " is not found in the list.";
+	return "[ " + to_string(number) + " ] is not found in the list.";
 }
 
 string replaceNumber(vector<int>& vecList)
@@ -208,9 +208,9 @@ string replaceNumber(vector<int>& vecList)
 			cin >> new_number;
 			vecList.at(i) = new_number;
 
-			return to_string(number) + " is replaced by " + to_string(new_number);
+			return "[ " + to_string(number) + " ] is replaced by [ " + to_string(new_number) + " ]";
 		}
 	}
 
-	return to_string(number) + " is not found";
+	return "[ " + to_string(number) + " ] is not found";
 }
