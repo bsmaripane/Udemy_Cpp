@@ -32,6 +32,8 @@ void printNumbers(vector<int> vecList);
 void addNumber(vector<int>& vecList);
 bool isNumberFound(vector<int> vecList, int num);
 double calcMean(vector<int>& vecList);
+int minimumNumber(vector<int> vecList);
+int maximumNumber(vector<int> vecList);
 void selected_choice(vector<int>& list, char selection);
 
 int main() {
@@ -85,32 +87,10 @@ void selected_choice(vector<int>& list, char selection) {
 		cout << (list.empty()? "Unable to calculate the mean - no data" : "The average is " + to_string(calcMean(list))) << endl;
 		break;
 	case 'S':
-		if (list.empty())
-			cout << "Unable to determine the smallest number - list is empty" << endl;
-		else {
-			int smallest{ list.at(0) };
-
-			for (auto number : list) {
-				if (number < smallest)
-					smallest = number;
-			}
-
-			cout << "The smallest is " << smallest << endl;
-		}
+		cout << (list.empty()? "Unable to determine the smallest number - list is empty" : "The smallest is " + to_string(minimumNumber(list))) << endl;
 		break;
 	case 'L':
-		if (list.empty())
-			cout << "Unable to determine the largest number - list is empty" << endl;
-		else {
-			int largest{ list.at(0) };
-
-			for (auto number : list) {
-				if (number > largest)
-					largest = number;
-			}
-
-			cout << "The largest is " << largest << endl;
-		}
+		cout << (list.empty()? "Unable to determine the largest number - list is empty" : "The largest is " + to_string(maximumNumber(list))) << endl;
 		break;
 	case 'F':
 		if (list.empty())
@@ -214,4 +194,25 @@ double calcMean(vector<int>& vecList)
 		sum += number;
 
 	return (static_cast<double>(sum) / vecList.size());
+}
+
+int minimumNumber(vector<int> vecList)
+{
+	int minNum{ vecList.at(0) };
+
+	for (auto number : vecList)
+		if (number < minNum)
+			minNum = number;
+	return minNum;
+}
+
+int maximumNumber(vector<int> vecList)
+{
+	int maxNum{ vecList.at(0) };
+
+	for (auto number : vecList)
+		if (number > maxNum)
+			maxNum = number;
+
+	return maxNum;
 }
