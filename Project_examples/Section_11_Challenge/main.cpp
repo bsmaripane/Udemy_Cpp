@@ -27,7 +27,9 @@ using namespace std;
 // Function Prototype
 void displayMenu();
 char readSelection();
-void printNumbers(vector<int>& vecList);
+void printNumbers(vector<int> vecList);
+void addNumber(vector<int>& vecList);
+bool isNumberFound(vector<int> vecList, int num);
 void selected_choice(vector<int>& list, char selection);
 
 int main() {
@@ -75,25 +77,8 @@ void selected_choice(vector<int>& list, char selection) {
 		printNumbers(list);
 		break;
 	case 'A':
-	{
-		int num{};
-		bool isFound{ false };
-
-		cout << "Enter integer value to add to the list: ";
-		cin >> num;
-
-		for (auto number : list)
-			if (number == num)
-				isFound = true;
-
-		if (isFound)
-			cout << num << " is already in the list" << endl;
-		else {
-			list.push_back(num);
-			cout << num << " added" << endl;
-		}
+		addNumber(list);
 		break;
-	}
 	case 'M':
 		if (list.empty())
 			cout << "Unable to calculate the mean - no data" << endl;
@@ -195,7 +180,7 @@ void selected_choice(vector<int>& list, char selection) {
 	}
 }
 
-void printNumbers(vector<int>& vecList)
+void printNumbers(vector<int> vecList)
 {
 	if (vecList.empty())
 		cout << "[] - the list is empty" << endl;
@@ -206,4 +191,27 @@ void printNumbers(vector<int>& vecList)
 			cout << number << " ";
 		cout << "]" << endl;
 	}
+}
+
+void addNumber(vector<int>& vecList)
+{
+	int number{};
+
+	cout << "Enter integer value to add to the list: ";
+	cin >> number;
+	
+	if (isNumberFound(vecList, number))
+		cout << number << " is already in the list" << endl;
+	else {
+		vecList.push_back(number);
+		cout << number << " added" << endl;
+	}
+}
+
+bool isNumberFound(vector<int> vecList, int num)
+{
+	for (auto number : vecList)
+		if (number == num)
+			return true;
+	return false;
 }
