@@ -20,9 +20,14 @@
 
 #include <iostream>
 #include <vector>
+#include <cctype>
 
 using namespace std;
 
+// Function Prototype
+void displayMenu();
+char readSelection();
+void printNumbers(vector<int>& vecList);
 void selected_choice(vector<int>& list, char selection);
 
 int main() {
@@ -30,42 +35,47 @@ int main() {
 	char choice{};
 
 	do {
-		cout << endl << "Select an option from the below menu:" << endl
-			<< "P - Print numbers" << endl
-			<< "A - Add a number no duplicate" << endl
-			<< "M - Display mean of the numbers" << endl
-			<< "S - Display the smallest numbe" << endl
-			<< "L - Display the largeest number" << endl
-			<< "F - Find a number in a list" << endl
-			<< "C - Clear the list" << endl
-			<< "R - Replace the number" << endl
-			<< "Q - Quit" << endl << endl
-			<< "Enter your choice : ";
-		cin >> choice;
-		cout << endl;
-
+		displayMenu();
+		choice = readSelection();
 		selected_choice(numbers, choice);
 
-	} while (choice != 'Q' && choice != 'q');
+	} while (choice != 'Q');
 
 	return 0;
+}
+
+// Function Definitions
+void displayMenu()
+{
+	cout << endl << "Select an option from the below menu:" << endl
+		<< "P - Print numbers" << endl
+		<< "A - Add a number no duplicate" << endl
+		<< "M - Display mean of the numbers" << endl
+		<< "S - Display the smallest numbe" << endl
+		<< "L - Display the largeest number" << endl
+		<< "F - Find a number in a list" << endl
+		<< "C - Clear the list" << endl
+		<< "R - Replace the number" << endl
+		<< "Q - Quit" << endl << endl
+		<< "Enter your choice : ";
+}
+
+char readSelection()
+{
+	char selection{ 'Q' };
+	cin >> selection;
+	cout << endl;
+
+	return toupper(selection);
 }
 
 void selected_choice(vector<int>& list, char selection) {
 	switch (selection) {
 	case 'P':
-	case 'p':
-		if (list.empty())
-			cout << "[] - the list is empty" << endl;
-		else {
-			cout << "[";
-			for (auto number : list)
-				cout << number << " ";
-			cout << "]" << endl;
-		}
+		printNumbers(list);
 		break;
 	case 'A':
-	case 'a': {
+	{
 		int num{};
 		bool isFound{ false };
 
@@ -85,7 +95,6 @@ void selected_choice(vector<int>& list, char selection) {
 		break;
 	}
 	case 'M':
-	case 'm':
 		if (list.empty())
 			cout << "Unable to calculate the mean - no data" << endl;
 		else {
@@ -101,7 +110,6 @@ void selected_choice(vector<int>& list, char selection) {
 		}
 		break;
 	case 'S':
-	case 's':
 		if (list.empty())
 			cout << "Unable to determine the smallest number - list is empty" << endl;
 		else {
@@ -116,7 +124,6 @@ void selected_choice(vector<int>& list, char selection) {
 		}
 		break;
 	case 'L':
-	case 'l':
 		if (list.empty())
 			cout << "Unable to determine the largest number - list is empty" << endl;
 		else {
@@ -131,7 +138,6 @@ void selected_choice(vector<int>& list, char selection) {
 		}
 		break;
 	case 'F':
-	case 'f':
 		if (list.empty())
 			cout << "Unable to find any number - list is empty" << endl;
 		else {
@@ -149,12 +155,11 @@ void selected_choice(vector<int>& list, char selection) {
 		}
 		break;
 	case 'C':
-	case 'c':
 		list.clear();
 		cout << "The list is cleared" << endl;
 		break;
 	case 'R':
-	case 'r': {
+	{
 		if (list.empty())
 			cout << "Unable to replace any value - list is empty" << endl;
 		else {
@@ -182,11 +187,23 @@ void selected_choice(vector<int>& list, char selection) {
 		break;
 	}
 	case 'Q':
-	case 'q':
 		cout << "Goodbye" << endl;
 		break;
 	default:
 		cout << "Unknown selection, please try again!" << endl;
 		break;
+	}
+}
+
+void printNumbers(vector<int>& vecList)
+{
+	if (vecList.empty())
+		cout << "[] - the list is empty" << endl;
+	else
+	{
+		cout << "[";
+		for (auto number : vecList)
+			cout << number << " ";
+		cout << "]" << endl;
 	}
 }
