@@ -211,12 +211,9 @@ string findNumber(vector<int> vecList)
 	cout << "Enter number to find: ";
 	cin >> number;
 
-	if (isNumberFound(vecList, number))
-	{
-		for (size_t i{}; i < vecList.size(); ++i)
-			if (number == vecList.at(i))
-				return to_string(number) + " is at position in the list " + to_string(i + 1);
-	}
-	else
-		return to_string(number) + " is not found in the list.";
+	for (size_t i{}; i < vecList.size(); ++i)
+		if (number == vecList.at(i))
+			return to_string(number) + " is at position " + to_string(i + 1) + " in the list ";
+	
+	return to_string(number) + " is not found in the list.";
 }
