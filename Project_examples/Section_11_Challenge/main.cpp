@@ -35,6 +35,7 @@ double calcMean(vector<int>& vecList);
 int minimumNumber(vector<int> vecList);
 int maximumNumber(vector<int> vecList);
 string findNumber(vector<int> vecList);
+string replaceNumber(vector<int>& vecList);
 void selected_choice(vector<int>& list, char selection);
 
 int main() {
@@ -101,36 +102,10 @@ void selected_choice(vector<int>& list, char selection) {
 		cout << "The list is cleared" << endl;
 		break;
 	case 'R':
-	{
-		if (list.empty())
-			cout << "Unable to replace any value - list is empty" << endl;
-		else {
-			int number{};
-			int new_number{};
-			bool isFound{ false };
-
-			cout << "Enter integer value to replace: ";
-			cin >> number;
-
-			for (size_t i{}; i < list.size(); ++i) {
-				if (list.at(i) == number) {
-					cout << "Enter a new integer value: ";
-					cin >> new_number;
-					isFound = true;
-				}
-
-			}
-
-			if (isFound)
-				cout << number << " is replaced by " << new_number << endl;
-			else
-				cout << number << " is not found" << endl;
-		}
+		cout << (list.empty() ? "Unable to replace any value - list is empty" : (replaceNumber(list))) << endl;
 		break;
-	}
 	case 'Q':
 		cout << "Goodbye" << endl;
-		break;
 	default:
 		cout << "Unknown selection, please try again!" << endl;
 		break;
@@ -216,4 +191,25 @@ string findNumber(vector<int> vecList)
 			return to_string(number) + " is at position " + to_string(i + 1) + " in the list ";
 	
 	return to_string(number) + " is not found in the list.";
+}
+
+string replaceNumber(vector<int>& vecList)
+{
+	int number{};
+	int new_number{};
+
+	cout << "Enter integer value to replace: ";
+	cin >> number;
+
+	for (size_t i{}; i < vecList.size(); ++i) {
+		if (vecList.at(i) == number) {
+			cout << "Enter a new integer value: ";
+			cin >> new_number;
+			vecList.at(i) = new_number;
+
+			return to_string(number) + " is replaced by " + to_string(new_number);
+		}
+	}
+
+	return to_string(number) + " is not found";
 }
