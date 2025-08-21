@@ -1,6 +1,8 @@
 // Section 12 Accessing Pointer Address
 
 #include <iostream>
+#include <vector>
+#include <string>
 
 using namespace std;
 
