@@ -43,14 +43,18 @@ int main()
     cout << "\n___________________________________________________\n";
 
     // Vector pointer
-    vector<string> stooge {"Belmy", "Felicia", "Semape", "Maxine"};
+    vector<string> lovers {"Belmy", "Felicia", "Semape", "Maxine"};
     vector<string> *vector_ptr{nullptr};
 
-    vector_ptr = &stooge;
+    vector_ptr = &lovers;
 
-    cout << "First stooge: " << (*vector_ptr).at(0) << endl;
+    cout << "Firstlover: " << (*vector_ptr).at(0) << endl;
 
-    cout << 
+    cout << "Lovers: ";
+    for (auto name: *vector_ptr)
+        cout << name << " ";
+    
+    cout << endl;
 
     return 0;
 }
