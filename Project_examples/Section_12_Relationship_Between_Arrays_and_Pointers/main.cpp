@@ -1,0 +1,20 @@
+// Section 12 The relationship between Arrays and Pointers
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int scores[]{ 100, 95, 89 };
+
+	cout << "scores: " << scores << endl;
+	cout << "*scores: " << *scores << endl;
+
+	int* score_ptr{ scores };
+
+	cout << "score_ptr: " << score_ptr << endl;
+	cout << "*score_ptr: " << *score_ptr << endl;
+
+	return 0;
+}
