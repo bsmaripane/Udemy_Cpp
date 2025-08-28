@@ -15,7 +15,12 @@ int main()
 		score_ptr++;
 	}
 
+	cout << "\n--------------------------------------------\n";
+	score_ptr = scores;
 
+	while (*score_ptr != -1) cout << *score_ptr++ << endl;
+
+	cout << "\n--------------------------------------------\n";
 
 
 	return 0;
