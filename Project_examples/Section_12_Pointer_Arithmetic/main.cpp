@@ -50,7 +50,7 @@ int main()
 	char_ptr1 = &name[0];
 	char_ptr2 = &name[4];
 
-	cout << "In the string " << name << ", " << *char_ptr1 << " is " << (char_ptr2 - char_ptr1) << " characters aways from " << *char_ptr1 << endl;
+	cout << "In the string " << name << ", " << *char_ptr2 << " is " << (char_ptr2 - char_ptr1) << " characters aways from " << *char_ptr1 << endl;
 
 
 	return 0;
