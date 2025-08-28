@@ -22,5 +22,11 @@ int main()
 	cout << "score_ptr[1]: " << score_ptr[1] << endl;
 	cout << "score_ptr[2]: " << score_ptr[2] << endl;
 
+	// Display array elements memory using the pointer
+	cout << "1st element score_ptr: " << score_ptr << endl;
+	cout << "2nd element (score_ptr + 1): " << (score_ptr + 1) << endl;
+	cout << "3rd element (score_ptr + 2): " << (score_ptr + 2) << endl;
+
+
 	return 0;
 }
