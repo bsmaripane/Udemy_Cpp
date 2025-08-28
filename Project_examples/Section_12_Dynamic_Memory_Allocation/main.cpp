@@ -34,6 +34,8 @@ int main()
 
 	cout << "Allocated memory of temp_ptr: " << temp_ptr << endl;
 
+	delete[] temp_ptr;		// frees allocated double storage
+
 	/******************************************************************/
 	// using new[] to allocate storage for an array
 
