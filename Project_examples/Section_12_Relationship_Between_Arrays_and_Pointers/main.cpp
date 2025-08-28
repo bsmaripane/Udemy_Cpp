@@ -29,6 +29,12 @@ int main()
 	cout << "score_ptr[2]: " << score_ptr[2] << endl;
 
 	// Display array elements memory using the pointer
+
+	cout << "\nArray offset notation --------------------------\n";
+	cout << "1st element *scores: " << *scores << endl;
+	cout << "2nd element *(scores + 1): " << *(scores + 1) << endl;
+	cout << "3rd element *(scores + 2): " << *(scores + 2) << endl;
+
 	cout << "\nPointer offset notation --------------------------\n";
 	cout << "1st element score_ptr: " << score_ptr << endl;
 	cout << "2nd element (score_ptr + 1): " << (score_ptr + 1) << endl;
