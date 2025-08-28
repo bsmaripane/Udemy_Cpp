@@ -22,5 +22,32 @@ int main()
 
 	delete int_ptr;		// frees the allocated storage
 
+	/*******************************************************************/
+
+	size_t size{};
+	double* temp_ptr{ nullptr };
+
+	cout << "How many temps: ";
+	cin >> size;
+
+	temp_ptr = new double[size];	// allocate double on the heap
+
+	cout << "Allocated memory of temp_ptr: " << temp_ptr << endl;
+
+	/******************************************************************/
+	// using new[] to allocate storage for an array
+
+	int* array_ptr{ nullptr };
+	int arr_size{};
+
+	cout << "How big do you want the array? ";
+	cin >> arr_size;
+
+	array_ptr = new int[arr_size];	// allocate array on the heap
+
+	cout << "Allocated memory od the array_ptr: " << array_ptr << endl;
+
+	delete[] array_ptr;			// frees allocated array storage
+
 	return 0;
 }
