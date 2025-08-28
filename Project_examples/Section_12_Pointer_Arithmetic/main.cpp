@@ -43,6 +43,15 @@ int main()
 
 	cout << "\n--------------------------------------------\n";
 
+	char name[]{ "Maripane" };
+	char* char_ptr1{ nullptr };
+	char* char_ptr2{ nullptr };
+
+	char_ptr1 = &name[0];
+	char_ptr2 = &name[4];
+
+	cout << "In the string " << name << ", " << *char_ptr1 << " is " << (char_ptr2 - char_ptr1) << " characters aways from " << *char_ptr1 << endl;
+
 
 	return 0;
 }
