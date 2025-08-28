@@ -17,7 +17,7 @@ int main()
 	cout << "*score_ptr: " << *score_ptr << endl;
 
 	// Using the pointer subscrpt to access array elements
-
+	cout << "\nPointer subscript notation --------------------------\n";
 	cout << "score_ptr[0]: " << score_ptr[0] << endl;
 	cout << "score_ptr[1]: " << score_ptr[1] << endl;
 	cout << "score_ptr[2]: " << score_ptr[2] << endl;
