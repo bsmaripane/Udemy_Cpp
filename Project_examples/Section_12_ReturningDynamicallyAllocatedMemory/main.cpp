@@ -21,7 +21,7 @@ int main()
 {
 	int* my_array;		// will be allocated by the function
 
-	my_array = create_array(100, 20);	// create the array
+	my_array = create_array(100);	// create the array
 
 	for (size_t i{}; i < 100; ++i)
 		cout << *(my_array + i) << " ";
