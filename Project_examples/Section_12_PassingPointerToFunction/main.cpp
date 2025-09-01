@@ -15,6 +15,10 @@ int main()
 	int* int_ptr{ nullptr };
 
 	cout << "Value: " << value << endl;
+
+	double_data(&value);
+	
+	cout << "Value: " << value << endl;
 	cout << "\n________________________________\n";
 
 	int_ptr = &value;
