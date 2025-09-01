@@ -16,7 +16,7 @@ int main()
 
 	cout << "*score_ptr is " << *score_ptr << endl;
 
-	score_ptr = &low_score;		// ERROR: 'score_ptr': you  cannot assign to a variable that is const
+	//score_ptr = &low_score;		// ERROR: 'score_ptr': you  cannot assign to a variable that is const
 
 	return 0;
 }
