@@ -15,9 +15,13 @@ void display(vector<string>* v)
 
 void display(int* array, int sentinel)
 {
-	for (int i{}; i != sentinel; ++i)
-		cout << *(array + i) << endl;
+	int i{};
 
+	while (*(array + i) != sentinel)
+	{
+		cout << *(array + i) << endl;
+		++i;
+	}
 	cout << endl;
 }
 
