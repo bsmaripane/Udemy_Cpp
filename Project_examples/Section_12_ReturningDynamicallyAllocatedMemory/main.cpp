@@ -21,13 +21,14 @@ int main()
 {
 	int* my_array;		// will be allocated by the function
 
-	my_array = create_array(100);	// create the array
+	my_array = create_array(10, 7);	// create the array
 
-	for (size_t i{}; i < 100; ++i)
+	for (size_t i{}; i < 10; ++i)
 		cout << *(my_array + i) << " ";
 	cout << endl;
 
 	delete[] my_array;	// free the storage
 
-	return 0;
+	cin.get();
+	//return 0;
 }
