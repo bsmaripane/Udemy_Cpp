@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -22,6 +23,15 @@ int main()
 	cout << "\n-----------------------------\n";
 	cout << "num: " << num << endl;
 	cout << "ref: " << ref << endl;
+
+	cout << "\n-----------------------------\n";
+	vector<string> names{ "Belmy", "Semape", "Thapelo" };
+
+	for (auto str : names)
+		str = "Maswi";
+
+	for (auto str : names)
+		cout << str << endl;
 
 	cout << "\n-----------------------------\n";
 
