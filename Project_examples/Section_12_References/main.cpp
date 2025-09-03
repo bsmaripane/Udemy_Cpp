@@ -34,7 +34,12 @@ int main()
 		cout << str << endl;
 
 	cout << "\n-----------------------------\n";
+	
+	for (auto& str : names)
+		str = "Felicia";
 
+	for (auto const& str : names)
+		cout << str << endl;
 
 	cin.get();
 }
