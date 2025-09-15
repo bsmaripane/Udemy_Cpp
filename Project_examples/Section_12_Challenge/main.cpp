@@ -40,6 +40,7 @@ int main()
 	cout << "Results: ";
 	print(results, results_size);
 
+	delete results;
 	cin.get();
 	return 0;
 }
