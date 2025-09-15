@@ -60,7 +60,7 @@ int* apply_all(int array1[], size_t array1_size, int array2[], size_t array2_siz
 
 void print(int* array_ptr, size_t array_size)
 {
-	cout << "[";
+	cout << "[ ";
 	for (size_t i{ 0 }; i < array_size; ++i)	// loop over array
 		cout << array_ptr[i] << " ";			// print array element
 	cout << "]" << endl;
