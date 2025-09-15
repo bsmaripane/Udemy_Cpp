@@ -52,7 +52,7 @@ int* apply_all(int array1[], size_t array1_size, int array2[], size_t array2_siz
 	
 	for (size_t i{ 0 }; i < array2_size; ++i)		// loop over array2
 		for (size_t j{ 0 }; j < array1_size; ++j)	// loop over array1
-			new_array[index] = array2[i] * array1[j];	// assign product of array2 and array 1 to new_array
+			new_array[index++] = array2[i] * array1[j];	// assign product of array2 and array 1 to new_array
 
 	return new_array;
 }
