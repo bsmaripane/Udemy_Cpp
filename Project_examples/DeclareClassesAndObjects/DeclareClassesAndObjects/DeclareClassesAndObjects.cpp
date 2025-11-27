@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <iomanip>
 
 using namespace std;
 
@@ -29,6 +30,52 @@ public:
         if (health > 0)
             return false;
         return true;
+    }
+};
+
+class Account
+{
+private:
+    string name;
+    double balance;
+
+public:
+    Account() : name(""), balance(0.0) {}
+    Account(string aName, double aBalance)
+    {
+        name = aName;
+        balance = aBalance;
+    }
+
+    void editName(string newName)
+    {
+        name = newName;
+    }
+
+    void accountDetails() const
+    {
+        cout << "\nAccount name: " << name << endl
+            << "Account balance: R" << fixed << setprecision(2) << balance << endl;
+    }
+
+    string name() const
+    {
+        return name;
+    }
+
+    double balance() const
+    {
+        return balance;
+    }
+
+    void deposit(double amount)
+    {
+        balance += amount;
+    }
+
+    void withdraw(double amount)
+    {
+        balance -= amount;
     }
 };
 
