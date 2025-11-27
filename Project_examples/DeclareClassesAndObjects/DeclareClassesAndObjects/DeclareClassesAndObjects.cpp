@@ -23,6 +23,8 @@ int main()
     Player semape;
     Player master;
 
+    Player players[]{ semape, master };
+
     Player* enemy{ nullptr };
     enemy = new Player;
 
@@ -31,3 +33,4 @@ int main()
     cin.get();
     return 0;
 }
+  
