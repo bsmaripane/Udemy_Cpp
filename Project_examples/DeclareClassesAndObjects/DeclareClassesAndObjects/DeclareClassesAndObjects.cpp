@@ -101,11 +101,11 @@ int main()
     //Player master;
 
     Account Maswi;
-    Account Lesego("Savings", 23678.36);
+    Account Lesego("Savings", -237.89);
 
     Maswi.setName("Debit");
     Maswi.deposit(97.34);
-    Lesego.withdraw(590);
+    Lesego.withdraw(50);
     Maswi.withdraw(23.78);
     Lesego.deposit(350);
 
