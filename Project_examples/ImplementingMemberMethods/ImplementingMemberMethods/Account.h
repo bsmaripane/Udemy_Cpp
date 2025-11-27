@@ -12,12 +12,12 @@ private:
 	double balance;
 
 public:
-	void setBalance(double aBalance);
+	void setBalance(double);
 	double getBalance() const;
-	void setName(string aName);
+	void setName(string);
 	string getName() const;
-	bool deposit(double amount);
-	bool withdraw(double amount);
+	bool deposit(double);
+	bool withdraw(double);
 };
 #endif
 
