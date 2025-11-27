@@ -47,7 +47,7 @@ public:
         balance = aBalance;
     }
 
-    void editName(string newName)
+    void setName(string newName)
     {
         name = newName;
     }
@@ -68,14 +68,30 @@ public:
         return balance;
     }
 
-    void deposit(double amount)
+    bool deposit(double amount)
     {
         balance += amount;
+        return true;
     }
 
-    void withdraw(double amount)
+    bool withdraw(double amount)
     {
-        balance -= amount;
+        if (balance > 0)
+        {
+            if (balance < amount)
+            {
+                cout << "Insufficient balance R" << fixed << setprecision(2) << balance << endl;
+                return false;
+            }
+            else
+                balance -= amount;
+            return true;
+        }
+        else 
+        {
+            cout<< "Overdrawn or zero balance R" << balance << endl;
+            return false;
+        }
     }
 };
 
@@ -87,7 +103,7 @@ int main()
     Account Maswi;
     Account Lesego("Savings", 23678.36);
 
-    Maswi.editName("Debit");
+    Maswi.setName("Debit");
     Maswi.deposit(97.34);
     Lesego.withdraw(590);
     Maswi.withdraw(23.78);
@@ -99,6 +115,24 @@ int main()
     enemy = new Player;
 
     delete enemy;*/
+
+    Account Maswi_account("Saving Account", 1000);
+    if (Maswi_account.deposit(200))
+        cout << "Deposit Successful" << endl;
+    else
+        cout << "Deposit Failed!" << endl;
+
+    if (Maswi_account.withdraw(500))
+        cout << "Withdrawal Successful" << endl;
+    else
+        cout << "Withdrawal Failed!" << endl;
+
+    if (Maswi_account.withdraw(1200))
+        cout << "Withdrawal Successful" << endl;
+    else
+        cout << "Withdrawal Failed!" << endl;
+
+    Maswi_account.accountDetails();
     
     cin.get();
     return 0;
