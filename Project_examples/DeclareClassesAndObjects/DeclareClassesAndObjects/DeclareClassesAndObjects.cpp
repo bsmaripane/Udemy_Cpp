@@ -40,7 +40,7 @@ private:
     double balance;
 
 public:
-    Account() : name(""), balance(0.0) {}
+    Account() : name("Default"), balance(0.0) {}
     Account(string aName, double aBalance)
     {
         name = aName;
@@ -58,12 +58,12 @@ public:
             << "Account balance: R" << fixed << setprecision(2) << balance << endl;
     }
 
-    string name() const
+    string getName() const
     {
         return name;
     }
 
-    double balance() const
+    double getBalance() const
     {
         return balance;
     }
@@ -82,14 +82,23 @@ public:
 int main()
 {
     Player semape;
-    Player master;
+    //Player master;
 
-    Player players[]{ semape, master};
+    Account Maswi;
+    Account Lesego("Savings", 23678.36);
+
+    Maswi.editName("Debit");
+    Maswi.deposit(97.34);
+    Lesego.withdraw(590);
+    Maswi.withdraw(23.78);
+    Lesego.deposit(350);
+
+    /*Player players[]{ semape, master};
 
     Player* enemy{ nullptr };
     enemy = new Player;
 
-    delete enemy;
+    delete enemy;*/
     
     cin.get();
     return 0;
