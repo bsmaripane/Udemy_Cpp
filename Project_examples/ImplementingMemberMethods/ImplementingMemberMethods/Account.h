@@ -9,7 +9,7 @@ class Account
 {
 private:
 	string name;
-	double name;
+	double balance;
 
 public:
 	void setBalance(double aBalance);
