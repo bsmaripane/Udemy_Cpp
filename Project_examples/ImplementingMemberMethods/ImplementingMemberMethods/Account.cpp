@@ -32,7 +32,7 @@ bool Account::withdraw(double amount)
 	{
 		if (balance < amount)
 		{
-			cout << "Insufficient balance!";
+			cout << "Insufficient balance!" << endl;
 			return false;
 		}
 		else
@@ -43,7 +43,7 @@ bool Account::withdraw(double amount)
 	}
 	else
 	{
-		cout << "Account is verdrawn or zero balance!" << endl;
+		cout << "Account is overdrawn or zero balance!" << endl;
 		return false;
 	}
 }
