@@ -7,7 +7,7 @@ int Calculator::divide(int x, int y) const
 {
 	if (y == 0)
 	{
-		std::cerr << "Error: Division by zero is NOT allowed!" << std::endl;
+		throw std::runtime_error("Error: Division by zero is NOT allowed!");
 	}
 	else
 		return (x / y);
@@ -17,7 +17,7 @@ int Calculator::module(int x, int y) const
 {
 	if (y == 0)
 	{
-		std::cerr << "Error: Division by zero is NOT allowed!" << std::endl;
+		throw std::runtime_error("Error: Division by zero is NOT allowed!");
 	}
 	else
 		return (x % y);
