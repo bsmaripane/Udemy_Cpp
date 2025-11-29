@@ -3,5 +3,9 @@
   <Executable>C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\BasicCalculatorApp\x64\Debug\UnitTests.exe</Executable>
   <TestDurations>
     <TestDuration Test="Calculator.AddTwoNumbers" Duration="1" />
+    <TestDuration Test="Calculator.MinusTwoNumbers" Duration="1" />
+    <TestDuration Test="Calculator.MultipleTwoNumbers" Duration="1" />
+    <TestDuration Test="Calculator.DivideTwoNumbers" Duration="1" />
+    <TestDuration Test="Calculator.ModuleTwoNumbers" Duration="1" />
   </TestDurations>
 </GtaTestDurations>
