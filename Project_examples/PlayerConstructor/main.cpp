@@ -14,6 +14,7 @@ public:
 	Player();
 	Player(std::string pName);
 	Player(std::string pName, int pHealth, int pXp);
+	~Player();	// Destructor
 };
 
 class Account
@@ -27,6 +28,7 @@ public:
 	Account(std::string aName);
 	Account(std::string aName, double aBalance);
 	Account(double aBalance);
+	~Account();	// Destructor
 };
 
 int main()
