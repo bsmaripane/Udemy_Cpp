@@ -1,4 +1,7 @@
-#pragma once
+#ifndef CALCULATOR_H
+#define CALCULATOR_H
+
+#include <iostream>
 
 template <class Type>
 class Calculator
@@ -10,4 +13,4 @@ public:
 	Type divide(Type x, Type y) const;
 	Type module(Type x, Type y) const;
 };
-
+#endif
