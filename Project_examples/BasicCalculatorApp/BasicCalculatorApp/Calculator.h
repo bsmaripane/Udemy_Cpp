@@ -3,31 +3,13 @@
 
 #include <iostream>
 
-template <class Type>
 class Calculator
 {
 public:
-	Type add(Type x, Type y) const { return (x + y); }
-	Type minus(Type x, Type y) const { return (x - y); }
-	Type multiple(Type x, Type y) const { return (x * y); }
-	Type divide(Type x, Type y) const
-	{
-		if (y == 0)
-		{
-			std::cerr << "Error: Division by zero is NOT allowed!" << std::endl;
-		}
-		else
-			return (x / y);
-	}
-
-	Type module(Type x, Type y) const
-	{
-		if (y == 0)
-		{
-			std::cerr << "Error: Division by zero is NOT allowed!" << std::endl;
-		}
-		else
-			return (x % y);
-	}
+	int add(int x, int y) const;
+	int minus(int x, int y) const;
+	int multiple(int x, int y) const;
+	int divide(int x, int y) const;
+	int module(int x, int y) const;
 };
 #endif
