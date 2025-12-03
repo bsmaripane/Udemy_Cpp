@@ -19,7 +19,7 @@ public:
 	
 	std::string getName() const;
 	int getHealth() const;
-	int getHealth() const;
+	int getXp() const;
 
 	Player(const Player& source);
 
