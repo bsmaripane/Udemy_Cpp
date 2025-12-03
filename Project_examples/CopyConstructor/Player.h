@@ -23,6 +23,8 @@ public:
 	int getHealth() const;
 	int getHealth() const;
 
+	Player(const Player& source);
+
 	~Player();
 };
 #endif
