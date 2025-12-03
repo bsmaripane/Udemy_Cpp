@@ -13,9 +13,7 @@ private:
 public:
 	Player();
 	Player(std::string pName);
-	Player(std::string pName, int pHealth);
-	Player(std::string pName, int pXp);
-	Player(std::string pName, int pHealth, int pXp);
+	Player(std::string pName = "Nano", int pHealth = 10, int pXp = 0);
 
 	void setName(std::string pName);
 	void setHealth(int pHealth);
