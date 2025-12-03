@@ -4,7 +4,7 @@ Player::Player(std::string pName, int pHealth, int pXp) : name(pName), health(pH
 
 void Player::setName(std::string pName) { name = pName; }
 void Player::setHealth(int pHealth) { health = pHealth; }
-void Player::setHealth(int pXp) { xp = pXp; }
+void Player::setXp(int pXp) { xp = pXp; }
 
 std::string Player::getName() const { return name; }
 int Player::getHealth() const { return health; }

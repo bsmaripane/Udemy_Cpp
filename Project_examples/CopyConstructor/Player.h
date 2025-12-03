@@ -15,7 +15,7 @@ public:
 
 	void setName(std::string pName);
 	void setHealth(int pHealth);
-	void setHealth(int pXp);
+	void setXp(int pXp);
 	
 	std::string getName() const;
 	int getHealth() const;
