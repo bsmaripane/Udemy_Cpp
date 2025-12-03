@@ -1,7 +1,5 @@
 #include "Player.h"
 
-Player::Player() : name(""), health(1), xp(0) {}
-Player::Player(std::string pName) : name(pName), health(1), xp(0) {}
 Player::Player(std::string pName, int pHealth, int pXp) : name(pName), health(pHealth), xp(pXp) {}
 
 void Player::setName(std::string pName) { name = pName; }

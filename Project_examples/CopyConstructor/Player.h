@@ -11,8 +11,6 @@ private:
 	int xp;
 
 public:
-	Player();
-	Player(std::string pName);
 	Player(std::string pName = "Nano", int pHealth = 10, int pXp = 0);
 
 	void setName(std::string pName);
