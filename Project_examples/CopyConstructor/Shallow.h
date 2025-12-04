@@ -14,7 +14,8 @@ public:
 	Shallow(const Shallow& source);
 	~Shallow();
 
-	setDataValue(int d);
-	getDataValue() const;
+	void setDataValue(int d);
+	int getDataValue() const;
+	int* getDataAdddress() const;
 };
 #endif
