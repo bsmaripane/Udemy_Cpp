@@ -23,13 +23,9 @@ int main()
 
 	display_player(empty);
 
-	//Player enemy;
-	//Player create_super_enemy() {
-	//	Player an_enemy{ "Super Enemy", 1000, 1000 };
-	//	return an_enemy;
-	//}
+	Player enemy(villain);
 
-	//enemy = create_super_enemey();
+	display_player(enemy);
 
 	std::cin.get();
 	return 0;
