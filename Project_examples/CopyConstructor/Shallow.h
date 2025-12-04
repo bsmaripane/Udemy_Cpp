@@ -13,5 +13,8 @@ public:
 	Shallow(int d);
 	Shallow(const Shallow& source);
 	~Shallow();
+
+	setDataValue(int d);
+	getDataValue() const;
 };
 #endif
