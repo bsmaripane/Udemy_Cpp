@@ -11,3 +11,5 @@ Shallow::~Shallow()
 	delete data;
 	std::cout << "Destructor freeing data" << std::endl;
 }
+
+Shallow::Shallow(const Shallow& source) : data(source.data) { std::cout << "Copy constructor - shallow" << std::endl; }
