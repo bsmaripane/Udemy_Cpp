@@ -1,6 +1,8 @@
 #ifndef DEEP_H
 #define DEEP_H
 
+#include <iostream>
+
 class Deep
 {
 private:
