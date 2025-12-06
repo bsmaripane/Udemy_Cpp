@@ -20,3 +20,7 @@ Deep::Deep(const Deep& source)
 }
 
 Deep::Deep(const Deep& source) : Deep(*source.data) { std::cout << std::endl << "Copy constructor - deep" << std::endl; }
+
+void Deep::setDataValue(int d) { *data = d; }
+int Deep::getDataValue() const { return *data; }
+int* Deep::getDataAddress() const { return data; }
