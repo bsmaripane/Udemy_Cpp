@@ -14,6 +14,7 @@ public:
 	int* getDataAddress() const;
 	Move(int d);
 	Move(const Move& source);
+	Move(Move&& source);
 	~Move();
 };
 #endif
