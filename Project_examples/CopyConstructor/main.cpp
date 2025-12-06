@@ -44,6 +44,7 @@ int main()
 
 	obj1.setDataValue(1000);
 	Deep obj2{ obj1 };
+	obj2.setDataValue(2500);
 
 	std::cout << "--- End Program --" << std::endl;
 	std::cin.get();
