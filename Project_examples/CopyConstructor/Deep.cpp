@@ -9,12 +9,14 @@ Deep::Deep(int d)
 Deep::~Deep()
 {
 	delete data;		// free storage
-	std::cout << "Destructor freeing data" << std::endl;
+	std::cout << std::endl << "Destructor freeing data" << std::endl;
 }
 
 Deep::Deep(const Deep& source)
 {
 	data = new int;		// allocate storage
 	*data = *source.data;
-	std::cout << "Copy constructor - deep" << std::endl;
+	std::cout << std::endl << "Copy constructor - deep" << std::endl;
 }
+
+Deep::Deep(const Deep& source) : Deep(*source.data) { std::cout << std::endl << "Copy constructor - deep" << std::endl; }
