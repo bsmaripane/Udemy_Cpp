@@ -11,6 +11,10 @@ private:
 public:
 	Deep(int d);
 	Deep(const Deep& source);
-	~Depp();
+	~Deep();
+
+	void setDataValue(int d);
+	int getDataValue() const;
+	int* getDataAddress() const;
 };
 #endif
