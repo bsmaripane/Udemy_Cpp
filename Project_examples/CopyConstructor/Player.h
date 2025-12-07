@@ -9,6 +9,7 @@ private:
 	std::string name;
 	int health;
 	int xp;
+	static int numPlayers;
 
 public:
 	Player(std::string pName = "Nano", int pHealth = 10, int pXp = 0);
@@ -20,7 +21,7 @@ public:
 	std::string getName() const;
 	int getHealth() const;
 	int getXp() const;
-
+	static int getNumPlayers();
 	Player(const Player& source);
 
 	~Player();
