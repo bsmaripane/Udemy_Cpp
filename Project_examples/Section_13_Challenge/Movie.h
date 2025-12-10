@@ -11,14 +11,13 @@ private:
 	int watched;		// number of times the movie has been watched
 
 public:
-	Movie(std::string name = "NoName", std::string rating = "Unknown", int times = 0)
-		: movieName(name), movieRating(rating), watched(times) {}
-	void setMovieName(std::string mName) { movieName = mName; }
-	void setMovieRating(std::string rating) { movieRating = rating; }
-	void setWatched(int noTimes) { watched = noTimes; }
+	Movie(std::string name = "NoName", std::string rating = "Unknown", int times = 0);
+	void setMovieName(std::string mName);
+	void setMovieRating(std::string rating);
+	void setWatched(int noTimes);
 
-	std::string getMovieName() const { return movieName; }
-	std::string getMovieRating() const { return movieRating; }
-	int getWatched() const { return watched; }
+	std::string getMovieName() const;
+	std::string getMovieRating() const;
+	int getWatched() const;
 };
 #endif
