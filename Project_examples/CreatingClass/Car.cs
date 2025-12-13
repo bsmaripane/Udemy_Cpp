@@ -8,9 +8,15 @@ namespace CreatingClass
 {
     internal class Car
     {
+        // member variable
+        private string _model = "";
+        private string _brand = "";
+
         // Constructor
-        public Car() {
-            Console.WriteLine("An Object of Car has been created!");
+        public Car(string model, string brand) {
+            _model = model;
+            _brand = brand;
+            Console.WriteLine($"An Object of {_model} {_brand} Car has been created!");
         }
     }
 }
