@@ -3,3 +3,13 @@ C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\CreatingClass\ob
 C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\CreatingClass\obj\Debug\net9.0\CreatingClass.AssemblyInfo.cs
 C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\CreatingClass\obj\Debug\net9.0\CreatingClass.csproj.CoreCompileInputs.cache
 C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\CreatingClass\obj\Debug\net9.0\CreatingClass.sourcelink.json
+C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\CreatingClass\bin\Debug\net9.0\CreatingClass.exe
+C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\CreatingClass\bin\Debug\net9.0\CreatingClass.deps.json
+C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\CreatingClass\bin\Debug\net9.0\CreatingClass.runtimeconfig.json
+C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\CreatingClass\bin\Debug\net9.0\CreatingClass.dll
+C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\CreatingClass\bin\Debug\net9.0\CreatingClass.pdb
+C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\CreatingClass\obj\Debug\net9.0\CreatingClass.dll
+C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\CreatingClass\obj\Debug\net9.0\refint\CreatingClass.dll
+C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\CreatingClass\obj\Debug\net9.0\CreatingClass.pdb
+C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\CreatingClass\obj\Debug\net9.0\CreatingClass.genruntimeconfig.cache
+C:\Users\bsmar\OneDrive\Desktop\Udemy\LearnC++\Project_examples\CreatingClass\obj\Debug\net9.0\ref\CreatingClass.dll

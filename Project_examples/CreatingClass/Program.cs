@@ -5,13 +5,14 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Creating a Class!");
-            Car audi = new Car("RS3", "Audi");
+            Car audi = new Car("RS3", "Audi", true);
             Car bmw = new Car("325is", "BMW");
 
             Console.Write("Please enter the bBrand name: ");
             audi.Brand = Console.ReadLine() ?? "";
 
-            Console.WriteLine($"You entered {audi.Brand}");
+            Console.WriteLine($"The brand is {audi.Brand}");
+            Console.WriteLine($"The brand is {bmw.Brand}");
 
             Console.ReadKey();
         }
