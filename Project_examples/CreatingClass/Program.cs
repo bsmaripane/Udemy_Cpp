@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Creating a Class!");
+            Car audi = new Car();
+
+
+            Console.ReadKey();
         }
     }
 }
