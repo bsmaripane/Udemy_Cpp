@@ -12,11 +12,27 @@ namespace CreatingClass
         private string _model = "";
         private string _brand = "";
 
+        // property
+        public string Model { get => _model; set => _model = value; }
+        public string Brand {
+            get { 
+                
+                return _brand; }
+            set { 
+                if (string.IsNullOrEmpty(value))
+                {
+                    Console.WriteLine("You entered NOTHING!");
+                    _brand = "DEFAULTVALUE";
+                }
+                else
+                    _brand = value; }
+            }
+
         // Constructor
         public Car(string model, string brand) {
-            _model = model;
-            _brand = brand;
-            Console.WriteLine($"An Object of {_model} {_brand} Car has been created!");
+            Model = model;
+            Brand = brand;
+            Console.WriteLine($"An Object of {Model} {Brand} Car has been created!");
         }
     }
 }
