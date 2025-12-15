@@ -33,14 +33,15 @@ MyString::~MyString()
 
 void MyString::display() const
 {
+	std::cout << str << ":" << getLength() << std::endl;
 }
 
 int MyString::getLength() const
 {
-	return 0;
+	return std::strlen(str);
 }
 
 const char* MyString::getStr() const
 {
-	return nullptr;
+	return str;
 }
