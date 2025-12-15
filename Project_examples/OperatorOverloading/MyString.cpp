@@ -28,6 +28,7 @@ MyString::MyString(const MyString& source) : str(nullptr)
 
 MyString::~MyString()
 {
+	delete[] str;
 }
 
 void MyString::display() const
