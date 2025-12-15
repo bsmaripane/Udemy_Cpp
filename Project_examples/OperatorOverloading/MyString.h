@@ -16,5 +16,6 @@ public:
 	void display() const;
 	int getLength() const;
 	const char* getStr() const;
+	MyString& operator=(const MyString& rhs);
 };
 #endif

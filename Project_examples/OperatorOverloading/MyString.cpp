@@ -45,3 +45,15 @@ const char* MyString::getStr() const
 {
 	return str;
 }
+
+MyString& MyString::operator=(const MyString& rhs)
+{
+	if (this == &rhs)
+		return *this;
+
+	delete[] str;
+	str = new char[std::strlen(rhs.str) + 1];
+	std::strcpy(str, rhs.str);
+
+	return *this;
+}
