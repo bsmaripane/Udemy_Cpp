@@ -30,6 +30,11 @@ MyString::MyString(const MyString& source) : str(nullptr)
 
 MyString::~MyString()
 {
+	if (this == nullptr)
+		std::cout << "Calling destructor for MyString: nullptr" << std::endl;
+	else
+		std::cout << "Calling destructor for MyString" << str << std::endl;
+
 	delete[] str;
 }
 
