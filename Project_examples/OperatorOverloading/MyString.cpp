@@ -1,4 +1,6 @@
 #include "MyString.h"
+#include <cstring>
+#pragma warning(disable : 4996)
 
 MyString::MyString() : str(nullptr)
 {
@@ -53,7 +55,7 @@ MyString& MyString::operator=(const MyString& rhs)
 
 	delete[] str;
 	str = new char[std::strlen(rhs.str) + 1];
-	std::strcpy(str, rhs.str);
+	std::strcpy(str, rhs.str);		// perform the copy
 
 	return *this;
 }
