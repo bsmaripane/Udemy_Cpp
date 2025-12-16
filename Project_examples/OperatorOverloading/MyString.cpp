@@ -60,3 +60,18 @@ MyString& MyString::operator=(const MyString& rhs)
 
 	return *this;
 }
+
+MyString& MyString::operator=(MyString&& rhs)
+{
+	std::cout << "Move assignment" << std::endl;
+	if (this == &rhs)		// self assignment
+		return *this;		// return current object
+
+	delete[] str;			// deallocate current storage
+	str = rhs.str;			// steal the pointer
+
+	rhs.str = nullptr;		// null out the rhs object
+
+	return *this;			// return current object
+
+}
