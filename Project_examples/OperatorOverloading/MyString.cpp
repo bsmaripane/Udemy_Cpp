@@ -50,6 +50,7 @@ const char* MyString::getStr() const
 
 MyString& MyString::operator=(const MyString& rhs)
 {
+	std::cout << "Copy assignment" << std::endl;
 	if (this == &rhs)
 		return *this;
 
