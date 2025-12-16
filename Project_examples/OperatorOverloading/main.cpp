@@ -26,6 +26,14 @@ int main()
 	a.display();
 	b.display();
 
+	// Overloading the Assignment Operator (move)
+	MyString d{ "Today" };
+	d.display();
+	d = MyString{ "December" };
+	d.display();
+	d = "Tuesday";
+	d.display();
+
 	std::cin.get();
 	return 0;
 }
