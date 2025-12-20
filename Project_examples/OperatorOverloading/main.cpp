@@ -34,6 +34,8 @@ int main()
 	d = "Tuesday";
 	d.display();
 
+	std::cout << (a == b ? "string a is the same as b" : "string a nd b are not the same.") << std::endl;
+
 	std::cin.get();
 	return 0;
 }
