@@ -98,3 +98,15 @@ bool MyString::operator==(const MyString& rhs) const
 {
 	return (std::strcmp(str, rhs.str) == 0) ? true : false;
 }
+
+MyString MyString::operator+(const MyString& rhs) const
+{
+	size_t buff_size{ std::strlen(str) + std::strlen(rhs.str) + 1 };
+	char* buff{ new char[buff_size] };
+	std::strcpy(buff, str);
+	std::strcat(buff, rhs.str);
+	MyString temp{ buff };
+	delete[] buff;
+
+	return temp;
+}
