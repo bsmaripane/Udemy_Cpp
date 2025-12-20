@@ -80,3 +80,16 @@ MyString& MyString::operator=(MyString&& rhs)
 	return *this;			// return current object
 
 }
+
+MyString MyString::operator-() const
+{
+	char* buff = new char[std::strlen(str) + 1];
+	std::strcpy(buff, str);
+
+	for (size_t i{ 0 }; i < std::strlen(buff); i++)
+		buff[i] = std::tolower(buff[i]);
+
+	MyString temp{ buff };
+	delete [] buff;
+	return temp;
+}
