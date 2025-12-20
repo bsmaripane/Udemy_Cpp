@@ -17,7 +17,7 @@ public:
 	int getLength() const;
 	const char* getStr() const;
 	MyString& operator=(const MyString& rhs);
-	MyString& operator=(MyString&& rhs);
+	MyString& operator=(MyString&& rhs) noexcept;
 	MyString operator-() const;
 };
 #endif

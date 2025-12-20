@@ -66,7 +66,7 @@ MyString& MyString::operator=(const MyString& rhs)
 	return *this;
 }
 
-MyString& MyString::operator=(MyString&& rhs)
+MyString& MyString::operator=(MyString&& rhs) noexcept
 {
 	std::cout << "Move assignment" << std::endl;
 	if (this == &rhs)		// self assignment
