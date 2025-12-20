@@ -93,3 +93,8 @@ MyString MyString::operator-() const
 	delete [] buff;
 	return temp;
 }
+
+bool MyString::operator==(const MyString& rhs) const
+{
+	return (std::strcmp(str, rhs.str)) ? true : false;
+}
