@@ -96,5 +96,5 @@ MyString MyString::operator-() const
 
 bool MyString::operator==(const MyString& rhs) const
 {
-	return (std::strcmp(str, rhs.str)) ? true : false;
+	return (std::strcmp(str, rhs.str) == 0) ? true : false;
 }
