@@ -21,6 +21,21 @@ bool operator==(const Mystring& lhs, const Mystring& rhs)
     return (std::strcmp(lhs.str, rhs.str) == 0) ? true : false;
 }
 
+bool operator!=(const Mystring& lhs, const Mystring& rhs)
+{
+    return  (std::strcmp(lhs.str, rhs.str) != 0) ? true : false;
+}
+
+bool operator<(const Mystring& lhs, const Mystring& rhs)
+{
+    return  (std::strcmp(lhs.str, rhs.str) < 0) ? true : false;
+}
+
+bool operator>(const Mystring& lhs, const Mystring& rhs)
+{
+    return  (std::strcmp(lhs.str, rhs.str) > 0) ? true : false;
+}
+
 Mystring operator-(const Mystring& obj)
 {
     char* buff{ new char[std::strlen(obj.str) + 1] };
@@ -45,6 +60,11 @@ Mystring operator+(const Mystring& lhs, const Mystring rhs)
     delete[] buff;
 
     return temp;
+}
+
+Mystring operator+=(const Mystring rhs)
+{
+    return Mystring();
 }
 
 Mystring::Mystring() : str{nullptr}
