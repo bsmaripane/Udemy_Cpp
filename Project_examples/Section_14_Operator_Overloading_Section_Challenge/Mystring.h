@@ -35,6 +35,8 @@ public:
 	Mystring operator-() const;						// make lowercase
 	Mystring& operator+=(const Mystring& rhs);		// s1 += s2; concat and assign
 	Mystring operator*(int n) const;				// s1 = s2*3; repeat s2 n times
-
+	Mystring& operator*=(int n);					// s1 *= 3; s1 = s1 * 3
+	Mystring& operator++();							// pre-increment ++s1
+	Mystring operator++(int);						// post-increment s1++
 };
 #endif
