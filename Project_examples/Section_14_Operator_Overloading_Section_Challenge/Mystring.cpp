@@ -50,7 +50,7 @@ Mystring operator-(const Mystring& obj)
     return temp;
 }
 
-Mystring operator+(const Mystring& lhs, const Mystring rhs)
+Mystring operator+(const Mystring& lhs, const Mystring rhs) const
 {
     char* buff{ new char[std::strlen(lhs.str) + std::strlen(rhs.str) + 1] };
     std::strcpy(buff, lhs.str);
@@ -62,7 +62,27 @@ Mystring operator+(const Mystring& lhs, const Mystring rhs)
     return temp;
 }
 
-Mystring operator+=(const Mystring rhs)
+Mystring& Mystring::operator+=(const Mystring& rhs)
+{
+    // Calculate the new length
+    size_t new_length = std::strlen(this->str) + std::strlen(rhs.str) + 1;
+
+    // Allocate new memory
+    char* buff = new char[new_length];
+
+    // Copy the current string and concatenate the rhs string
+    std::strcpy(buff, this->str);
+    std::strcat(buff, rhs.str);
+
+    // Free the old memory and assign the new string
+    delete[] this->str;
+    this->str = buff;
+
+    // Return the current object
+    return *this;
+}
+
+Mystring Mystring::operator*(int n) const
 {
     return Mystring();
 }
