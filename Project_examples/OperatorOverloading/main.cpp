@@ -22,6 +22,9 @@ int main()
 	stooges.display();
 
 	MyString two_stooges = moe + " " + "Larry";
+	two_stooges.display();
+	MyString three_stooges = moe + " " + "Curly";
+	three_stooges.display();
 
 	std::cin.get();
 	return 0;
