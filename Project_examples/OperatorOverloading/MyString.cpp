@@ -1,4 +1,5 @@
 #include "MyString.h"
+#include <string>
 #include <cstring>
 #pragma warning(disable : 4996)
 
@@ -30,22 +31,20 @@ MyString::MyString(const MyString& source) : str(nullptr)
 
 MyString::~MyString()
 {
-	if (this == nullptr)
-		std::cout << "Calling destructor for MyString: nullptr" << std::endl;
-	else
-		std::cout << "Calling destructor for MyString" << str << std::endl;
+	std::cout << "Calling destructor for MyString: ";
+	std::cout << (str ? str : "(NULL)") << std::endl;
 
 	delete[] str;
 }
 
 void MyString::display() const
 {
-	std::cout << str << ":" << getLength() << std::endl;
+	std::cout << ( str ? str : "(NULL)") << ":" << getLength() << std::endl;
 }
 
 int MyString::getLength() const
 {
-	return std::strlen(str);
+	return static_cast<int>(str ? std::strlen(str) : 0);
 }
 
 const char* MyString::getStr() const

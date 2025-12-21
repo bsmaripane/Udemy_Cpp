@@ -2,6 +2,8 @@
 #ifndef MYSTRING_H
 #define MYSTRING_H
 #include <iostream>
+#include <string>
+#include <cstring>
 
 class MyString
 {
