@@ -26,6 +26,6 @@ public:
 	MyString& operator=(MyString&& rhs) noexcept;
 	//MyString operator-() const;
 	//bool operator==(const MyString &rhs) const;
-	MyString operator+(const MyString &rhs) const;
+	//MyString operator+(const MyString &rhs) const;
 };
 #endif
