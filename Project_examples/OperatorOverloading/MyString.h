@@ -10,6 +10,8 @@ class MyString
 	friend bool operator==(const MyString& lhs, const MyString& rhs);
 	friend MyString operator-(const MyString& obj);
 	friend MyString operator+(const MyString& lhs, const MyString& rhs);
+	friend std::ostream& operator<<(std::ostream& os, const MyString& rhs);
+	friend std::istream& operator>>(std::istream& in, MyString& rhs);
 
 private:
 	char* str;		// C-style string
@@ -18,6 +20,7 @@ public:
 	MyString();
 	MyString(const char* s);
 	MyString(const MyString& source);
+	MyString(MyString&& source);
 	~MyString();
 	void display() const;
 	int getLength() const;

@@ -29,6 +29,12 @@ MyString::MyString(const MyString& source) : str(nullptr)
 	std::strcpy(str, source.str);
 }
 
+MyString::MyString(MyString&& source) : str(source.str)
+{
+	std::cout << "Move constructor used" << std::endl;
+	source.str = nullptr;
+}
+
 MyString::~MyString()
 {
 	std::cout << "Calling destructor for MyString: ";
@@ -54,7 +60,7 @@ const char* MyString::getStr() const
 
 MyString& MyString::operator=(const MyString& rhs)
 {
-	std::cout << "Copy assignment" << std::endl;
+	std::cout << "Using copy assignment" << std::endl;
 	if (this == &rhs)
 		return *this;
 
@@ -67,7 +73,7 @@ MyString& MyString::operator=(const MyString& rhs)
 
 MyString& MyString::operator=(MyString&& rhs) noexcept
 {
-	std::cout << "Move assignment" << std::endl;
+	std::cout << "Using move assignment" << std::endl;
 	if (this == &rhs)		// self assignment
 		return *this;		// return current object
 
@@ -139,4 +145,20 @@ MyString operator+(const MyString& lhs, const MyString& rhs)
 	delete[] buff;
 	
 	return temp;
+}
+
+std::ostream& operator<<(std::ostream& os, const MyString& rhs)
+{
+	os << rhs.str;
+	return os;
+}
+
+std::istream& operator>>(std::istream& in, MyString& rhs)
+{
+	char* buff{ new char[1000] };
+	in >> buff;
+	rhs = MyString{ buff };
+	delete[] buff;
+
+	return in;
 }

@@ -26,6 +26,18 @@ int main()
 	MyString three_stooges = moe + " " + "Curly";
 	three_stooges.display();
 
+	// Test the overload the insertion and extraction
+	MyString curly;
+
+	std::cout << "Enter the third stooge's first name: ";
+	std::cin >> curly;
+
+	std::cout << "The three stooges are " << larry << ", " << moe << ", and " << curly << std::endl;
+	std::cout << std::endl << "Enter the three stooges names separated by a space: ";
+	std::cin >> larry >> moe >> curly;
+
+	std::cout << "The three stooges are " << larry << ", " << moe << ", and " << curly << std::endl;
+
 	std::cin.get();
 	return 0;
 }
