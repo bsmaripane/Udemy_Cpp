@@ -7,6 +7,9 @@ class Mystring
 {
 	friend std::ostream& operator<<(std::ostream& os, const Mystring& rhs);
 	friend std::istream& operator>>(std::istream& in, const Mystring& rhs);
+	friend bool operator==(const Mystring& lhs, const Mystring& rhs);
+	friend Mystring operator-(const Mystring& obj);
+	friend Mystring operator+(const Mystring& lhs, const Mystring rhs);
 
 private:
 	char* str;	// pointer to a char[] that holds a C-style string
