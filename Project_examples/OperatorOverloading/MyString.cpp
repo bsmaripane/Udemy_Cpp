@@ -80,23 +80,23 @@ MyString& MyString::operator=(MyString&& rhs) noexcept
 
 }
 
-MyString MyString::operator-() const
-{
-	char* buff = new char[std::strlen(str) + 1];
-	std::strcpy(buff, str);
+//MyString MyString::operator-() const
+//{
+//	char* buff = new char[std::strlen(str) + 1];
+//	std::strcpy(buff, str);
+//
+//	for (size_t i{ 0 }; i < std::strlen(buff); i++)
+//		buff[i] = std::tolower(buff[i]);
+//
+//	MyString temp{ buff };
+//	delete [] buff;
+//	return temp;
+//}
 
-	for (size_t i{ 0 }; i < std::strlen(buff); i++)
-		buff[i] = std::tolower(buff[i]);
-
-	MyString temp{ buff };
-	delete [] buff;
-	return temp;
-}
-
-bool MyString::operator==(const MyString& rhs) const
-{
-	return (std::strcmp(str, rhs.str) == 0) ? true : false;
-}
+//bool MyString::operator==(const MyString& rhs) const
+//{
+//	return (std::strcmp(str, rhs.str) == 0) ? true : false;
+//}
 
 MyString MyString::operator+(const MyString& rhs) const
 {
@@ -107,5 +107,36 @@ MyString MyString::operator+(const MyString& rhs) const
 	MyString temp{ buff };
 	delete[] buff;
 
+	return temp;
+}
+
+bool operator==(const MyString& lhs, const MyString& rhs)
+{
+	return (std::strcmp(lhs.str, rhs.str) == 0) ? true : false;
+}
+
+MyString operator-(const MyString& obj)
+{
+	char* buff{ new char[std::strlen(obj.str) + 1] };
+	std::strcpy(buff, obj.str);
+
+	for (size_t i{ 0 }; i < std::strlen(buff); i++)
+		buff[i] = std::tolower(buff[i]);
+
+	MyString temp{ buff };
+	delete[] buff;
+
+	return temp;
+}
+
+MyString operator+(const MyString& lhs, const MyString& rhs)
+{
+	char* buff{ new char[std::strlen(lhs.str) + std::strlen(rhs.str) + 1] };
+	std::strcpy(buff, lhs.str);
+	std::strcat(buff, rhs.str);
+
+	MyString temp{ buff };
+	delete[] buff;
+	
 	return temp;
 }
