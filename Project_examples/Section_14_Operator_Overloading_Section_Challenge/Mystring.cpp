@@ -50,10 +50,10 @@ Mystring operator-(const Mystring& obj)
     return temp;
 }
 
-Mystring operator+(const Mystring& lhs, const Mystring rhs) const
+Mystring Mystring::operator+( const Mystring& rhs) const
 {
-    char* buff{ new char[std::strlen(lhs.str) + std::strlen(rhs.str) + 1] };
-    std::strcpy(buff, lhs.str);
+    char* buff{ new char[std::strlen(str) + std::strlen(rhs.str) + 1] };
+    std::strcpy(buff, str);
     std::strcat(buff, rhs.str);
 
     Mystring temp{ buff };
@@ -64,27 +64,62 @@ Mystring operator+(const Mystring& lhs, const Mystring rhs) const
 
 Mystring& Mystring::operator+=(const Mystring& rhs)
 {
-    // Calculate the new length
-    size_t new_length = std::strlen(this->str) + std::strlen(rhs.str) + 1;
+    *this = *this + rhs;
 
-    // Allocate new memory
-    char* buff = new char[new_length];
-
-    // Copy the current string and concatenate the rhs string
-    std::strcpy(buff, this->str);
-    std::strcat(buff, rhs.str);
-
-    // Free the old memory and assign the new string
-    delete[] this->str;
-    this->str = buff;
-
-    // Return the current object
     return *this;
+}
+
+Mystring Mystring::operator-() const
+{
+    char* buff{ new char[std::strlen(str) + 1] };
+    std::strcpy(buff, str);
+    for (size_t i{ 0 }; i < std::strlen(buff); i++)
+        buff[i] = std::tolower(buff[i]);
+
+    Mystring temp{ buff };
+    delete[] buff;
+
+    return temp;
 }
 
 Mystring Mystring::operator*(int n) const
 {
-    return Mystring();
+    Mystring temp;
+    for (int i{ 1 }; i <= n; i++)
+        temp = temp + *this;
+
+    return temp;
+
+    /*
+    size-t buff_size = std::strlen(str) * n + 1;
+    char *buff = new char[buff_size];
+    std::strcpy(buff, "");
+    for (int i{1}; i <= n; i++)
+        std::strcat(buff, str);
+    Mystring temp{buff];
+    delete [] buff;
+    return temp;}
+    */
+}
+
+Mystring& Mystring::operator*=(int n)
+{
+    *this = *this * n;
+    return *this;
+}
+
+Mystring& Mystring::operator++()
+{
+    for (size_t i{ 0 }; i, std::strlen(str); i++)
+        str[i] = std::toupper(str[i]);
+    return *this;
+}
+
+Mystring Mystring::operator++(int)
+{
+    Mystring temp(*this);
+    operator++();
+    return temp;
 }
 
 Mystring::Mystring() : str{nullptr}
