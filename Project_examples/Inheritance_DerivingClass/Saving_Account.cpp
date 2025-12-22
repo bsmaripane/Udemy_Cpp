@@ -1,12 +1,8 @@
 #include "Saving_Account.h"
 
-Saving_Account::Saving_Account()
-{
-}
+Saving_Account::Saving_Account() {}
 
-Saving_Account::~Saving_Account()
-{
-}
+Saving_Account::~Saving_Account() {}
 
 void Saving_Account::deposit(double amount)
 {

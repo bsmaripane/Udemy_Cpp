@@ -5,6 +5,7 @@
 
 class Saving_Account : public Account
 {
+public:
 	Saving_Account();
 	~Saving_Account();
 	void deposit(double amount);
