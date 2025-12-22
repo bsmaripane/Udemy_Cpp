@@ -10,6 +10,6 @@ void Account::withdraw(double amount)
 	std::cout << "Account withdraw called with " << amount << std::endl;
 }
 
-Account::Account() {}
+Account::Account() : acc_name("Main Account"), balance(0.0) {}
 
 Account::~Account() {}
