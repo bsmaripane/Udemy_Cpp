@@ -1,6 +1,6 @@
 #include "Saving_Account.h"
 
-Saving_Account::Saving_Account() {}
+Saving_Account::Saving_Account() : int_rate(0.075) { acc_name = "Saving Account";  balance = 50.00; }
 
 Saving_Account::~Saving_Account() {}
 
