@@ -1,4 +1,6 @@
 #include "Mystring.h"
+#include <cstring>
+#include <string>
 
 std::ostream& operator<<(std::ostream& os, const Mystring& rhs)
 {
@@ -10,45 +12,45 @@ std::istream& operator>>(std::istream& in, const Mystring& rhs)
 {
     char* buff{ new char[1000] };
     in >> buff;
-    rhs = Mystring{ buff };
+    //rhs = Mystring{ buff };
     delete[] buff;
 
     return in;
 }
 
-bool operator==(const Mystring& lhs, const Mystring& rhs)
+bool Mystring::operator==(const Mystring& rhs) const
 {
-    return (std::strcmp(lhs.str, rhs.str) == 0) ? true : false;
+    return (std::strcmp(str, rhs.str) == 0) ? true : false;
 }
 
-bool operator!=(const Mystring& lhs, const Mystring& rhs)
+bool Mystring::operator!=(const Mystring& rhs) const
 {
-    return  (std::strcmp(lhs.str, rhs.str) != 0) ? true : false;
+    return  (std::strcmp(str, rhs.str) != 0) ? true : false;
 }
 
-bool operator<(const Mystring& lhs, const Mystring& rhs)
+bool Mystring::operator<(const Mystring& rhs) const
 {
-    return  (std::strcmp(lhs.str, rhs.str) < 0) ? true : false;
+    return  (std::strcmp(str, rhs.str) < 0) ? true : false;
 }
 
-bool operator>(const Mystring& lhs, const Mystring& rhs)
+bool Mystring::operator>(const Mystring& rhs) const
 {
-    return  (std::strcmp(lhs.str, rhs.str) > 0) ? true : false;
+    return  (std::strcmp(str, rhs.str) > 0) ? true : false;
 }
 
-Mystring operator-(const Mystring& obj)
-{
-    char* buff{ new char[std::strlen(obj.str) + 1] };
-    std::strcpy(buff, obj.str);
-
-    for (size_t i{ 0 }; i < std::strlen(buff); i++)
-        buff[i] = std::tolower(buff[i]);
-
-    Mystring temp{ buff };
-    delete[] buff;
-
-    return temp;
-}
+//Mystring Mystring::operator-(const Mystring& obj)
+//{
+//    char* buff{ new char[std::strlen(obj.str) + 1] };
+//    std::strcpy(buff, obj.str);
+//
+//    for (size_t i{ 0 }; i < std::strlen(buff); i++)
+//        buff[i] = std::tolower(buff[i]);
+//
+//    Mystring temp{ buff };
+//    delete[] buff;
+//
+//    return temp;
+//}
 
 Mystring Mystring::operator+( const Mystring& rhs) const
 {

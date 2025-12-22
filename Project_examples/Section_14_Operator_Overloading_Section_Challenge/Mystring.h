@@ -7,12 +7,6 @@ class Mystring
 {
 	friend std::ostream& operator<<(std::ostream& os, const Mystring& rhs);
 	friend std::istream& operator>>(std::istream& in, const Mystring& rhs);
-	friend bool operator==(const Mystring& lhs, const Mystring& rhs);
-	friend bool operator!=(const Mystring& lhs, const Mystring& rhs);
-	friend bool operator<(const Mystring& lhs, const Mystring& rhs);
-	friend bool operator>(const Mystring& lhs, const Mystring& rhs);
-	friend Mystring operator-(const Mystring& obj);
-
 private:
 	char* str;	// pointer to a char[] that holds a C-style string
 
@@ -31,6 +25,11 @@ public:
 	const char* get_str() const;				// getter method
 
 	// Overloaded operator member methods
+	bool operator==(const Mystring& rhs) const;
+	bool operator!=(const Mystring& rhs) const;
+	bool operator<(const Mystring& rhs) const;
+	bool operator>(const Mystring& rhs) const;
+	//Mystring operator-(const Mystring& obj);
 	Mystring operator+(const Mystring& rhs) const;
 	Mystring operator-() const;						// make lowercase
 	Mystring& operator+=(const Mystring& rhs);		// s1 += s2; concat and assign
