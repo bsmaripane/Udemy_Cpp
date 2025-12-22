@@ -1,40 +1,34 @@
 #include <iostream>
+#include <vector>
 #include "Account.h"
-#include "Saving_Account.h"
+#include "Savings_Account.h"
+#include "Account_Util.h"
 
 int main()
 {
 	// Use the Account class
-	std::cout << "======================= Account ============================" << std::endl;
-	Account acc(1000);
-	std::cout << acc << std::endl;
+	std::vector<Account> accounts;
+	accounts.push_back(Account{});
+	accounts.push_back(Account{"Belmy"});
+	accounts.push_back(Account{"Maxine", 2000});
+	accounts.push_back(Account{"Lesego", 5000});
 
-	acc.deposit(500.00);
-	std::cout << acc << std::endl;
-
-	acc.withdraw(2500);
-	std::cout << acc << std::endl;
-
-	acc.withdraw(500);
-	std::cout << acc << std::endl;
-
+	display(accounts);
+	deposit(accounts, 1000);
+	withdraw(accounts, 2000);
 	std::cout << std::endl;
 
 	// Use the Saving_Account
-	std::cout << "======================= Saving_Account ============================" << std::endl;
-	Saving_Account sav_acc(1500.00, 7);
-	std::cout << sav_acc << std::endl;
+	std::vector<Savings_Account> sav_accounts;
+	sav_accounts.push_back(Savings_Account{});
+	sav_accounts.push_back(Savings_Account{"Maswi"});
+	sav_accounts.push_back(Savings_Account{"Belicia", 2000});
+	sav_accounts.push_back(Savings_Account{"Felicia", 5000, 5.0});
 
-	sav_acc.deposit(1500.0);
-	std::cout << sav_acc << std::endl;
+	display(sav_accounts);
+	deposit(sav_accounts, 1000);
+	withdraw(sav_accounts, 2000);
 
-	sav_acc.withdraw(5250.0);
-	std::cout << sav_acc << std::endl;
-
-	sav_acc.withdraw(1200.00);
-	std::cout << sav_acc << std::endl;
-
-	std::cout << "\n======================================================================\n";
 	std::cin.get();
 	return 0;
 }
