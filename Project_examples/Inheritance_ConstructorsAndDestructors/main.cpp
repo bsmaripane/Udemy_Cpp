@@ -27,6 +27,8 @@ int main()
 {
 	Base base;
 	Base b{ 200 };
+	Derived derived;
+	Derived d{ 1000 };
 
 	std::cin.get();
 	return 0;
