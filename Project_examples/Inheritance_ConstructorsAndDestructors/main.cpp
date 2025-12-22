@@ -7,6 +7,15 @@ class Base
 public:
 	Base() : value{ 0 } { std::cout << "Base no-args constructor" << std::endl; }
 	Base(int x) : value{ x } { std::cout << "Base (int) overloaded constructor" << std::endl; }
+	Base(const Base& other) : value{ other.value } {std::cout << "Base copy constructor" << std::endl; }
+	Base& operator=(const Base& rhs)
+	{
+		std::cout << "Base operator=" << std::endl;
+		if (this == &rhs)
+			return *this;
+		value = rhs.value;
+		return *this;
+	}
 	~Base() { std::cout << "Base destructor" << std::endl; }
 
 private:
@@ -26,10 +35,12 @@ public:
 
 int main() 
 {
-	/*Base base;
-	Base b{ 200 };*/
-	Derived derived;
-	Derived d{ 1000 };
+	Base base;
+	Base b{ 100 };
+	Base b1{ b };
+	b = b1;
+	//Derived derived;
+	//Derived d{ 1000 };
 
 	std::cin.get();
 	return 0;
