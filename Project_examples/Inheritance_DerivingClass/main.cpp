@@ -45,8 +45,9 @@ int main()
 	std::vector<Trust_Account> trust_account;
 	trust_account.push_back(Trust_Account{});
 	trust_account.push_back(Trust_Account{"Bunny"});
-	trust_account.push_back(Trust_Account{"Thapelo", 2500});
-	trust_account.push_back(Trust_Account{"Shortie", 2500, 15.0});
+	trust_account.push_back(Trust_Account{"Thapelo", 20500, 5.0});
+	trust_account.push_back(Trust_Account{"Shortie", 25000, 15.0});
+	trust_account.push_back(Trust_Account{"Taily", 35000});
 
 	display(trust_account);
 	deposit(trust_account, 1500);
