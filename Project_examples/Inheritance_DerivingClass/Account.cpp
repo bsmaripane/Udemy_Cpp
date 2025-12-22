@@ -2,7 +2,7 @@
 
 void Account::deposit(double amount)
 {
-	balance == amount;
+	balance += amount;
 }
 
 void Account::withdraw(double amount)
