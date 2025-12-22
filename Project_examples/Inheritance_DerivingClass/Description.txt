@@ -25,3 +25,6 @@ Challenge is the following:
 		However, any deposit of R5000.00 or more will receive a $50.00 bouns deposited to the account
 
 		The Trust account withdrawal should only allow 3 withdrawals per year and each of these must less than 20%of the account balance.
+
+Hints:
+	Reuse existing functionality
