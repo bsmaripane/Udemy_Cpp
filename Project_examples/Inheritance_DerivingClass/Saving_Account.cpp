@@ -1,15 +1,17 @@
 #include "Saving_Account.h"
 
-Saving_Account::Saving_Account() : int_rate(0.075) { acc_name = "Saving Account";  balance = 50.00; }
+Saving_Account::Saving_Account() : Saving_Account(0.0, 0.0) {}
 
-Saving_Account::~Saving_Account() {}
+Saving_Account::Saving_Account(double balance, double int_rate) :Account(balance), int_rate(int_rate) {}
 
 void Saving_Account::deposit(double amount)
 {
-	std::cout << "Saving_Account deposit called with " << amount << std::endl;
+	amount += (amount * int_rate / 100);
+	Account::deposit(amount);
 }
 
-void Saving_Account::withdraw(double amount)
+std::ostream& operator<<(std::ostream& os, const Saving_Account& account)
 {
-	std::cout << "Saving_Account withdraw called with " << amount << std::endl;
+	os << "Saving account balance: " << account.balance << " interest rate: " << account.int_rate << std::endl;
+	return os;
 }
