@@ -2,22 +2,26 @@
 
 std::ostream& operator<<(std::ostream& os, const Trust_Account& account)
 {
-	os << "[ Trust account name: " << " balance: R" << std::fixed << std::setprecision(2) << account.get_balance() << std::endl;
+	os << "[ Trust Account: " << account.name << ": " << account.balance << ", " << account.int_rate << "%, withdrawals: " << account.num_withdrawals << "]" << std::endl;
 	return os;
 }
 
-Trust_Account::Trust_Account(std::string name, double balance, double int_rate) : Savings_Account(name, balance, int_rate) {}
+Trust_Account::Trust_Account(std::string name, double balance, double int_rate) : Savings_Account{ name, balance, int_rate }, num_withdrawals{ 0 } {}
 
 bool Trust_Account::deposit(double amount)
 {
-	if (allowed_withdrawals <= 3 && amount < (balance * 20 / 100))
-		if (amount >= MIN_DEPOSIT_FOR_BONUS)
-		{
-			balance += BONUS;
-			return Savings_Account::deposit(amount);
-		}
-		else
-			return Savings_Account::deposit(amount);
-	else
+	if (amount >= bonus_threshold)
+		amount += bonus_amount;
+	return Savings_Account::deposit(amount);
+}
+
+bool Trust_Account::withdraw(double amount)
+{
+	if (num_withdrawals >= max_withdrawals || (amount > balance * max_withdraw_percent))
 		return false;
+	else
+	{
+		++num_withdrawals;
+		return Savings_Account::withdraw(amount);
+	}
 }
