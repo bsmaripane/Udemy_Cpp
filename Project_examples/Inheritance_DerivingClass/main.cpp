@@ -54,7 +54,11 @@ int main()
 	deposit(trust_account, 7500);
 	withdraw(trust_account, 11250);
 	deposit(trust_account, 5500);
-	deposit(trust_account, 4750);
+
+	for (int i{ 1 }; i < 6; i++) {
+		withdraw(trust_account, 4750);
+		deposit(trust_account, 4750);
+	}
 
 
 	std::cin.get();
