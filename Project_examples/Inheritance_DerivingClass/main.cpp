@@ -2,6 +2,7 @@
 #include <vector>
 #include "Account.h"
 #include "Savings_Account.h"
+#include "Checking_Account.h"
 #include "Account_Util.h"
 
 int main()
@@ -28,6 +29,16 @@ int main()
 	display(sav_accounts);
 	deposit(sav_accounts, 1000);
 	withdraw(sav_accounts, 2000);
+
+	// Use the Checking_Account
+	std::vector<Checking_Account> check_account;
+	check_account.push_back(Checking_Account{});
+	check_account.push_back(Checking_Account{"Kganya"});
+	check_account.push_back(Checking_Account{"Thato", 1700});
+
+	display(check_account);
+	deposit(check_account, 1000);
+	withdraw(check_account, 2000);
 
 	std::cin.get();
 	return 0;
