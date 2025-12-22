@@ -5,12 +5,13 @@
 
 class Account
 {
-public:
-	std::string acc_name;
+	friend std::ostream& operator<<(std::ostream& os, const Account& account);
+protected:
 	double balance;
+public:
 	void deposit(double amount);
 	void withdraw(double amount);
 	Account();
-	~Account();
+	Account(double balalnce);
 };
 #endif // ACCOUNT_H
