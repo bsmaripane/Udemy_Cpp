@@ -19,15 +19,15 @@ class Derived : public Base
 private:
 	int doubled_value;
 public:
-	Derived() : doubled_value{ 0 } { std::cout << "Derived no-args constructor" << std::endl; }
-	Derived(int x) : doubled_value{ x*2 } { std::cout << "Derived (int) overloaded constructor" << std::endl; }
+	Derived() : Base{}, doubled_value { 0 } { std::cout << "Derived no-args constructor" << std::endl; }
+	Derived(int x) : Base{ x }, doubled_value{ x * 2 } { std::cout << "Derived (int) overloaded constructor" << std::endl; }
 	~Derived() { std::cout << "Derived destructor" << std::endl; }
 };
 
 int main() 
 {
-	Base base;
-	Base b{ 200 };
+	/*Base base;
+	Base b{ 200 };*/
 	Derived derived;
 	Derived d{ 1000 };
 
