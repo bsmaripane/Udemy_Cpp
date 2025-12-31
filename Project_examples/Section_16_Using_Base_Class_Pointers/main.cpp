@@ -59,8 +59,19 @@ int main()
 	for (auto i = 0; i < 4; ++i)
 		array[i]->withdraw(1000);
 
+	std::cout << "\n = = = Array = = =" << std::endl;
+	array[0] = p3;
+	for (auto i = 0; i < 4; ++i)
+		array[i]->withdraw(1000);
+
 	std::cout << "\n = = = Vector = = =" << std::endl;
 	std::vector<Account*> accounts{ p1, p2, p3, p4 };
+	for (auto acc_ptr : accounts)
+		acc_ptr->withdraw(1000);
+
+	std::cout << "\n = = = Vector = = =" << std::endl;
+	accounts.push_back(p3);
+	accounts.push_back(p4);
 	for (auto acc_ptr : accounts)
 		acc_ptr->withdraw(1000);
 
