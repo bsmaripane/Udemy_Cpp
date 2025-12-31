@@ -1,6 +1,7 @@
 // Section 16 The Problem
 
 #include <iostream>
+#include <memory>
 
 class Base
 {
@@ -40,6 +41,11 @@ int main()
 
 	Base* ptr = new Derived();
 	ptr->say_hello();
+
+	std::unique_ptr<Base> ptr1 = std::make_unique<Derived>();
+	ptr->say_hello();
+
+	delete ptr;
 
 	std::cin.get();
 	return 0;
