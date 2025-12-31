@@ -35,6 +35,10 @@ int main()
 	Derived d;
 	d.say_hello();
 
+	greetings(b);
+	greetings(d);
+
+
 	std::cin.get();
 	return 0;
 }
