@@ -38,6 +38,8 @@ int main()
 	greetings(b);
 	greetings(d);
 
+	Base* ptr = new Derived();
+	ptr->say_hello();
 
 	std::cin.get();
 	return 0;
