@@ -12,6 +12,7 @@ public:
 	{
 		std::cout << "In Account::withdraw" << std::endl;
 	}
+	~Account() { std::cout << "Account:: destructor" << std::endl; }
 };
 
 class Checking : public Account
@@ -21,6 +22,7 @@ public:
 	{
 		std::cout << "In Checking::withdraw" << std::endl;
 	}
+	~Checking() { std::cout << "Checking:: destructor" << std::endl; }
 };
 
 class Savings : public Account
@@ -30,6 +32,7 @@ public:
 	{
 		std::cout << "In Saving::withdraw" << std::endl;
 	}
+	~Savings() { std::cout << "Savings:: destructor" << std::endl; }
 };
 
 class Trust : public Account
@@ -39,6 +42,7 @@ public:
 	{
 		std::cout << "In Trust::withdraw" << std::endl;
 	}
+	~Trust() { std::cout << "Trust:: destructor" << std::endl; }
 };
 
 int main()
