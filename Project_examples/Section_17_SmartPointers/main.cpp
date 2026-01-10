@@ -59,6 +59,14 @@ int main()
 	std::cout << *ptr4 << std::endl;
 	std::cout << *ptr5 << std::endl;
 
+	// shared_ptr - creating, initialising and using
+	std::shared_ptr<int> ptr6{ new int {29} };
+	std::cout << "\nShared Pointer\n" << *ptr6 << std::endl;
+
+	*ptr6 = 30;
+
+	std::cout << *ptr6 << std::endl;
+
 	std::cin.get();
 	return 0;
 }
