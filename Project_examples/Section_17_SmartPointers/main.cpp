@@ -77,6 +77,16 @@ int main()
 	std::cout << ptr6.use_count() << std::endl;
 	std::cout << ptr7.use_count() << std::endl;
 
+	// shared-ptr - user defined classes
+	std::shared_ptr<Account> acc{ new Account{"Lesego", 257.78} };
+	std::cout << *acc << std::endl;
+
+	acc->deposit(273);
+	std::cout << *acc << std::endl;
+
+	acc->withdraw(375);
+	std::cout << *acc << std::endl;
+
 	std::cin.get();
 	return 0;
 }
