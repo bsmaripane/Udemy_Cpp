@@ -70,6 +70,9 @@ int main()
 	//  some other useful methods
 	std::cout << ptr6.use_count() << std::endl;
 
+	std::shared_ptr<int> ptr7{ ptr6 };
+	std::cout << ptr6.use_count() << std::endl;
+
 	std::cin.get();
 	return 0;
 }
