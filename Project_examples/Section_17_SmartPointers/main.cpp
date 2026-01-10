@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <memory>
+#include <vector>
 #include "../Inheritance_DerivingClass/Account.h"
 #include "../Inheritance_DerivingClass/Account.cpp"
 
@@ -34,6 +35,16 @@ int main()
 
 	p1->withdraw(500);
 	std::cout << *p1 << std::endl;
+
+	// unique pointers - vectors and move
+	std::vector<std::unique_ptr<int>> vec;
+	std::unique_ptr<int> ptr2{ new int{30} };
+
+	//vec.push_back(ptr2);	// Error - copy not allowed
+
+	vec.push_back(std::move(ptr2));
+
+	
 
 	std::cin.get();
 	return 0;
