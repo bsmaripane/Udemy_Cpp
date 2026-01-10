@@ -73,6 +73,20 @@ int main()
 	Trust t;
 	std::cout << t << std::endl;
 
+	std::cout << "\nUsing a pointer to refer the derived classes\n" << std::endl;
+
+	Account* ptr1 = new Account();
+	std::cout << *ptr1 << std::endl;
+
+	Account* ptr2 = new Checking();
+	std::cout << *ptr2 << std::endl;
+
+	Account* ptr3 = new Savings();
+	std::cout << *ptr3 << std::endl;
+
+	Account* ptr4 = new Trust();
+	std::cout << *ptr4 << std::endl;
+
 	std::cin.get();
 	return 0;
 }
