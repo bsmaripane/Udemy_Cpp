@@ -59,6 +59,10 @@ int main()
 	Circle c;
 	c.draw();
 
+	Shape* ptr = new Circle();
+	ptr->draw();
+	ptr->rotate();
+
 	std::cin.get();
 	return 0;
 }
