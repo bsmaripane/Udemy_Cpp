@@ -2,7 +2,7 @@
 
 std::ostream& operator<<(std::ostream& os, const Checking_Account& account)
 {
-    os << "[Checking_Account: " << account.name << " : R" << std::fixed << std::setprecision(2) << account.balance << "]";
+    os << "[Checking Account: " << account.name << " : R" << std::fixed << std::setprecision(2) << account.balance << "]";
     return os;
 }
 
