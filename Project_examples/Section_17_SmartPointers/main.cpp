@@ -67,6 +67,9 @@ int main()
 
 	std::cout << *ptr6 << std::endl;
 
+	//  some other useful methods
+	std::cout << ptr6.use_count() << std::endl;
+
 	std::cin.get();
 	return 0;
 }
