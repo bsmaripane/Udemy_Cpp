@@ -73,6 +73,10 @@ int main()
 	std::shared_ptr<int> ptr7{ ptr6 };
 	std::cout << ptr6.use_count() << std::endl;
 
+	ptr6.reset();
+	std::cout << ptr6.use_count() << std::endl;
+	std::cout << ptr7.use_count() << std::endl;
+
 	std::cin.get();
 	return 0;
 }
