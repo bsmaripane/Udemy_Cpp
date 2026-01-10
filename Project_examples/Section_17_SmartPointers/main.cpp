@@ -87,6 +87,18 @@ int main()
 	acc->withdraw(375);
 	std::cout << *acc << std::endl;
 
+	// shared_ptr - vectors and move
+	std::vector<std::shared_ptr<int>> vec2;
+	std::shared_ptr<int> ptr{ new int{100} };
+	// Ok - copy IS allowed
+	vec2.push_back(ptr);
+	vec2.push_back(ptr);
+	vec2.push_back(ptr);
+
+	std::cout << ptr.use_count() << std::endl;
+	for (const auto& p : vec2)
+		std::cout << *p << " ";
+
 	std::cin.get();
 	return 0;
 }
