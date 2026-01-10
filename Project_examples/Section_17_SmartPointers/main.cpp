@@ -44,7 +44,20 @@ int main()
 
 	vec.push_back(std::move(ptr2));
 
-	
+	//std::cout << *ptr2 << std::endl;
+
+	for (const auto& p : vec)
+		std::cout << *p << " ";
+
+	// unique_ptr - make_unique (from C++14)
+	std::unique_ptr<int> ptr3 = std::make_unique<int>(100);
+	std::unique_ptr<Account> ptr4 = std::make_unique<Account>("Maxine", 5000);
+
+	auto ptr5 = std::make_unique<Account>("Felicia", 3600);
+
+	std::cout << *ptr3 << std::endl;
+	std::cout << *ptr4 << std::endl;
+	std::cout << *ptr5 << std::endl;
 
 	std::cin.get();
 	return 0;
