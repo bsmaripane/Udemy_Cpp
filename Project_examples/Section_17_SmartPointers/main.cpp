@@ -13,6 +13,16 @@ int main()
 
 	std::cout << *ptr1 << std::endl;
 
+	// Some other useful methods
+	std::cout << ptr1.get() << std::endl;
+
+	ptr1.reset();	// ptr1 is now nullptr
+
+	if (ptr1)
+		std::cout << *ptr1 << std::endl;
+	else
+		std::cout << "ptr1 is nullptr" << std::endl;
+
 	std::cin.get();
 	return 0;
 }
