@@ -63,6 +63,19 @@ int main()
 	ptr->draw();
 	ptr->rotate();
 
+	std::cout<<std::endl;
+
+	Shape* s1 = new Line();
+	Shape* s2 = new Square();
+	
+	std::vector<Shape*> shapes{ ptr, s1, s2 };
+
+	for (const auto p : shapes)
+		p->draw();
+
+	delete s1;
+	delete s2;
+
 	std::cin.get();
 	return 0;
 }
