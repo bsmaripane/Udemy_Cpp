@@ -32,7 +32,14 @@ void func_a()
 void func_b()
 {
 	std::cout << "Starting func_b" << std::endl;
-	func_c();
+	try
+	{
+		func_c();
+	}
+	catch (int& ex)
+	{
+		std::cerr << "Caught error in func_b" << std::endl;
+	}
 	std::cout << "Ending func_b" << std::endl;
 }
 
