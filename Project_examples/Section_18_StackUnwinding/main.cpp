@@ -1,13 +1,20 @@
 #include <iostream>
 
+void func_a();
 void func_b();
 void func_c();
 
 int main()
 {
 	std::cout << "Starting main" << std::endl;
-	func_a();
-
+	try
+	{
+		func_a();
+	}
+	catch (int& ex)
+	{
+		std::cerr << "Caught error in main" << std::endl;
+	}
 	std::cout << "Finishing main" << std::endl;
 	std::cout << "\n\t= = = = = = End of Program = = = = = =";
 	system("pause");
@@ -32,5 +39,6 @@ void func_b()
 void func_c()
 {
 	std::cout << "Starting func_c" << std::endl;
+	throw 100;
 	std::cout << "Ending func_c" << std::endl;
 }
