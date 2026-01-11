@@ -12,6 +12,7 @@ int main()
 {
 	int numerator{}, denominator{};
 	double result{};
+	double average{};
 
 	std::cout << "Enter a numerator: ";
 	std::cin >> numerator;
@@ -29,25 +30,16 @@ int main()
 			result = static_cast<double>(numerator) / denominator;
 			std::cout << "Result: " << result << std::endl;
 		}
+		// Catching an exception thrown from a function
+		average = calculate_avg((67 + 79 + 91 + 59 + 54), 500);
+		std::cout << "Average: " << average << std::endl;
 	}
 	catch (int& ex)
 	{
 		std::cerr << "Error - you can't divide by zero" << std::endl;
 	}
 
-	// Catching an exception thrown from a function
-	double average{};
-
-	try
-	{
-		average = calculate_avg((67+79+91+59+54), 500);
-		std::cout << "Average: " << average << std::endl;
-	}
-	catch (int& ex)
-	{
-		std::cerr << "Division by zero is not allowed" << std::endl;
-	}
-
+	
 	std::cout << "\n\t= = = = = = End of Program = = = = = =";
 	//std::cin.get();
 	system("pause");
