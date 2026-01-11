@@ -1,6 +1,13 @@
 #include <iostream>
 
 
+double calculate_avg(int sum, int total)
+{
+	if (total == 0)
+		throw 0;
+	return static_cast<double>(sum) / total;
+}
+
 int main()
 {
 	int numerator{}, denominator{};
@@ -28,6 +35,7 @@ int main()
 		std::cerr << "Error - you can't divide by zero" << std::endl;
 	}
 
+	// Catching an exception thrown from a function
 	
 
 	std::cout << "\n\t= = = = = = End of Program = = = = = =";
