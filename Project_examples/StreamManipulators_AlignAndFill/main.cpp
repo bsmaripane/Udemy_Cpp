@@ -12,9 +12,11 @@ int main()
 	std::cout << "-- Defaults ----------------------------------" << std::endl;
 	std::cout << "Default: " << num1 << name << std::endl;
 
-	// Using Field width - justification 
-	std::cout << "-- Field width - Setw(10) and left -----------" << std::endl;
-	std::cout << "Setw(10): " << std::setw(10) << std::left << num1 << name << std::endl;
+	// Using Field width - justification - setw(10) and right 
+	std::cout << "-- Field width - Setw(10) and right -----------" << std::endl;
+	std::cout << "Setw(10): " << std::setw(10) << num1 
+							  << std::setw(10) << std::right << name 
+							  << std::setw(15) << std::right << name << std::endl;
 
 	system("pause>0");
 	return 0;
