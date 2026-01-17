@@ -16,9 +16,9 @@ int main()
 	std::cout << "num2: " << num2 << std::endl;
 	std::cout << "num3: " << num3 << std::endl;
 
-	// Display using precision 3, fixed and scientific notation -  display capital 'E' in scientific
-	std::cout << std::setprecision(3) << std::scientific << std::uppercase;
-	std::cout << "--- Precision 3 - scientific - uppercase --------" << std::endl;
+	// Show '+' symbol for positive numbers
+	std::cout << std::setprecision(3) << std::fixed << std::showpoint;
+	std::cout << "--- Precision 3 - fixed - showpos -------------" << std::endl;
 	std::cout << "num1: " << num1 << std::endl;
 	std::cout << "num2: " << num2 << std::endl;
 	std::cout << "num3: " << num3 << std::endl;
