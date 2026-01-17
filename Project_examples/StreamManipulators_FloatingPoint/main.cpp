@@ -16,9 +16,9 @@ int main()
 	std::cout << "num2: " << num2 << std::endl;
 	std::cout << "num3: " << num3 << std::endl;
 
-	// Display using precision 3 and fixed
-	std::cout << std::setprecision(3) << std::fixed;
-	std::cout << "--- Precision 3 -- fixed -----------------------" << std::endl;
+	// Display using precision 3, fixed and scientific notation - precision is ater the decimal
+	std::cout << std::setprecision(3) << std::scientific;
+	std::cout << "--- Precision 3 - scientific --------------------" << std::endl;
 	std::cout << "num1: " << num1 << std::endl;
 	std::cout << "num2: " << num2 << std::endl;
 	std::cout << "num3: " << num3 << std::endl;
