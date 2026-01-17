@@ -11,13 +11,17 @@ int main()
 	double num3{ 1234.0 };
 
 	// using default settings
-	std::cout << " --- Defaults -----------------------------------" << std::endl;
+	std::cout << "--- Defaults -----------------------------------" << std::endl;
 	std::cout << "num1: " << num1 << std::endl;
 	std::cout << "num2: " << num2 << std::endl;
 	std::cout << "num3: " << num3 << std::endl;
 
 	// Display in precision 2 scientific notation is used
-
+	std::cout << std::setprecision(2);
+	std::cout << "--- Precision 2 --------------------------------" << std::endl;
+	std::cout << "num1: " << num1 << std::endl;
+	std::cout << "num2: " << num2 << std::endl;
+	std::cout << "num3: " << num3 << std::endl;
 
 	system("pause>0");
 	return 0;
