@@ -9,7 +9,10 @@ int main()
 
 	std::cout << "num: " << num << std::endl;
 
-	std::cout << std::showpoint;
+	// returning to general settings
+	std::cout.setf(std::ios::scientific | std::ios::fixed);
+	std::cout << "num: " << num << std::endl;
+	std::cout.unsetf(std::ios::scientific | std::ios::fixed);
 	std::cout << "num: " << num << std::endl;
 
 	system("pause>0");
