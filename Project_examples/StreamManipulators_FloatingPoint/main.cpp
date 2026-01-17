@@ -16,9 +16,9 @@ int main()
 	std::cout << "num2: " << num2 << std::endl;
 	std::cout << "num3: " << num3 << std::endl;
 
-	// Display using precision 5
-	std::cout << std::setprecision(5);
-	std::cout << "--- Precision 5 --------------------------------" << std::endl;
+	// Display using precision 9
+	std::cout << std::setprecision(9);
+	std::cout << "--- Precision 9 --------------------------------" << std::endl;
 	std::cout << "num1: " << num1 << std::endl;
 	std::cout << "num2: " << num2 << std::endl;
 	std::cout << "num3: " << num3 << std::endl;
