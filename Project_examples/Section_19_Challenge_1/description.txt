@@ -1,0 +1,10 @@
+Section 19 Challenge 1
+
+Formatting output
+=============================================================================================================================
+In this challenge you are to display the provided data in a nicely formatted table.
+There are 3 structures provided.
+The structures work together to create a Tours structure that will contain information about Tours to South America.
+The Tours include Countries, Cities within those countries along with populaion and cost data for each city tour.
+
+============================================================================================================================
