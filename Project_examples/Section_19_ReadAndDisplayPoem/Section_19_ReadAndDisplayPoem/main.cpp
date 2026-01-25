@@ -2,10 +2,12 @@
 
 #include <iostream>
 #include <fstream>
+#include <string>
 
 int main()
 {
 	std::ifstream in_file;
+	std::string line{};
 
 	try
 	{
@@ -17,7 +19,10 @@ int main()
 			return 1;
 		}
 
-
+		while (std::getline(in_file, line))
+		{
+			std::cout << line << std::endl;
+		}
 	}
 	catch (const std::exception& ex)
 	{
