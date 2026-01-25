@@ -2,14 +2,27 @@
 
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 #include <string>
 #include <stdexcept>
+
+void print_header()
+{
+	std::cout << std::setw(20) << std::left << "Student" << "Score" << std::endl;
+	std::cout << "---------------------------\n";
+}
 
 int main()
 {
 	std::fstream file{};
 	char character{};
 	std::string filename{ "../responses.txt" };
+	std::string answer_key{};
+	std::string name{};
+	std::string response{};
+	int running_sum{ 0 };
+	int total_students{ 0 };
+	double average_score{ 0.0 };
 
 	try
 	{
@@ -20,6 +33,9 @@ int main()
 			system("pause>0");
 			return 1;
 		}
+
+		file >> answer_key;
+		print_header();
 
 		while (file.get(character))
 		{
@@ -32,6 +48,7 @@ int main()
 		std::cerr << "Error: " << ex.what() << std::endl;
 	}
 
+	if (file.is_open()) file.close();
 	system("pause>0");
 	return 0;
 }
