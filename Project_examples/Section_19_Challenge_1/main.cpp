@@ -73,15 +73,18 @@ int main()
 	std::cout << "--------------------------------------------------------------------\n";
 	for (auto country : tours.countries)	// loop through the countries
 	{
+		int x = 0;
 		std::cout << std::setw(20) << std::left << country.name;
 		for (auto city : country.cities)	// loop through the cities for each country
 		{
-			std::cout << std::setw(20) << std::right << std::setw(20) << std::left << city.name
+			if (x > 0) std::cout << std::setw(20) << "";
+			std::cout << std::setw(20) << std::left << city.name
 				<< std::setw(20) << std::left << city.population
 				<< std::setw(20) << std::left << city.cost << std::endl;
-		}
-		std::cout << "--------------------------------------------------------------------\n";
+			x++;
+		}		
 	}
+	std::cout << "--------------------------------------------------------------------\n";
 	std::cout << std::endl;
 	system("pause>0");
 	return 0;
