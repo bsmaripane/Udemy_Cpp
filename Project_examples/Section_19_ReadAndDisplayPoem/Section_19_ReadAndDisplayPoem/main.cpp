@@ -17,6 +17,8 @@ int main()
 		if (!in_file.is_open())
 		{
 			throw std::ios_base::failure("Failed to open the file.");
+			system("pause>0");
+			return 1;
 		}
 	}
 
