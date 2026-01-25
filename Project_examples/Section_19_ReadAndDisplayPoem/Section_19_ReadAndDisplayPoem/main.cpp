@@ -7,7 +7,7 @@
 int main()
 {
 	std::ifstream in_file;
-	std::string line{};
+	char c;
 
 	try
 	{
@@ -19,10 +19,11 @@ int main()
 			return 1;
 		}
 
-		while (std::getline(in_file, line))
+		while (in_file.get(c))
 		{
-			std::cout << line << std::endl;
+			std::cout << c;
 		}
+		std::cout << std::endl;
 	}
 	catch (const std::exception& ex)
 	{
