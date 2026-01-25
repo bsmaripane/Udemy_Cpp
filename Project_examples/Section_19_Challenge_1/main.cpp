@@ -27,6 +27,8 @@ struct Tours
 
 int main()
 {
+	const int TITLE_WIDTH{ 50 };
+	const int FIELD_WIDTH{ 20 };
 	Tours tours
 	{"Tour Ticket Prices from Miami",
 		{
@@ -64,7 +66,7 @@ int main()
 	};
 
 	// Unformatted display so you can see how to access the vector elements
-	std::cout << std::setw(50) << std::right << tours.title << std::endl;
+	std::cout << std::setw(TITLE_WIDTH) << std::right << tours.title << std::endl;
 	std::cout << "====================================================================\n\n";
 	std::cout << std::setw(20) << std::left << "Country"
 		<< std::setw(20) << std::left << "City"
@@ -74,14 +76,14 @@ int main()
 	for (auto country : tours.countries)	// loop through the countries
 	{
 		int x = 0;
-		std::cout << std::setw(20) << std::left << country.name;
+		std::cout << std::setw(FIELD_WIDTH) << std::left << country.name;
 		for (auto city : country.cities)	// loop through the cities for each country
 		{
-			if (x > 0) std::cout << std::setw(20) << "";
-			std::cout << std::setw(20) << std::left << city.name
-				<< std::setw(20) << std::left << city.population
-				<< std::setw(20) << std::left << city.cost << std::endl;
-			x++;
+			if (x > 0) std::cout << std::setw(FIELD_WIDTH) << "";
+			std::cout << std::setw(FIELD_WIDTH) << std::left << city.name
+				<< std::setw(FIELD_WIDTH) << std::left << city.population
+				<< std::setw(FIELD_WIDTH) << std::left << city.cost << std::endl;
+			x = 1;
 		}		
 	}
 	std::cout << "--------------------------------------------------------------------\n";
