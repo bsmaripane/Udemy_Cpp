@@ -17,6 +17,11 @@ int process_response(std::string response, std::string answer)
 
 }
 
+void print_student(std::string name, int score)
+{
+	std::cout << std::setw(20) << std::left << name << score << std::endl;
+}
+
 int main()
 {
 	std::fstream file{};
@@ -45,6 +50,8 @@ int main()
 		{
 			++total_students;
 			int score = process_response(response, answer_key);
+			running_sum += score;
+			print_student(name, score);
 		}
 		std::cout << std::endl;
 	}
