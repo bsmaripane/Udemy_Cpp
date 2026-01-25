@@ -12,10 +12,14 @@ void print_header()
 	std::cout << "---------------------------\n";
 }
 
+int process_response(std::string response, std::string answer)
+{
+
+}
+
 int main()
 {
 	std::fstream file{};
-	char character{};
 	std::string filename{ "../responses.txt" };
 	std::string answer_key{};
 	std::string name{};
@@ -37,9 +41,10 @@ int main()
 		file >> answer_key;
 		print_header();
 
-		while (file.get(character))
+		while (file >> name >> response)
 		{
-			std::cout << character;
+			++total_students;
+			int score = process_response(response, answer_key);
 		}
 		std::cout << std::endl;
 	}
