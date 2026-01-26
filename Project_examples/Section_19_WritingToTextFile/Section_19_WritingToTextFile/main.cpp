@@ -23,6 +23,7 @@ int main()
 		std::cerr << "Exception error: " << ex.what() << std::endl;
 	}
 
+	if (outFile.is_open()) outFile.close();
 	system("pause>0");
 	return 0;
 }
