@@ -6,8 +6,8 @@
 
 int main()
 {
-	std::string inFileName{};
-	std::string outFileName{};
+	std::string inFileName{"../myfile.txt"};
+	std::string outFileName{"../myfile_copy.txt"};
 	std::ofstream outFile{outFileName};
 	std::ifstream inFile{inFileName};
 
