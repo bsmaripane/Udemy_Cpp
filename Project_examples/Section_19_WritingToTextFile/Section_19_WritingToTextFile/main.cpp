@@ -6,25 +6,31 @@
 
 int main()
 {
-	std::string fileName{}; 
-	std::ofstream outFile{};
-	std::ifstream inFile{};
+	std::string inFileName{};
+	std::string outFileName{};
+	std::ofstream outFile{outFileName};
+	std::ifstream inFile{inFileName};
 
 	try
 	{
 		if (!outFile)
 		{
-			std::cerr << "Failed to open/create: " << fileName << std::endl;
+			std::cerr << "Failed to open/create: " << outFileName << std::endl;
 			system("pause>0");
 			return 1;
 		}
 
 		if (!outFile)
 		{
-			std::cerr << "Failed to open: " << fileName << std::endl;
+			std::cerr << "Failed to open: " << inFileName << std::endl;
 			system("pause>0");
 			return 1;
 		}
+
+		std::string line{};
+		while (std::getline(inFile, line))
+			outFile << line << std::endl;
+		
 	}
 	catch (std::exception& ex)
 	{
