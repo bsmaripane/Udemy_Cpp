@@ -14,12 +14,31 @@ void print_header()
 
 int process_response(std::string response, std::string answer)
 {
+	int match{ 0 };
 
+	for (int i{0}; i < 5; i++)
+	{
+		if (answer[i] == response[i])
+			match++;
+	}
+	
+	return match;
 }
 
 void print_student(std::string name, int score)
 {
 	std::cout << std::setw(20) << std::left << name << score << std::endl;
+}
+
+double calcuate_average(int score_sum, int total)
+{
+	return static_cast<double> (score_sum) / total;
+}
+
+void print_average_score(double average)
+{
+	std::cout << "---------------------------\n";
+	std::cout << std::setw(20) << std::left << "Average score" << average << std::endl;
 }
 
 int main()
@@ -53,7 +72,10 @@ int main()
 			running_sum += score;
 			print_student(name, score);
 		}
-		std::cout << std::endl;
+
+		average_score = calcuate_average(running_sum, total_students);
+		print_average_score(average_score);
+		
 	}
 	catch (std::exception& ex)
 	{
