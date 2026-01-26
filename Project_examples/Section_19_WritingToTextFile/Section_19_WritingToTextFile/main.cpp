@@ -27,9 +27,9 @@ int main()
 			return 1;
 		}
 
-		std::string line{};
-		while (std::getline(inFile, line))
-			outFile << line << std::endl;
+		char character;
+		while (inFile.get(character))
+			outFile.put(character);
 		
 	}
 	catch (std::exception& ex)
