@@ -20,7 +20,7 @@ int main()
 			return 1;
 		}
 
-		if (!outFile)
+		if (!inFile)
 		{
 			std::cerr << "Failed to open: " << inFileName << std::endl;
 			system("pause>0");
