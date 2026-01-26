@@ -6,16 +6,15 @@
 
 int main()
 {
-	int num{};
-	double total{};
-	std::string name{};
-	std::string info{ "Felicia 28 47600.57" };
+	int num{ 28 };
+	double total{ 12345.587 };
+	std::string name{ "Felicia" };
 
-	// Reading from a stringstream
-	std::istringstream iss{ info };
-	iss >> name >> num >> total;
+	// Writing to a stringstream
+	std::ostringstream oss{ };
+	oss << name << num << total;
 
-	std::cout << "Name: " << name << "\nAge: " << num << "\nMagadi cost so far: R" << total << std::endl;
+	std::cout << oss.str() << std::endl;
 
 	system("pause>0");
 	return 0;
