@@ -12,7 +12,7 @@ int main()
 
 	// Writing to a stringstream
 	std::ostringstream oss{ };
-	oss << name << num << total;
+	oss << name << " " << num << " " << total;
 
 	std::cout << oss.str() << std::endl;
 
