@@ -12,6 +12,13 @@ int main()
 	std::sort(oddNumers.begin(), oddNumers.end());
 	for (auto elem : oddNumers)
 		std::cout << elem << " ";
+	std::cout << std::endl;
+
+	// reverse a vector
+	std::reverse(oddNumers.begin(), oddNumers.end());
+	for (auto elem : oddNumers)
+		std::cout << elem << " ";
+	std::cout << std::endl;
 
 	system("pause>0");
 	return 0;
