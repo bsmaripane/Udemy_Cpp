@@ -3,14 +3,14 @@
 #include <iostream>
 #include <string>
 
-template <int N>
+template <class Type, int N>
 class Array
 {
 	int size{ N };
-	int values[N];	// the N needs to ne know at compile-time
+	Type values[N];	// the N needs to ne know at compile-time
 
 
-	friend std::ostream& operator<<(std::ostream& os, const Array<N>& arr)
+	friend std::ostream& operator<<(std::ostream& os, const Array<Type, N>& arr)
 	{
 		os << "[ ";
 
@@ -23,13 +23,13 @@ class Array
 
 public:
 	Array() = default;
-	Array(int init_value)
+	Array(Type init_value)
 	{
 		for (auto& item : values)
 			item = init_value;
 	}
 
-	void fill(int value)
+	void fill(Type value)
 	{
 		for (auto& item : values)
 			item = value;
@@ -48,7 +48,7 @@ public:
 
 int main()
 {
-	Array<5>numbers;
+	Array<int, 5>numbers;
 	std::cout << "The size of numbers is: " << numbers.getSize() << std::endl;
 	std::cout << numbers << std::endl;
 
@@ -68,9 +68,13 @@ int main()
 
 	std::cout << numbers << std::endl;
 
-	Array<100>numbers2{ 29 };
+	Array<double, 100>numbers2{ 29 };
 	std::cout << "The size of numbers2 is: " << numbers2.getSize() << std::endl;
 	std::cout << numbers2 << std::endl;
+
+	Array<std::string, 7>names{"I love Felicia more"};
+	std::cout << "The size of numbers2 is: " << names.getSize() << std::endl;
+	std::cout << names << std::endl;
 
 	system("pause");
 	return 0;
