@@ -3,13 +3,14 @@
 #include <iostream>
 #include <string>
 
+template <int N>
 class Array
 {
 	int size{ N };
 	int values[N];	// the N needs to ne know at compile-time
 
 
-	friend std::ostream& operator<<(std::ostream& os, const Array& arr)
+	friend std::ostream& operator<<(std::ostream& os, const Array<N>& arr)
 	{
 		os << "[ ";
 
@@ -37,6 +38,11 @@ public:
 	int getSize() const
 	{
 		return size;
+	}
+
+	int& operator[](int index)
+	{
+		return values[index];
 	}
 };
 
