@@ -10,26 +10,26 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="10" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="10" />
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="10" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height= "75" />
-            <RowDefinition Height= "10" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
         </Grid.RowDefinitions>
         
         <Label Grid.Row="1" Grid.Column="2" Content="Title of App" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label Grid.Row="2" Grid.Column="2" Content="Sample Text" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Label Grid.Row="3" Grid.Column="2" Content="A" FontSize="25" Background= "WhiteSmoke" HorizontalAlignment="Center" VerticalAlignment="Center" />
-        <Label Grid.Row="3" Grid.Column="4" Content="B" FontSize="25" Background= "WhiteSmoke" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Grid.Row="3" Grid.Column="2" Content="A"/>
+        <Button Grid.Row="3" Grid.Column="4" Content="B"/>
 
     </Grid>
 </Window>
