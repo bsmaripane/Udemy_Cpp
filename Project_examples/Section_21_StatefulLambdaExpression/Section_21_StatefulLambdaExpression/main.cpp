@@ -1,0 +1,72 @@
+// Section 21 Stateful Lambda Expression
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int global_x{ 1000 };
+
+// Capture by value
+// The global variable global_x cannot be captured because it is not within the reaching scope of the lambda.
+// It can however still be accessed from within the lambda using normal name lookup rules.
+void test1()
+{
+	std::cout << "\n--- Test1 ---------------------------------------\n";
+
+	int local_x{ 100 };
+
+	auto l = [local_x]()
+		{
+			std::cout << local_x << std::endl;
+			std::cout << global_x << std::endl;
+		};
+
+	l();
+}
+
+// Capture by value - mutable
+// The captured variable x can only be modified within the lambda by using the mutable keyword.
+// Note that this modifiability only pertains to the captured variable within the lambda body and not the actual variable.
+void test2()
+{
+	std::cout << "\n--- Test2 ---------------------------------------\n";
+
+	int x{ 100 };
+
+	auto l = [x]() mutable
+		{
+			x += 100;
+			std::cout << x << std::endl;
+		};
+
+	l();
+	std::cout << x << std::endl;
+
+	l();
+	std::cout << x << std::endl;
+}
+
+// Capture by reference
+// Any changes made to the catured reference variable within the lambda body will change the actual variable
+void Test3()
+{
+	std::cout << "\n--- Test2 ---------------------------------------\n";
+
+	int x{ 100 };
+
+	auto l = [&x]() mutable
+		{
+			x += 100;
+			std::cout << x << std::endl;
+		};
+
+	l();
+	std::cout << x << std::endl;
+}
+
+int main()
+{
+
+	system("pause");
+	return 0;
+}
