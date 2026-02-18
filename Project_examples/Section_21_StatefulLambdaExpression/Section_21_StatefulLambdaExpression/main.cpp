@@ -88,6 +88,34 @@ void Test4()
 	std::cout << x << std::endl;
 }
 
+// Default capture by reference
+// This time because all three variables - x, y, z are used within the lambda body, all three of them will be captured by reference
+void Test5()
+{
+	std::cout << "\n--- Test5 ---------------------------------------\n";
+
+	int x{ 100 };
+	int y{ 200 };
+	int z{ 300 };
+
+	auto l = [&]()
+		{
+			x += 100;
+			y += 100;
+			z += 100;
+
+			std::cout << x << std::endl;
+			std::cout << y << std::endl;
+			std::cout << z << std::endl;
+		};
+
+	l();
+	std::cout << "\n";
+	std::cout << x << std::endl;
+	std::cout << y << std::endl;
+	std::cout << z << std::endl;
+}
+
 int main()
 {
 
