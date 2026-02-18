@@ -47,6 +47,15 @@ int main()
 	std::cout << "test_score1: " << test_score1 << std::endl;
 	std::cout << "test_score2: " << test_score2 << std::endl;
 
+	// Use auto as lambda parameter type specifiers
+	int num1{ 10 };
+	float num2{ 30.3 };
+
+	auto out = [](auto num) {std::cout << num << std::endl; };
+
+	out(num1);
+	out(num2);
+
 	system("pause");
 	return 0;
 }
