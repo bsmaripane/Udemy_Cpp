@@ -145,6 +145,12 @@ void Test6()
 
 int main()
 {
+	test1();
+	test2();
+	Test3();
+	Test4();
+	Test5();
+	Test6();
 
 	system("pause");
 	return 0;
