@@ -32,6 +32,21 @@ int main()
 
 	std::cout << sum(nums, 3) << std::endl;
 
+	// Use values and references as lambda parameters
+	int test_score1{ 88 };
+	int test_score2{ 75 };
+
+	auto bonus = [](int& score1, int& score2, int bonus_points)
+		{
+			score1 += bonus_points;
+			score2 += bonus_points;
+		};
+
+	bonus(test_score1, test_score2, 5);
+
+	std::cout << "test_score1: " << test_score1 << std::endl;
+	std::cout << "test_score2: " << test_score2 << std::endl;
+
 	system("pause");
 	return 0;
 }
