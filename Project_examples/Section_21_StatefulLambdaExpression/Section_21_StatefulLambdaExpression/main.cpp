@@ -143,6 +143,33 @@ void Test6()
 	std::cout << z << std::endl;
 }
 
+// Default capture by reference, capture x and z by value
+void Test7()
+{
+	std::cout << "\n--- Test7 ---------------------------------------\n";
+
+	int x{ 100 };
+	int y{ 200 };
+	int z{ 300 };
+
+	auto l = [&,x,y]() mutable
+		{
+			x += 100;
+			y += 100;
+			z += 100;
+
+			std::cout << x << std::endl;
+			std::cout << y << std::endl;
+			std::cout << z << std::endl;
+		};
+
+	l();
+	std::cout << "\n";
+	std::cout << x << std::endl;
+	std::cout << y << std::endl;
+	std::cout << z << std::endl;
+}
+
 int main()
 {
 	test1();
