@@ -50,7 +50,7 @@ void test2()
 // Any changes made to the catured reference variable within the lambda body will change the actual variable
 void Test3()
 {
-	std::cout << "\n--- Test2 ---------------------------------------\n";
+	std::cout << "\n--- Test3 ---------------------------------------\n";
 
 	int x{ 100 };
 
@@ -61,6 +61,30 @@ void Test3()
 		};
 
 	l();
+	std::cout << x << std::endl;
+}
+
+// Default capture by value - mutable
+// Only variables used within the lambda body are captured by value.
+// The variable z is not captured by the lambda.
+void Test4()
+{
+	std::cout << "\n--- Test4 ---------------------------------------\n";
+
+	int x{ 100 };
+	int y{ 200 };
+	int z{ 300 };
+
+	auto l = [=]() mutable
+		{
+			x += 100;
+			y += 100;
+			std::cout << x << std::endl;
+			std::cout << y << std::endl;
+		};
+
+	l();
+	std::cout << "\n";
 	std::cout << x << std::endl;
 }
 
