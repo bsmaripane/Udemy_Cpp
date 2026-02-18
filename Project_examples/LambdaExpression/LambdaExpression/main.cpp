@@ -1,6 +1,7 @@
 // Section 21 Lambda Expression
 
 #include <iostream>
+#include <vector>
 
 int main()
 {
@@ -55,6 +56,18 @@ int main()
 
 	out(num1);
 	out(num2);
+
+	std::vector<int> exam_scores{ 93,88,75,68,65 };
+	std::vector<float> assignment_scores{ 88.5,85.5,75.5,68.5,65.5 };
+
+	auto final = [](auto& marks, int final_marks)
+		{
+			for (auto& mark : marks)
+				mark += final_marks;
+		};
+
+	final(exam_scores, 5);
+	final(assignment_scores, 10);
 
 	system("pause");
 	return 0;
