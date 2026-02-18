@@ -178,6 +178,7 @@ int main()
 	Test4();
 	Test5();
 	Test6();
+	Test7();
 
 	system("pause");
 	return 0;
