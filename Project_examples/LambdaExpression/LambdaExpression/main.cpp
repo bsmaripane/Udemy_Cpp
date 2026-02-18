@@ -3,6 +3,13 @@
 #include <iostream>
 #include <vector>
 
+void print_if(std::vector<int> nums, bool (*predicate) (int))
+{
+	for (int i : nums)
+		if (predicate(i))
+			std::cout << i;
+}
+
 int main()
 {
 	auto word = []() { std::cout << "Hello Lambda Expression" << std::endl; };
@@ -68,6 +75,12 @@ int main()
 
 	final(exam_scores, 5);
 	final(assignment_scores, 10);
+
+	// Using lambda expressions as predicates
+	std::vector<int> numbers{ 1,2,3,4,5 };
+
+	print_if(numbers, [] (auto k) {return k % 2 == 0; });
+	print_if(numbers, [](auto k) {return k % 2 != 0; });
 
 	system("pause");
 	return 0;
