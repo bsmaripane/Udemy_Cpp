@@ -17,6 +17,21 @@ int main()
 
 	std::cout << module(9, 5) << std::endl;
 
+	// Stateless lambda expressions
+
+	const int n{ 3 };
+	int nums[n]{ 10,20,30 };
+
+	auto sum = [](int nums[], int n)
+		{
+			int sum{ 0 };
+			for (int i{ 0 }; i < n; i++)
+				sum += nums[i];
+			return sum;
+		};
+
+	std::cout << sum(nums, 3) << std::endl;
+
 	system("pause");
 	return 0;
 }
