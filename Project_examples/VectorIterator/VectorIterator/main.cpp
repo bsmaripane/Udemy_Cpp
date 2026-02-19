@@ -3,6 +3,7 @@
 #include <iostream>
 #include <iterator>
 #include <vector>
+#include <set>
 
 
 int main()
@@ -14,6 +15,17 @@ int main()
 	for (auto it = vec.begin(); it != vec.end(); it++)
 	{
 		std::cout << *it << " ";
+	}
+	std::cout << std::endl;
+
+	// Iterate string of characters
+	std::set<char> surname{ 'M','A','R','I','P','A','N','E' };
+	auto iter = surname.begin();
+
+	while (iter != surname.end())
+	{
+		std::cout << *iter << std::endl;
+		++iter;
 	}
 
 	system("pause");
