@@ -28,6 +28,17 @@ int main()
 		++iter;
 	}
 
+	// Reverse iterators
+	std::vector<int> vec2{ 1,2,3,4,5,6 };
+	std::vector<int>::reverse_iterator rit = vec2.rbegin(); // Use a different variable name
+
+	while (rit != vec2.rend())
+	{
+		std::cout << *rit << std::endl;
+		++rit;
+	}
+	std::cout << std::endl;
+
 	system("pause");
 	return 0;
 }
