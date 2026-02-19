@@ -11,10 +11,9 @@ int main()
 
 	std::vector<int>::iterator it = vec.begin();
 
-	while (it != vec.end())
+	for (auto it = vec.begin(); it != vec.end(); it++)
 	{
 		std::cout << *it << " ";
-		++it;
 	}
 
 	system("pause");
