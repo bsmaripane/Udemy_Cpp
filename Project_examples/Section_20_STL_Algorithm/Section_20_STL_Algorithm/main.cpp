@@ -3,6 +3,13 @@
 #include <algorithm>
 #include <vector>
 
+struct Square_Functor
+{
+	void operator() (int x)
+	{
+		std::cout << x * x << " ";
+	}
+};
 
 int main()
 {
@@ -11,6 +18,9 @@ int main()
 
 	if (loc != vec.end())
 		std::cout << *loc << std::endl;
+
+	// for_each - using a functor
+
 
 	system("pause");
 	return 0;
