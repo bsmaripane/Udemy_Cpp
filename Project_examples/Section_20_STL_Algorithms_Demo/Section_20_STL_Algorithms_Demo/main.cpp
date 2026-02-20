@@ -44,9 +44,19 @@ void find_test()
 	std::cout << ((loc1 != players.end()) ? "Found Kganya" : "Kganya not found") << std::endl;
 }
 
+void count_test()
+{
+	std::cout << "\n================================\n";
+	std::vector<int>vec{ 0,1,2,3,4,5,3,2,1,2 };
+
+	int num = std::count(vec.begin(), vec.end(), 2);
+	std::cout << num << " occurrences found" << std::endl;
+}
+
 int main()
 {
 	find_test();
+	count_test();
 
 	std::cout << std::endl;
 	system("pause");
