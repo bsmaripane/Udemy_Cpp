@@ -92,7 +92,17 @@ void all_of_test()
 
 	std::cout << ((std::all_of(vec.begin(), vec.end(), [](int x) {return x < 20; })) ?
 		"All the elements are < 20" : "Not all the elements are < 20") << std::endl;
-	
+}
+
+void string_transform_test()
+{
+	std::cout << "\n================================\n";
+
+	std::string str1{ "This is a test" };
+
+	std::cout << "Before transform: " << str1 << std::endl;
+	std::transform(str1.begin(), str1.end(), str1.begin(), ::toupper);
+	std::cout << "Before transform: " << str1 << std::endl;
 }
 
 int main()
@@ -102,6 +112,7 @@ int main()
 	count_if_test();
 	replace_test();
 	all_of_test();
+	string_transform_test();
 
 	std::cout << std::endl;
 	system("pause");
