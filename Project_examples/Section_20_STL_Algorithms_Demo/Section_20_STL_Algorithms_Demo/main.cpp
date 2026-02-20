@@ -64,6 +64,8 @@ void count_if_test()
 	num = std::count_if(vec.begin(), vec.end(), [](int x) {return x % 2 != 0; });
 	std::cout << num << " odd numbers found" << std::endl;
 
+	num = std::count_if(vec.begin(), vec.end(), [](int x) {return x >= 5; });
+	std::cout << num << " numbers greater then or equal to 5 found" << std::endl;
 }
 
 int main()
