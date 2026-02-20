@@ -53,10 +53,24 @@ void count_test()
 	std::cout << num << " occurrences found" << std::endl;
 }
 
+void count_if_test()
+{
+	std::cout << "\n================================\n";
+	// count only if the element is even
+	std::vector<int>vec{ 1,2,3,4,5,6,7,1,2,8,3,4,2,1, 100 };
+	int num = std::count_if(vec.begin(), vec.end(), [](int x) -> int {return x % 2 == 0; });
+	std::cout << num << " even numbers found" << std::endl;
+
+	num = std::count_if(vec.begin(), vec.end(), [](int x) {return x % 2 != 0; });
+	std::cout << num << " odd numbers found" << std::endl;
+
+}
+
 int main()
 {
 	find_test();
 	count_test();
+	count_if_test();
 
 	std::cout << std::endl;
 	system("pause");
