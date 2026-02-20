@@ -23,9 +23,30 @@ public:
 	}
 };
 
+void find_test()
+{
+	std::cout << "\n================================\n";
+	std::vector<int>vec{ 1,2,3,4,5 };
+	auto loc = std::find(std::begin(vec), std::end(vec), 1);
+
+	if (loc != std::end(vec))
+		std::cout << "Found the number: " << *loc << std::endl;
+	else
+		std::cout << "Coundn't find the number" << std::endl;
+
+	std::list<Person> players{
+		{"Lesego", 12},
+		{"Kganya", 3},
+		{"Belicia", 5}
+	};
+
+	auto loc1 = std::find(players.begin(), players.end(), Person{ "Kganya", 3 });
+	std::cout << ((loc1 != players.end()) ? "Found Kganya" : "Kganya not found") << std::endl;
+}
+
 int main()
 {
-
+	find_test();
 
 	std::cout << std::endl;
 	system("pause");
