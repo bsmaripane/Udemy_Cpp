@@ -21,6 +21,11 @@ int main()
 	// for_each - using a regular functioon
 
 	std::for_each(vec.begin(), vec.end(), Square);
+	std::cout<< std::endl;
+
+	// for_each - using a lambda expression
+	std::for_each(vec.begin(), vec.end(), [](int x) {std::cout << x * x << " "; });
+	std::cout << std::endl;
 
 	system("pause");
 	return 0;
