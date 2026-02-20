@@ -20,7 +20,9 @@ int main()
 		std::cout << *loc << std::endl;
 
 	// for_each - using a functor
+	Square_Functor square;
 
+	std::for_each(vec.begin(), vec.end(), square);
 
 	system("pause");
 	return 0;
