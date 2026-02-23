@@ -6,35 +6,68 @@
 #include <algorithm>
 
 template <class T>
-void display(const std::deque<T>& d)
+void Display(const std::deque<T>& d)
 {
-	std::cout << "[";
+	std::cout << "[ ";
 	for (const auto& elem : d)
 		std::cout << elem << " ";
 	std::cout << "]" << std::endl;
 }
 
-void test1()
+void Test1()
 {
 	std::cout << "\nTest1 =========================================\n";
 
 	std::deque<int>d{ 1,2,3,4,5 };
-	display(d);
+	Display(d);
 
 	d = { 2,4,6,8 };
-	display(d);
+	Display(d);
 
 	std::deque<int> d1(10, 100);	// ten 100s in the deque
-	display(d1);
+	Display(d1);
 
 	d[0] = 100;
 	d.at(1) = 200;
-	display(d);
+	Display(d);
+}
+
+void Test2()
+{
+	std::cout << "\nTest2 =========================================\n";
+
+	std::deque<int> d{ 0,0,0 };
+	Display(d);
+
+	d.push_back(10);
+	d.push_back(20);
+	Display(d);
+
+	d.push_front(100);
+	d.push_front(200);
+	Display(d);
+
+	std::cout << "Front: " << d.front() << std::endl;
+	std::cout << "Back: " << d.back() << std::endl;
+	std::cout << "Size: " << d.size() << std::endl;
+
+	d.pop_back();
+	d.pop_front();
+	Display(d);
+}
+
+void Test3()
+{
+	std::cout << "\nTest3 =========================================\n";
+
+
 }
 
 int main()
 {
-	test1();
+	Test1();
+	Test2();
+	Test3();
 
 	system("pause");
 	return 0;
