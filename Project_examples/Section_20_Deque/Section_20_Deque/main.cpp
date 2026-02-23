@@ -91,12 +91,30 @@ void Test4()
 	Display(d);
 }
 
+void Test5()
+{
+	std::cout << "\nTest5 =========================================\n";
+
+	std::vector<int> vec{ 0,1,2,3,4,5,6,7,8,9,10 };
+	std::deque<int> d;
+
+	std::copy(vec.begin(), vec.end(), std::front_inserter(d));
+
+	Display(d);
+	d.clear();
+
+	std::copy(vec.begin(), vec.end(), std::back_inserter(d));
+
+	Display(d);
+}
+
 int main()
 {
 	Test1();
 	Test2();
 	Test3();
 	Test4();
+	Test5();
 
 	system("pause");
 	return 0;
