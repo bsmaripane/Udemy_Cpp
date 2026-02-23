@@ -18,6 +18,16 @@ int main()
 
 	d = { 2,4,6,8,10 };
 
+	// deque common methods
+	std::cout << d.size() << std::endl;
+	std::cout << d.max_size() << std::endl;
+
+	std::cout << d.at(0) << std::endl;
+	std::cout << d[1] << std::endl;
+
+	std::cout << d.front() << std::endl;
+	std::cout << d.back() << std::endl;
+
 	system("pause");
 	return 0;
 }
