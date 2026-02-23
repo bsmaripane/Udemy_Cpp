@@ -60,7 +60,16 @@ void Test3()
 {
 	std::cout << "\nTest3 =========================================\n";
 
+	std::vector<int> vec{ 1,2,3,4,5,6,7,8,9,10 };
+	std::deque<int> d;
 
+	for (const auto& elem : vec)
+		if (elem % 2 == 0)
+			d.push_back(elem);
+		else
+			d.push_front(elem);
+
+	Display(d);
 }
 
 int main()
