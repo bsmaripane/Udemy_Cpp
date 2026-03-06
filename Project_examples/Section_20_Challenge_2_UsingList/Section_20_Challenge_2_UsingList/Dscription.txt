@@ -1,0 +1,30 @@
+Section 20 Challenge 2 Using std::list
+======================================
+
+In this challenge will create a menu driven application that will simulate a user playing songs from a playlist of songs.
+
+Use a list to simulate the user selecting the first song in the play then selecting next and previous to play forward of backwards through the playlist.
+
+Allow users to add new song to the playlist and they will be added prior to the currently playing song.
+The menu looks as follows:
+	F - Play First Song
+	N - Play Next Song
+	P - Play Previous Song
+	A - Add and Play a New Song at Current Location
+	L - List the Current Playlist
+=======================================================================================================
+Enter a selection (Q to quit):
+
+And the available playlist is modeled as a std::list<Song>
+Following are the songs in the playlist:
+
+God's Plan				Drake						5
+Never Be The Same		Camila Cabello				5
+Pray for Me				The Weekend and K.Lamar		4
+The Middle				Zedd, Maren Morris & Grey	5
+Wait					Maroone 5					4
+Whatever it Takes		Imagine Dragons				3
+
+Clear std::cin and ignore everything in the buffer with:
+std::cin.clear();
+std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
