@@ -58,8 +58,22 @@ void DisplayPlaylist(const std::list<Song>& playlist, const Song& currentSong)
 
 int main()
 {
-	
+	std::list<Song> playlist
+	{
+		{"God's Plan", "Drake", 5},
+		{"Never Be The Same", "Camila Cabello", 5},
+		{"Pray for Me", "The Weekend and K.Lamar", 4},
+		{"The Middle", "Zedd, Maren Morris & Grey", 5},
+		{"Wait", "Maroone 5", 4},
+		{"Whatever it Takes", "Imagine Dragons", 3}
+	};
 
+	std::list<Song>::iterator currentSong = playlist.begin();
+
+	std::cout << "To be implemented" << std::endl;
+	// program logic goes here
+
+	std::cout << "\nThanks for listening!" << std::endl;
 	system("pause");
 	return 0;
 }
