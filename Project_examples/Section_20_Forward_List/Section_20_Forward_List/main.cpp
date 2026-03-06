@@ -13,6 +13,17 @@ int main()
 	std::cout << "fList.max_size(): " << fList.max_size() << std::endl;
 	std::cout << "fList.front(): " << fList.front() << std::endl;
 
+	// methods that use iterators
+	auto it = std::find(fList.begin(), fList.end(), 4);
+
+	fList.insert_after(it, 10);
+	fList.emplace_after(it, 100);
+
+	fList.erase_after(it);
+
+	fList.resize(2);
+	fList.resize(5);
+
 	system("pause");
 	return 0;
 }
