@@ -30,13 +30,17 @@ bool IsPalindrome(const std::string& str)
 
 int main()
 {
-	
 	std::cout << "Section 20 Section Challenge 1 Deque\n\n";
+
+	std::vector<std::string> test_strings{ "a", "aa", "Aa", "aba", "aBBa", "abbcbba", "ab", "abc", "radar", "bob", "ana", "avid diva", "Amore, Roma", "A Toyata's a toyota", "A Santa at NASA",
+		"A man, a plan, a cat, a ham, a yak, a yam, a hat, a canal-Panama!", "This is a panlindromw", "palindrome"};
 
 	std::cout << std::boolalpha;
 	std::cout << std::setw(8) << std::left << "Result" << "String\n====================================\n";
 	std::cout << std::setw(8) << std::left << IsPalindrome("Deque") << "Deque" << std::endl;
-	std::cout << std::setw(8) << std::left << IsPalindrome("A Santa at NASA") << "A Santa at NASA" << std::endl;
+
+	for (size_t i{0}; i < test_strings.size(); i++)
+		std::cout << std::setw(8) << std::left << IsPalindrome(test_strings.at(i)) << test_strings.at(i) << std::endl;
 
 	system("pause");
 	return 0;
