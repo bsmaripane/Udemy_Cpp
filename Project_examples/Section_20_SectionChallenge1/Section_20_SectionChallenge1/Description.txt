@@ -17,3 +17,5 @@ For the purpose of this assignment we will only consider alpha characters and om
 
 A common method to solve this problem is to compare the string to its reverse and
 if the are equal then it must be a palindrome, But we will use a deque.
+
+A deque is a double ended queue, which means that we can add and remove items from both the front and the back of the queue.
