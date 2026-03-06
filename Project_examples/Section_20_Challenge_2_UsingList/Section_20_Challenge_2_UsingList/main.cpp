@@ -33,7 +33,16 @@ public:
 	bool operator==(const Song& rhs) const { return this->name == rhs.name; }
 };
 
-
+void DisplayMenu()
+{
+	std::cout << "\nF - Play First Song" << std::endl
+		<< "N - Play Next Song" << std::endl
+		<< "P - Play Previous Song" << std::endl
+		<< "A - Add and Play a New Song at Current Location" << std::endl
+		<< "L - List the Current Playlist" << std::endl
+		<< "========================================================" << std::endl
+		<< "Enter a selection(Q to quit) : ";
+}
 
 int main()
 {
