@@ -41,7 +41,13 @@ void DisplayMenu()
 		<< "A - Add and Play a New Song at Current Location" << std::endl
 		<< "L - List the Current Playlist" << std::endl
 		<< "========================================================" << std::endl
-		<< "Enter a selection(Q to quit) : ";
+		<< "Enter a selection(Q to quit): ";
+}
+
+void PlayCurrentSong(const Song& song)
+{
+	std::cout << "Playing:" << std::endl;
+	std::cout << song << std::endl;
 }
 
 int main()
