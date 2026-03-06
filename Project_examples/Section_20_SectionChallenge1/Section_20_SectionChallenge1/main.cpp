@@ -32,7 +32,7 @@ int main()
 	
 	std::cout << "Section 20 Section Challenge 1 Deque\n\n";
 
-	std::cout.boolalpha;
+	std::cout << std::boolalpha;
 	std::cout << IsPalindrome("Deque") << std::endl;
 	std::cout << IsPalindrome("A Santa at NASA") << std::endl;
 
