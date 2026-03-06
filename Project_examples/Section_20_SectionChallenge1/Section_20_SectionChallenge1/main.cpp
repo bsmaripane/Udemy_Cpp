@@ -4,6 +4,7 @@
 #include <vector>
 #include <deque>
 #include <algorithm>
+#include <iomanip>
 
 bool IsPalindrome(const std::string& str)
 {
@@ -33,8 +34,9 @@ int main()
 	std::cout << "Section 20 Section Challenge 1 Deque\n\n";
 
 	std::cout << std::boolalpha;
-	std::cout << IsPalindrome("Deque") << std::endl;
-	std::cout << IsPalindrome("A Santa at NASA") << std::endl;
+	std::cout << std::setw(8) << std::left << "Result" << "String\n====================================\n";
+	std::cout << std::setw(8) << std::left << IsPalindrome("Deque") << "Deque" << std::endl;
+	std::cout << std::setw(8) << std::left << IsPalindrome("A Santa at NASA") << "A Santa at NASA" << std::endl;
 
 	system("pause");
 	return 0;
