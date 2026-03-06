@@ -22,17 +22,18 @@ class Song
 	int rating;
 public:
 	Song() = default;
-	Song(std::string name, std::string artist, int rating) : name(name), artist(artist) 
-	{
-		if (rating < 0 || rating > 5)
-			this->rating = 0;
-	}
+	Song(const std::string& name, const std::string& artist, int rating)
+		: name(name),
+		  artist(artist),
+		  rating((rating < 0 || rating > 5) ? 0 : rating) {}
 	std::string GetName() const { return name; }
 	std::string GetArtist() const { return artist; }
 	int GetRating() const { return rating; }
 	bool operator<(const Song& rhs) const { return this->name < rhs.name; }
 	bool operator==(const Song& rhs) const { return this->name == rhs.name; }
 };
+
+
 
 int main()
 {
