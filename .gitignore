@@ -1,73 +1,56 @@
-# Visual Studio-specific files
+# Visual Studio cache and user-specific files
 .vs/
-*.sln
-*.vcxproj
-*.vcxproj.user
-*.vcxproj.filters
-*.ncb
-*.sdf
-*.opensdf
 *.suo
 *.user
-*.cache
-*.pdb
-*.idb
+*.userosscache
+*.sln.docstates
+
+# Visual C++ cache
+ipch/
 *.ipch
-*.tlog/
-*.lastbuildstate
-*.manifest
-*.pch
 
-# Build directories and binaries
-/x64/
-/Win32/
-/Debug/
-/Release/
-/build/
-/bin/
-/lib/
-/out/
-/obj/
-/ipch/
+# Build results
+Debug/
+Release/
+x64/
+x86/
+build/
+bin/
+obj/
+out/
 
-# C++ compiled files
+# Compiled binaries
 *.exe
 *.dll
 *.obj
-*.o
 *.lib
+*.o
 *.a
 *.so
 *.dylib
 *.out
 *.app
 
-# Debugging and profiling files
-*.dSYM/
-*.gcno
-*.gcda
-*.gcov
+# Debugging files
+*.pdb
+*.idb
+*.ilk
 
-# CMake and Makefile files
-CMakeFiles/
-CMakeCache.txt
-Makefile
-cmake_install.cmake
-
-# Logs and temporary files
+# Logs and temp files
 *.log
 *.tmp
 *.cache
-*.tlog/
-*.lastbuildstate
 
-# IDE and editor-specific files
-*.swp
-*.swo
-*.idea/
-*.vscode/
-*.code-workspace
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
 
-# OS-specific files
-*.DS_Store
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
 Thumbs.db
