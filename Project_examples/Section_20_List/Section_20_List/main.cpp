@@ -4,7 +4,7 @@
 #include <iostream>
 #include <list>
 
-int amin()
+int main()
 {
 	std::list<int> list1{ 1,2,3,4,5 };
 	std::list<int> list2(10, 100);
