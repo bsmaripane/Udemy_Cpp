@@ -50,9 +50,15 @@ void PlayCurrentSong(const Song& song)
 	std::cout << song << std::endl;
 }
 
+void DisplayPlaylist(const std::list<Song>& playlist, const Song& currentSong)
+{
+	// This function should display the current playlist and then the current song playing.
+	std::cout << "You implement this function" << std::endl;
+}
+
 int main()
 {
-
+	
 
 	system("pause");
 	return 0;
