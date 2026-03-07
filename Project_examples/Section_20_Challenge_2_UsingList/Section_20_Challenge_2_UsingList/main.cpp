@@ -69,11 +69,86 @@ int main()
 		{"Wait", "Maroone 5", 4},
 		{"Whatever it Takes", "Imagine Dragons", 3}
 	};
-
 	std::list<Song>::iterator currentSong = playlist.begin();
+	char selection{};
 
-	std::cout << "To be implemented" << std::endl;
-	// program logic goes here
+	DisplayPlaylist(playlist, *currentSong);
+
+	do
+	{
+		DisplayMenu();
+		std::cin >> selection;
+		selection = toupper(selection);
+
+		if (selection == 'F')
+		{
+			std::cout << "Playing First Song" << std::endl;
+			currentSong = playlist.begin();
+			PlayCurrentSong(*currentSong);
+		}
+		else if (selection == 'N')
+		{
+			std::cout << "Playing Next Song" << std::endl;
+			currentSong++;
+
+			if (currentSong == playlist.end())
+			{
+				std::cout << "Wrapping to start of playlist" << std::endl;
+				currentSong = playlist.end();
+			}
+
+			PlayCurrentSong(*currentSong);
+		}
+		else if (selection == 'P')
+		{
+			std::cout << "Playing Previous Song" << std::endl;
+
+			if (currentSong == playlist.begin())
+			{
+				std::cout << "Wrapping to end of playlist" << std::endl;
+				currentSong = playlist.end();
+			}
+
+			currentSong--;
+			PlayCurrentSong(*currentSong);
+		}
+		else if (selection == 'A')
+		{
+			std::string name, artist;
+			int rating;
+
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+			std::cout << "Adding and playing new song" << std::endl;
+			std::cout << "Enter song name: ";
+			getline(std::cin, name);
+
+			std::cout << "Enter song artist: ";
+			getline(std::cin, artist);
+
+			std::cout << "Enter your rating (1 - 5): ";
+			std::cin >> rating;
+			while (rating <= 0 || rating > 5)
+			{
+				std::cout << "Error: rating must be between 1 and 5 inclusive. Try again!\nEnter your rating: ";
+				std::cin >> rating;
+			}
+
+			playlist.insert(currentSong, Song{ name, artist, rating });
+			currentSong--;
+			PlayCurrentSong(*currentSong);
+		}
+		else if (selection == 'L')
+		{
+			std::cout << std::endl;
+			DisplayPlaylist(playlist, *currentSong);
+		}
+		else if (selection == 'Q')
+			std::cout << "Quitting" << std::endl;
+		else
+			std::cout << "Illegal choice, try again..." << std::endl;
+	} while (selection != 'Q');
 
 	std::cout << "\nThanks for listening!" << std::endl;
 	system("pause");
