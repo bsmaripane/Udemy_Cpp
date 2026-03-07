@@ -13,6 +13,17 @@ int main()
 		std::string{"Belmy"}
 	};
 
+	std::cout << "set1.size(): " << set1.size() << std::endl;
+	std::cout << "stooges.size(): " << stooges.size() << std::endl;
+	std::cout << "set1.max_size(): " << set1.max_size() << std::endl;
+	std::cout << "stooges.max_size(): " << stooges.max_size() << std::endl;
+
+	set1.insert(9);
+	stooges.insert("Today");
+
+	std::cout << "set1.size(): " << set1.size() << std::endl;
+	std::cout << "stooges.size(): " << stooges.size() << std::endl;
+
 	system("pause");
 	return 0;
 }
