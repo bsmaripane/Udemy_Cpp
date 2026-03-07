@@ -52,8 +52,10 @@ void PlayCurrentSong(const Song& song)
 
 void DisplayPlaylist(const std::list<Song>& playlist, const Song& currentSong)
 {
-	// This function should display the current playlist and then the current song playing.
-	std::cout << "You implement this function" << std::endl;
+	for (const Song& song : playlist)
+		std::cout << song << std::endl;
+
+	std::cout << "Current song:" << std::endl << currentSong << std::endl;
 }
 
 int main()
