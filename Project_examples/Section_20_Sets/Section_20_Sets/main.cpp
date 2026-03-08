@@ -31,6 +31,10 @@ int main()
 	if (it != set1.end())
 		set1.erase(it);
 
+	set1.clear();
+
+	std::cout << ((set1.empty()) ? "set1 is empty" : "set1 is not empty") << std::endl;
+
 	system("pause");
 	return 0;
 }
