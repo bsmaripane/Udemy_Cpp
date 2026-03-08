@@ -30,6 +30,11 @@ public:
 	{
 		return (this->name == rhs.name && this->age == rhs.age);
 	}
+
+	bool operator<(const Person& rhs) const
+	{
+		return std::tie(name, age) < std::tie(rhs.name, rhs.age);
+	}
 };
 
 template<typename T>
@@ -67,9 +72,38 @@ void Test1()
 	display(set1);
 }
 
+void Test2()
+{
+	std::cout << "\nTest2 ===================================\n";
+
+	std::set<Person> favoritePeople
+	{
+		{"Lesego", 12},
+		{"Felicia", 29},
+		{"Maashele", 53},
+		{"Kganya", 4}
+	};
+	display(favoritePeople);
+
+	favoritePeople.emplace("Belicia", 5);
+	display(favoritePeople);
+
+	favoritePeople.emplace("Belmy", 5);
+	display(favoritePeople);
+
+	auto it = favoritePeople.find(Person{"Felicia", 29});
+	if (it != favoritePeople.end()) favoritePeople.erase(it);
+	display(favoritePeople);
+
+	it = favoritePeople.find(Person{ "XXX", 4 });
+	if (it != favoritePeople.end()) favoritePeople.erase(it);
+	display(favoritePeople);
+}
+
 int main()
 {
 	Test1();
+	Test2();
 
 	system("pause");
 	return 0;
