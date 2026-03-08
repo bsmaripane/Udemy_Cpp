@@ -100,10 +100,33 @@ void Test2()
 	display(favoritePeople);
 }
 
+void Test3()
+{
+	std::cout << "\nTest3 ===================================\n";
+
+
+	std::set<std::string> set1{ "A", "B","C" };
+	display(set1);
+
+	auto result = set1.insert("D");
+	display(set1);
+
+	std::cout << std::boolalpha;
+	std::cout << "first: " << *(result.first) << std::endl;
+	std::cout << "second: " << result.second << std::endl;
+
+	result = set1.insert("A");
+	display(set1);
+
+	std::cout << "first: " << *(result.first) << std::endl;
+	std::cout << "second: " << result.second << std::endl;
+}
+
 int main()
 {
 	Test1();
 	Test2();
+	Test3();
 
 	system("pause");
 	return 0;
