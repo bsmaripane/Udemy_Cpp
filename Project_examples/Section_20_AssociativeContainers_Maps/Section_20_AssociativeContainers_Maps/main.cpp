@@ -58,9 +58,31 @@ void test1()
 	display(map);
 }
 
+void test2()
+{
+	std::cout << "\nTest2 =======================================\n";
+
+	std::map<std::string, std::set<int>> grades
+	{
+		{"Felicia", {97, 89, 58, 78}},
+		{"Belmy", {89, 91, 92, 88}},
+		{"Lesego", {89,99, 89, 85, 95} }
+	};
+	display(grades);
+
+	grades["Belmy"].insert(75);
+	display(grades);
+
+	auto it = grades.find("Feilicia");
+	if (it != grades.end())
+		it->second.insert(77);
+	display(grades);
+}
+
 int main()
 {
 	test1();
+	test2();
 
 	system("pause");
 	return 0;
