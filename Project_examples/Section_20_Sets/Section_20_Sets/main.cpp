@@ -24,6 +24,10 @@ int main()
 	std::cout << "set1.size(): " << set1.size() << std::endl;
 	std::cout << "stooges.size(): " << stooges.size() << std::endl;
 
+	set1.erase(3);
+
+
+
 	system("pause");
 	return 0;
 }
