@@ -42,6 +42,9 @@ int main()
 	if (it != fullName.end())
 		fullName.erase(it);
 
+	map1.clear();
+	std::cout << ((map1.empty()) ? "map1 is empty" : "map1 is not empty") << std::endl;
+
 	system("pause");
 	return 0;
 }
