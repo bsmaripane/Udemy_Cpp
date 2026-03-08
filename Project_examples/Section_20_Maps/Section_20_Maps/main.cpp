@@ -34,6 +34,14 @@ int main()
 	fullName["Licia"] = "Graduate";
 	fullName.at("Licia") = "My Wife";
 
+	fullName.erase("Maxine");
+	if (fullName.find("Semape") != fullName.end())
+		std::cout << "Found Semape!" << std::endl;
+
+	auto it = fullName.find("Lesego");
+	if (it != fullName.end())
+		fullName.erase(it);
+
 	system("pause");
 	return 0;
 }
