@@ -41,8 +41,35 @@ void display(const std::set<T>& aSet)
 	std::cout << "]" << std::endl;
 }
 
+void Test1()
+{
+	// Sets
+	std::cout << "\nTest1 ===================================\n";
+
+	std::set<int> set1{ 1,4,3,5,2 };
+	display(set1);
+
+	set1 = { 1,2,3,1,1,2,2,3,3,4,5 };
+	display(set1);
+
+	set1.insert(0);
+	set1.insert(10);
+
+	display(set1);
+
+	std::cout << ((set1.count(10)) ? "10 is in the set" : "10 is NOT in the set") << std::endl;
+
+	auto it = set1.find(5);
+
+	if (it != set1.end()) std::cout << "Found: " << *it << std::endl;
+
+	set1.clear();
+	display(set1);
+}
+
 int main()
 {
+	Test1();
 
 	system("pause");
 	return 0;
