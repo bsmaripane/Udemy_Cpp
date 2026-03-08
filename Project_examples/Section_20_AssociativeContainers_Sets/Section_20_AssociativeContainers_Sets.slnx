@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Section_20_AssociativeContainers_Sets/Section_20_AssociativeContainers_Sets.vcxproj" />
+</Solution>
