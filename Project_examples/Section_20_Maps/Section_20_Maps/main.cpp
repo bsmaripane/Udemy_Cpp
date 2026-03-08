@@ -26,6 +26,10 @@ int main()
 	std::cout << "map1.max_size(): " << map1.max_size() << std::endl;
 	std::cout << "fullName.max_size(): " << fullName.max_size() << std::endl;
 
+	std::pair<std::string, std::string> pair1{ "Maxine", "Maripane" };
+	fullName.insert(pair1);
+	fullName.insert(std::make_pair("Semape", "Maswi"));
+
 	system("pause");
 	return 0;
 }
