@@ -32,10 +32,17 @@ public:
 	}
 };
 
+template<typename T>
+void display(const std::set<T>& aSet)
+{
+	std::cout << "[ ";
+	for (const auto& elem : aSet)
+		std::cout << elem << " ";
+	std::cout << "]" << std::endl;
+}
 
 int main()
 {
-
 
 	system("pause");
 	return 0;
