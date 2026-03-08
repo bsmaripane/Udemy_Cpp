@@ -30,6 +30,10 @@ int main()
 	fullName.insert(pair1);
 	fullName.insert(std::make_pair("Semape", "Maswi"));
 
+	fullName["Licia"] = "Teacher";
+	fullName["Licia"] = "Graduate";
+	fullName.at("Licia") = "My Wife";
+
 	system("pause");
 	return 0;
 }
