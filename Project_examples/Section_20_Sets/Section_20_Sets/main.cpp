@@ -26,7 +26,10 @@ int main()
 
 	set1.erase(3);
 
+	auto it = set1.find(9);
 
+	if (it != set1.end())
+		set1.erase(it);
 
 	system("pause");
 	return 0;
