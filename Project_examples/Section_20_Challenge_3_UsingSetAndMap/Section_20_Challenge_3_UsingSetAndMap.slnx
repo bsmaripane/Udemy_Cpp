@@ -3,5 +3,8 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Section_20_Challenge_3_UsingSetAndMap/Section_20_Challenge_3_UsingSetAndMap.vcxproj" />
+  <Folder Name="/file/">
+    <File Path="words.txt" />
+  </Folder>
+  <Project Path="Section_20_Challenge_3_UsingSetAndMap/Section_20_Challenge_3_UsingSetAndMap.vcxproj" Id="d6fd9e5d-469c-4b54-abe6-1e7e4760cddd" />
 </Solution>
