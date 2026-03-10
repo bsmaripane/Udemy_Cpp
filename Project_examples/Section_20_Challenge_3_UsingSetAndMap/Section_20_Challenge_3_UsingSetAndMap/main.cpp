@@ -34,6 +34,22 @@ void display_words(std::map<std::string, std::set<int>> &map)
 	}
 }
 
+// Method to removes periods, commas, semicolons and colons in a string and returns the clean version
+std::string clean_string(const std::string& string)
+{
+	std::string result;
+
+	for (char character : string)
+	{
+		if (character == '.' || character == ',' || character == ':' || character == ';')
+			continue;
+		else
+			result += character;
+	}
+
+	return result;
+}
+
 // Part1 process the file and builds a map of words and
 //		 the number of times they occur in the file
 void part1()
