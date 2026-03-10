@@ -5,7 +5,18 @@
 #include <fstream>
 #include <set>
 #include <map>
+#include <iomanip>
 
+// Used for Part1: Display the word and count from the std::map<std::string, int>
+void display_words(std::map<std::string, int> &map)
+{
+	std::cout << std::setw(12) << std::left << "\nWord" << std::setw(7) << std::right << "Count" << std::endl;
+	std::cout << "================================" << std::endl;
+	for (auto pair : map)
+		std::cout << std::setw(12) << std::left << pair.first << std::setw(7) << std::right << pair.second << std::endl;
+}
+
+// Used for Part2: Display the word and count from the std::map<std::string, std::set<int>>
 void display_words(std::map<std::string, std::set<int>> map)
 {
 	std::cout << "Display the map of <std::string, std::set<int>>" << std::endl;
@@ -39,7 +50,7 @@ void part2()
 {
 	std::cout << "\nPart Two ----------------------------------------------------\n";
 
-	std::map<std::string, std::set<int>> words;
+	std::map<std::string, int> words;
 	std::string line;
 	std::string word;
 	std::ifstream in_file{ "../words.txt" };
