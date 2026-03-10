@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <fstream>
+#include <string>
+#include <sstream>
 #include <set>
 #include <map>
 #include <iomanip>
@@ -56,14 +58,23 @@ void part1()
 {
 	std::cout << "\nPart One ----------------------------------------------------\n";
 
-	std::map<std::string, std::set<int>> words;
+	std::map<std::string, int> words;
 	std::string line;
 	std::string word;
 	std::ifstream in_file{ "../words.txt" };
 
 	if (in_file)
 	{
-		// Implement code
+		while (std::getline(in_file, line))
+		{
+			std::stringstream ss(line);
+
+			while (ss >> word)
+			{
+				word = clean_string(word);
+				words[word]++;	// increment the count for the word in the map
+			}
+		}
 
 		in_file.close();
 		display_words(words);
