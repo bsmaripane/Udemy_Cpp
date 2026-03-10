@@ -89,14 +89,26 @@ void part2()
 {
 	std::cout << "\nPart Two ----------------------------------------------------\n";
 
-	std::map<std::string, int> words;
+	std::map<std::string, std::set<int>> words;
 	std::string line;
 	std::string word;
 	std::ifstream in_file{ "../words.txt" };
 
 	if (in_file)
 	{
-		// Implement code
+		int line_number{ 0 };
+
+		while (std::getline(in_file, line))
+		{
+			line_number++;
+			std::stringstream ss(line);
+
+			while (ss >> word)
+			{
+				word = clean_string(word);
+				words[word].insert(line_number);
+			}
+		}
 
 		in_file.close();
 		display_words(words);
