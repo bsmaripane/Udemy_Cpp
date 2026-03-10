@@ -8,14 +8,29 @@
 
 void part1()
 {
-
+	std::cout << "\nPart One ----------------------------------------------------\n";
 }
 
 // Part2 process the file and builds a map of words and
 //		 a set of line numbers in which the word appears
 void part2()
 {
+	std::cout << "\nPart Two ----------------------------------------------------\n";
 
+	std::map<std::string, std::set<int>> words;
+	std::string line;
+	std::string word;
+	std::ifstream in_file{ "../file/words.txt" };
+
+	if (in_file)
+	{
+		// Implement code
+
+		in_file.close();
+		display_words(words);
+	}
+	else
+		std::cout << "\nError opening input file!\n";
 }
 
 int main()
