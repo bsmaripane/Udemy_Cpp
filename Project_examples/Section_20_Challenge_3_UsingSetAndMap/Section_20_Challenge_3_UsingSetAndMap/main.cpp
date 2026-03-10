@@ -11,9 +11,26 @@ void display_words(std::map<std::string, std::set<int>> map)
 	std::cout << "Display the map of <std::string, std::set<int>>" << std::endl;
 }
 
+// Part1 process the file and builds a map of words and
+//		 the number of times they occur in the file
 void part1()
 {
 	std::cout << "\nPart One ----------------------------------------------------\n";
+
+	std::map<std::string, std::set<int>> words;
+	std::string line;
+	std::string word;
+	std::ifstream in_file{ "../words.txt" };
+
+	if (in_file)
+	{
+		// Implement code
+
+		in_file.close();
+		display_words(words);
+	}
+	else
+		std::cout << "\nError opening input file!\n";
 }
 
 // Part2 process the file and builds a map of words and
@@ -45,6 +62,7 @@ int main()
 	part1();
 	part2();
 
+	std::cout << std::endl;
 	system("pause");
 	return 0;
 }
