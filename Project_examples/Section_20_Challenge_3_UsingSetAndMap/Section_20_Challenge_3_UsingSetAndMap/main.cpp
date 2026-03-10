@@ -12,14 +12,26 @@ void display_words(std::map<std::string, int> &map)
 {
 	std::cout << std::setw(12) << std::left << "\nWord" << std::setw(7) << std::right << "Count" << std::endl;
 	std::cout << "================================" << std::endl;
+
 	for (auto pair : map)
 		std::cout << std::setw(12) << std::left << pair.first << std::setw(7) << std::right << pair.second << std::endl;
 }
 
 // Used for Part2: Display the word and count from the std::map<std::string, std::set<int>>
-void display_words(std::map<std::string, std::set<int>> map)
+void display_words(std::map<std::string, std::set<int>> &map)
 {
-	std::cout << "Display the map of <std::string, std::set<int>>" << std::endl;
+	std::cout << std::setw(12) << std::left << "\nWord" << "Occurrences" << std::endl;
+	std::cout << "==========================================" << std::endl;
+	
+	for (auto pair : map)
+	{
+		std::cout << std::setw(12) << std::left << pair.first << std::left << "[ ";
+
+		for (auto num : pair.second)
+			std::cout << num << " ";
+
+		std::cout << "]" << std::endl;
+	}
 }
 
 // Part1 process the file and builds a map of words and
