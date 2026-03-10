@@ -6,6 +6,11 @@
 #include <set>
 #include <map>
 
+void display_words(std::map<std::string, std::set<int>> map)
+{
+	std::cout << "Display the map of <std::string, std::set<int>>" << std::endl;
+}
+
 void part1()
 {
 	std::cout << "\nPart One ----------------------------------------------------\n";
@@ -20,7 +25,7 @@ void part2()
 	std::map<std::string, std::set<int>> words;
 	std::string line;
 	std::string word;
-	std::ifstream in_file{ "../file/words.txt" };
+	std::ifstream in_file{ "../words.txt" };
 
 	if (in_file)
 	{
