@@ -2,7 +2,11 @@
 // Stack and Queue challenge
 
 #include <iostream>
+#include <stack>
 #include <queue>
+#include <string>
+#include <cctype>
+#include <iomanip>
 
 int main()
 {
