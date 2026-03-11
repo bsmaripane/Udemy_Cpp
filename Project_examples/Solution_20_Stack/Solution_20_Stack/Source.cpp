@@ -46,6 +46,12 @@ int main()
 
 	std::cout << "Size: " << stackNums.size() << std::endl;
 
+	stackNums.push(10);
+	display(stackNums);
+
+	stackNums.top() = 100;
+	display(stackNums);
+
 	system("pause");
 	return 0;
 }
