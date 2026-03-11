@@ -37,6 +37,9 @@ int main()
 
 	std::cout << "Size: " << queue.size() << std::endl;
 
+	std::cout << "Front: " << queue.front() << std::endl;
+	std::cout << "Back: " << queue.back() << std::endl;
+
 	queue.pop();
 	queue.pop();
 	display(queue);
