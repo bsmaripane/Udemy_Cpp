@@ -28,6 +28,8 @@ int main()
 		queue.push(item);
 	display(queue);
 
+	std::cout << "Size: " << queue.size() << std::endl;
+
 	queue.push(10);
 	queue.push(20);
 	queue.push(30);
