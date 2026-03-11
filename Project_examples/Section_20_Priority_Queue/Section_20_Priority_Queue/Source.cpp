@@ -35,6 +35,18 @@ public:
 
 // Display the priority queue by repeatedly topping and popping the priority queue.
 // It is being passed by value, don't modify the priority queue being passed in.
+template<typename Type>
+void display(std::priority_queue<Type> priorityQueue)
+{
+	std::cout << "[ ";
+	while (!priorityQueue.empty())
+	{
+		Type element = priorityQueue.top();
+		priorityQueue.pop();
+		std::cout << element << " ";
+	}
+	std::cout << "]" << std::endl;
+}
 
 int main()
 {
