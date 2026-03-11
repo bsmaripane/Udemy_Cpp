@@ -33,7 +33,8 @@ int main()
 		stackNums.push(item);
 	display(stackNums);
 
-
+	stackNums.push(10);
+	display(stackNums);
 
 	system("pause");
 	return 0;
