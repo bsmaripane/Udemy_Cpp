@@ -25,6 +25,12 @@ int main()
 {
 	std::cout << "Section 20 Queue\n\n";
 
+	std::queue<int> queue;
+
+	for (int item : { 1, 2, 3, 4, 5})
+		queue.push(item);
+	display(queue);
+
 	std::cout << std::endl;
 	system("pause");
 	return 0;
