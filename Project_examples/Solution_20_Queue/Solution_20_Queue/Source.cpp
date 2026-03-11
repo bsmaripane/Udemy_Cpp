@@ -8,6 +8,18 @@
 
 // Display the elements of the queue by repeatedly removing elements from the front.
 // The queue is passed in by value, don't affect the passed in queue.
+template<typename Type>
+void display(std::queue<Type> queue)
+{
+	std::cout << "[ ";
+	while (!queue.empty())
+	{
+		Type element = queue.front();
+		queue.pop();
+		std::cout << element << " ";
+	}
+	std::cout << "]" << std::endl;
+}
 
 int main()
 {
