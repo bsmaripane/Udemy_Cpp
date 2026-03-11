@@ -28,6 +28,11 @@ int main()
 		queue.push(item);
 	display(queue);
 
+	queue.push(10);
+	queue.push(20);
+	queue.push(30);
+	display(queue);
+
 	std::cout << std::endl;
 	system("pause");
 	return 0;
