@@ -7,6 +7,18 @@
 
 // Displays a stack of by repeatedly topping and popping the stack.
 // The stack is passed in value, so don't affaect the passed stack
+template<typename Type>
+void display(std::stack<Type> stack)
+{
+	std::cout << "[ ";
+	while (!stack.empty())
+	{
+		Type element = stack, top();
+		stack.pop();
+		std::cout << element << " ";
+	}
+	std::cout << " ]" << std::endl;
+}
 
 int main()
 {
