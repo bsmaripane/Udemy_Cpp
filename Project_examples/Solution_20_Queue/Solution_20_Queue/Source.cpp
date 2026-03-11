@@ -35,6 +35,12 @@ int main()
 	queue.push(30);
 	display(queue);
 
+	std::cout << "Size: " << queue.size() << std::endl;
+
+	queue.pop();
+	queue.pop();
+	display(queue);
+
 	std::cout << std::endl;
 	system("pause");
 	return 0;
