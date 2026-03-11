@@ -44,6 +44,13 @@ int main()
 	queue.pop();
 	display(queue);
 
+	queue.front() = 9;
+	queue.back() = 29;
+
+	std::cout << "Front: " << queue.front() << std::endl;
+	std::cout << "Back: " << queue.back() << std::endl;
+	display(queue);
+
 	while (!queue.empty())
 		queue.pop();
 	display(queue);
