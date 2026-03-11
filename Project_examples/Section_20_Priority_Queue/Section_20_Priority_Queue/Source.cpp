@@ -33,6 +33,9 @@ public:
 	}
 };
 
+// Display the priority queue by repeatedly topping and popping the priority queue.
+// It is being passed by value, don't modify the priority queue being passed in.
+
 int main()
 {
 	std::cout << "Section 20 Priority Queue\n\n";
