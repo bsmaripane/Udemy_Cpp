@@ -41,6 +41,10 @@ int main()
 	queue.pop();
 	display(queue);
 
+	while (!queue.empty())
+		queue.pop();
+	display(queue);
+
 	std::cout << std::endl;
 	system("pause");
 	return 0;
