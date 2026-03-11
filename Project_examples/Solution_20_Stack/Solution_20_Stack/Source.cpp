@@ -36,6 +36,15 @@ int main()
 	stackNums.push(10);
 	display(stackNums);
 
+	stackNums.pop();
+	stackNums.pop();
+	display(stackNums);
+
+	while (!stackNums.empty())
+		stackNums.pop();
+	display(stackNums);
+
+
 	system("pause");
 	return 0;
 }
