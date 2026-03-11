@@ -8,6 +8,12 @@
 #include <cctype>
 #include <iomanip>
 
+bool is_palindrome(const std::string& string)
+{
+	// Implement - use a stack and a queue to solve the problem
+	return false;
+}
+
 int main()
 {
 	std::cout << "Section 20: Stack and Queue challenge\n\n";
