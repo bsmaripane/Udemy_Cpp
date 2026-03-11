@@ -17,9 +17,20 @@ bool is_palindrome(const std::string& string)
 	for (char character : string)
 		if (std::isalpha(character))
 		{
-			charStack.push(std::tolower(character));
-			charQueue.push(std::tolower(character));
+			character = toupper(character);
+			charStack.push(character);
+			charQueue.push(character);
 		}
+
+	// Check for palindrome
+	while (charStack.size() > 0)
+	{
+		if (charStack.top() != charQueue.front())
+			return false;
+
+		charStack.pop();
+		charQueue.pop();
+	}
 
 	return true;
 }
@@ -29,7 +40,7 @@ int main()
 	std::cout << "Section 20: Stack and Queue challenge\n\n";
 
 	std::vector<std::string> test_strings{ "a", "aa", "Aa", "aba", "aBBa", "abbcbba", "ab", "abc", "radar", "bob",
-		"ana", "avid diva", "Amore, Roma", "A Toyata's a toyota", "A Santa at NASA", "C++",
+		"ana", "avid diva", "Amore, Roma", "A Toyata's a toyota", "A Santa at NASA", "C++", "Deque",
 		"A man, a plan, a cat, a ham, a yak, a yam, a hat, a canal-Panama!", "This is a panlindromw", "palindrome" };
 
 	std::cout << std::boolalpha;
