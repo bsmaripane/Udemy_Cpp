@@ -48,10 +48,26 @@ void display(std::priority_queue<Type> priorityQueue)
 	std::cout << "]" << std::endl;
 }
 
+void test1()
+{
+	std::cout << "Test One ============================================\n";
+
+	std::priority_queue<int> priorityQueue;
+	for (int item : { 3, 5, 7, 12, 23, 12, 4, 100, 0, 3, 5, 7, 9, 1 })
+		priorityQueue.push(item);
+
+	std::cout << "Size: " << priorityQueue.size() << std::endl;
+	std::cout << "Top: " << priorityQueue.top() << std::endl;
+	display(priorityQueue);
+	priorityQueue.pop();
+	display(priorityQueue);
+}
+
 int main()
 {
 	std::cout << "Section 20 Priority Queue\n\n";
 
+	test1();
 
 	std::cout << std::endl;
 	system("pause");
