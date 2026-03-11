@@ -13,7 +13,7 @@ void display(std::stack<Type> stack)
 	std::cout << "[ ";
 	while (!stack.empty())
 	{
-		Type element = stack, top();
+		Type element = stack.top();
 		stack.pop();
 		std::cout << element << " ";
 	}
@@ -32,6 +32,8 @@ int main()
 	for (int item : { 1, 2, 3, 4, 5})
 		stackNums.push(item);
 	display(stackNums);
+
+
 
 	system("pause");
 	return 0;
