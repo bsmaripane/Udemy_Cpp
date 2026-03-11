@@ -63,11 +63,28 @@ void test1()
 	display(priorityQueue);
 }
 
+void test2()
+{
+	std::cout << "Test Two ============================================\n";
+
+	std::priority_queue<Person> priorityQueue;
+
+	priorityQueue.push(Person("Felicia", 29));
+	priorityQueue.push(Person("Emily", 53));
+	priorityQueue.push(Person("Lesego", 11));
+	priorityQueue.push(Person("Tracy", 32));
+	priorityQueue.push(Person("Kganya", 4));
+	priorityQueue.push(Person("Maswi", 30));
+
+	display(priorityQueue);
+}
+
 int main()
 {
 	std::cout << "Section 20 Priority Queue\n\n";
 
 	test1();
+	test2();
 
 	std::cout << std::endl;
 	system("pause");
