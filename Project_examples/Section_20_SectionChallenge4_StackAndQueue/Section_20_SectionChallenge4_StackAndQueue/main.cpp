@@ -10,8 +10,18 @@
 
 bool is_palindrome(const std::string& string)
 {
-	// Implement - use a stack and a queue to solve the problem
-	return false;
+	std::stack<char> charStack;
+	std::queue<char> charQueue;
+
+	// Add characters to the stack and queue
+	for (char character : string)
+		if (std::isalpha(character))
+		{
+			charStack.push(std::tolower(character));
+			charQueue.push(std::tolower(character));
+		}
+
+	return true;
 }
 
 int main()
