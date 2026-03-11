@@ -44,6 +44,7 @@ int main()
 		stackNums.pop();
 	display(stackNums);
 
+	std::cout << "Size: " << stackNums.size() << std::endl;
 
 	system("pause");
 	return 0;
