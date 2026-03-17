@@ -26,3 +26,9 @@ TEST(CalculatorTest, AddTwoPosAndNegNumbers)
 	Calculator calc;
 	EXPECT_EQ(calc.add(-2, 4), 2);
 }
+
+TEST(CalculatorTest, MinusTwoNumbers)
+{
+	Calculator calc;
+	EXPECT_EQ(calc.minus(12, 4), 8);
+}
