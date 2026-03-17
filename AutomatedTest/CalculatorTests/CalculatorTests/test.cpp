@@ -32,3 +32,21 @@ TEST(CalculatorTest, MinusTwoNumbers)
 	Calculator calc;
 	EXPECT_EQ(calc.minus(12, 4), 8);
 }
+
+TEST(CalculatorTest, MinusTwoNegNumbers)
+{
+	Calculator calc;
+	EXPECT_EQ(calc.minus(-12, -4), -8);
+}
+
+TEST(CalculatorTest, MinusTwoNegAndPosNumbers)
+{
+	Calculator calc;
+	EXPECT_EQ(calc.minus(-12, 4), -16);
+}
+
+TEST(CalculatorTest, MinusTwoPosAndNegNumbers)
+{
+	Calculator calc;
+	EXPECT_EQ(calc.minus(-12, 4), -16);
+}
