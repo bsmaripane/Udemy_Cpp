@@ -32,3 +32,11 @@ TEST_F(CalculatorTest, MultiplyTwoNumbers)
 	EXPECT_EQ(calc.multiply(-4, 5), -20);
 	EXPECT_EQ(calc.multiply(7, -3), -21);
 }
+
+TEST_F(CalculatorTest, DivideTwoNumbers)
+{
+	EXPECT_EQ(calc.divide(10, 5), 2);
+	EXPECT_EQ(calc.divide(5, 8), 0);
+	EXPECT_EQ(calc.divide(-10, 2), -5);
+	EXPECT_EQ(calc.divide(7, 5), 1);
+}
