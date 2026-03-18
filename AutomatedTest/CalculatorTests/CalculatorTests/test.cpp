@@ -3,8 +3,13 @@
 #include <gtest/gtest.h>
 #include "Calculator.h"
 
-Calculator calc;
-TEST(CalculatorTest, AddTwoNumbers) 
+class CalculatorTest : public ::testing::Test
+{
+protected:
+	Calculator calc;
+};
+
+TEST_F(CalculatorTest, AddTwoNumbers) 
 {
 	EXPECT_EQ(calc.add(4, 12), 16);
 	EXPECT_EQ(calc.add(-4, -12), -16);
@@ -12,7 +17,7 @@ TEST(CalculatorTest, AddTwoNumbers)
 	EXPECT_EQ(calc.add(-2, 4), 2);
 }
 
-TEST(CalculatorTest, MinusTwoNumbers)
+TEST_F(CalculatorTest, MinusTwoNumbers)
 {
 	EXPECT_EQ(calc.minus(12, 4), 8);
 	EXPECT_EQ(calc.minus(-12, -4), -8);
