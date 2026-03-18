@@ -28,4 +28,7 @@ TEST_F(CalculatorTest, MinusTwoNumbers)
 TEST_F(CalculatorTest, MultiplyTwoNumbers)
 {
 	EXPECT_EQ(calc.multiply(2, 5), 10);
+	EXPECT_EQ(calc.multiply(-2, -2), 4);
+	EXPECT_EQ(calc.multiply(-4, 5), -20);
+	EXPECT_EQ(calc.multiply(7, -3), -21);
 }
