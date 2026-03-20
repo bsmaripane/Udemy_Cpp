@@ -14,3 +14,9 @@ TEST(StudentDatabase, GetStudentById_ShouldReturnCorrectName)
 	db.addStudent(101, "Maxine");
 	EXPECT_EQ(db.getStudentName(101), "Maxine");
 }
+
+TEST(StudentDatabase, GetStudent_InvalidId_ShouldReturnEmpty)
+{
+	StudentDatabase db;
+	EXPECT_EQ(db.getStudentName(-1), "");
+}
