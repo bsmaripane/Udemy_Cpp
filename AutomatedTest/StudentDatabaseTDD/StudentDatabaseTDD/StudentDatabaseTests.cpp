@@ -7,3 +7,10 @@ TEST(StudentDatabaseTest, AddStudent_ShouldIncreaseCount)
 	db.addStudent(101, "Maxine");
 	EXPECT_EQ(db.getCount(), 1);
 }
+
+TEST(StudentDatabase, GetStudentById_ShouldReturnCorrectName)
+{
+	StudentDatabase db;
+	db.addStudent(101, "Maxine");
+	EXPECT_EQ(db.getStudentName(101), "Maxine");
+}
