@@ -2,10 +2,19 @@
 
 void StudentDatabase::addStudent(int studentId, std::string studentName)
 {
-	count++;
+	students[studentId] = studentName;
 }
 
 int StudentDatabase::getCount() const
 {
-	return count;
+	return students.size();
+}
+
+std::string StudentDatabase::getStudentName(int studentId) const
+{
+	auto iter{ students.find(studentId) };
+	if (iter != students.end())
+		return iter->second;
+
+	return "";
 }
