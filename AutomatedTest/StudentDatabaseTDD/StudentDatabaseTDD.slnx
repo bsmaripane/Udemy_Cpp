@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="StudentDatabaseTDD/StudentDatabaseTDD.vcxproj" />
+  <Project Path="StudentDatabaseTDD/StudentDatabaseTDD.vcxproj" Id="ddcdbc0f-a330-4a8a-9d3e-9b66d7a99a7f" />
 </Solution>
